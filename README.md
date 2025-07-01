@@ -17,10 +17,14 @@ botanical_updates/
 │   │   ├── current/        # Current admin flow
 │   │   ├── new-update/     # Ready for deployment
 │   │   └── proposed/       # Future vision
-│   └── tech/
-│       ├── current/        # Current architecture
-│       ├── new-update/     # Ready for deployment
-│       └── proposed/       # Future vision
+│   ├── tech/
+│   │   ├── current/        # Current architecture
+│   │   ├── new-update/     # Ready for deployment
+│   │   └── proposed/       # Future vision
+│   └── booking/
+│       ├── current/        # Current booking flow
+│       ├── improved/       # Improved booking flow
+│       └── analysis/       # Pain points and improvements
 └── README.md
 ```
 
@@ -83,6 +87,26 @@ botanical_updates/
 - Quantum-ready algorithms
 - Blockchain integration
 - Zero-latency global network
+
+### 📅 Booking Flow (Botaniqal Specific)
+
+#### [Current Booking Flow](./flowcharts/booking/current/booking-flow.md)
+- Two-step process (booking + intake)
+- Single provider (Dr. Dia)
+- Basic eligibility screening
+- Calendly integration
+
+#### [Improved Booking Flow](./flowcharts/booking/improved/booking-flow.md)
+- Unified booking experience
+- Multiple provider support
+- Smart eligibility handling
+- Patient dashboard
+
+#### [Booking Analysis](./flowcharts/booking/analysis/improvements-summary.md)
+- Pain points identification
+- Implementation roadmap
+- Expected outcomes
+- Technical requirements
 
 ## Key Improvements by Version
 
