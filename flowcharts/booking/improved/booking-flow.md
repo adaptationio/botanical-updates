@@ -23,17 +23,24 @@ flowchart TD
     
     UnifiedForm --> BasicDetails[Step 1: Basic Details]
     BasicDetails --> SaveProgress1{Save & Continue?}
-    SaveProgress1 -->|Continue| Eligibility[Step 2: Eligibility Check]
+    SaveProgress1 -->|Continue| Eligibility[Step 2: Personalized Health Assessment]
     SaveProgress1 -->|Save for Later| EmailLink[Email Progress Link]
     
-    Eligibility --> MentalHealth{Mental Health Screening}
-    MentalHealth -->|Needs Support| AlternativeOptions[Show Alternative Options]
-    MentalHealth -->|Eligible| MedicalHistory[Step 3: Medical History]
+    Eligibility --> HealthProfile{Create Health Profile}
+    HealthProfile -->|Complex Needs| CarePathways[Personalized Care Pathways]
+    HealthProfile -->|Standard Path| MedicalHistory[Step 3: Medical History]
     
-    AlternativeOptions --> TeleHealth{Telehealth Option?}
-    TeleHealth -->|Yes| MedicalHistory
-    TeleHealth -->|No| ContactClinic[Contact Clinic Details + Resources]
-    ContactClinic --> End1([End])
+    CarePathways --> PathOptions{Select Care Option}
+    PathOptions -->|Integrated Care| IntegratedTeam[Multi-Practitioner Team]
+    PathOptions -->|Telehealth First| TelehealthPriority[Telehealth Consultation]
+    PathOptions -->|In-Person Priority| InPersonPath[Priority In-Person Booking]
+    PathOptions -->|Care Coordinator| Coordinator[Assign Care Coordinator]
+    
+    IntegratedTeam --> MedicalHistory
+    TelehealthPriority --> MedicalHistory
+    InPersonPath --> MedicalHistory
+    Coordinator --> CoordinatorContact[Coordinator Contacts Within 24hrs]
+    CoordinatorContact --> End1([Personalized Journey])
     
     MedicalHistory --> SaveProgress2{Save & Continue?}
     SaveProgress2 -->|Continue| CalendarIntegrated[Step 4: Select Appointment]
@@ -110,12 +117,12 @@ flowchart TD
     classDef improvement fill:#e0f2f1,stroke:#00695c,stroke-width:3px
     
     class Start,End1,End2 startEnd
-    class Choice,MentalHealth,TeleHealth,SaveProgress1,SaveProgress2,ProviderSelect,PaymentOptions,ImmediateActions,AutomatedFlow,AccountCreated,Features decision
+    class Choice,HealthProfile,PathOptions,SaveProgress1,SaveProgress2,ProviderSelect,PaymentOptions,ImmediateActions,AutomatedFlow,AccountCreated,Features decision
     class Welcome,InitialInfo,FollowInfo,StartBooking1,StartBooking2,CalendarIntegrated,TimeSlots,ConfirmTime process
     class Payment,Card,PayPal,Afterpay,ProcessPayment payment
     class SMS,Email,Day7,Day1,Hours2 notification
     class UnifiedForm,BasicDetails,Eligibility,MedicalHistory,Consent form
-    class AlternativeOptions,ProviderProfiles,Dashboard,AddCalendar,DownloadSummary,ShareDetails,Reschedule improvement
+    class CarePathways,IntegratedTeam,TelehealthPriority,InPersonPath,Coordinator,CoordinatorContact,ProviderProfiles,Dashboard,AddCalendar,DownloadSummary,ShareDetails,Reschedule improvement
 ```
 
 ## Key Improvements
@@ -125,10 +132,12 @@ flowchart TD
 - **Progress Saving**: Users can save and return to complete booking
 - **Step Indicators**: Clear progress through booking steps
 
-### 2. Enhanced Eligibility Handling
-- **Alternative Options**: Telehealth offered for mental health cases
-- **Resources**: Provides helpful resources instead of just rejection
-- **Soft Screening**: More nuanced approach to eligibility
+### 2. Personalized Health Assessment
+- **Health Profile Creation**: Builds comprehensive understanding of patient needs
+- **Multiple Care Pathways**: Integrated care, telehealth priority, in-person priority
+- **Care Coordinator Option**: Personal support for complex cases
+- **No Rejection**: Everyone finds a suitable care pathway
+- **Proactive Support**: 24-hour coordinator contact for complex needs
 
 ### 3. Provider Flexibility
 - **Multiple Providers**: Option for next available or specific provider

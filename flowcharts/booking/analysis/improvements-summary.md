@@ -3,10 +3,11 @@
 ## Current Flow Pain Points
 
 ### 1. User Experience Issues
-- **Hard Stop at Mental Health**: Binary yes/no screening may turn away patients who could benefit from alternative care options
+- **Restrictive Health Screening**: Current assessment may discourage patients who could benefit from care
 - **Two-Step Process**: Separate booking and intake forms increase friction and potential drop-off
 - **No Progress Saving**: Users must complete entire process in one session
 - **Limited Provider Options**: Only Dr. Dia available, no flexibility
+- **Lack of Care Pathways**: No personalized options for different patient needs
 
 ### 2. Technical Limitations
 - **No Integration**: Booking and intake are separate systems
@@ -15,9 +16,10 @@
 - **Single Payment Option**: Limited to Calendly's payment processing
 
 ### 3. Accessibility Concerns
-- **No Alternative Paths**: Mental health patients have no online options
+- **Limited Care Options**: Patients with complex needs have few alternatives
 - **No Support Features**: Can't share with carers or save information
 - **Limited Information**: Minimal explanation of services before booking
+- **No Personalization**: One-size-fits-all approach to patient care
 
 ## Proposed Improvements
 
@@ -28,12 +30,14 @@
 | Complete in one session | Save and resume | 30% more completions |
 | Linear flow only | Multiple pathways | Better user satisfaction |
 
-### 2. Smart Eligibility Handling
+### 2. Personalized Health Assessment
 | Current | Improved | Benefit |
 |---------|----------|---------|
-| Binary yes/no screening | Nuanced assessment | Serve more patients |
-| Rejection message only | Alternative options | Better patient care |
-| No telehealth option | Telehealth for MH | Increased accessibility |
+| Restrictive screening | Health profile creation | Comprehensive patient understanding |
+| Binary eligible/not eligible | Multiple care pathways | 100% patient accommodation |
+| Single care model | Integrated/telehealth/coordinator options | Personalized care delivery |
+| Rejection for complex cases | Care coordinator assignment | No patient turned away |
+| Generic approach | Tailored patient journeys | Better health outcomes |
 
 ### 3. Enhanced Provider Management
 | Current | Improved | Benefit |
@@ -69,7 +73,8 @@
 1. Add save and resume functionality
 2. Implement smart reminders
 3. Add calendar integration
-4. Improve mental health screening flow
+4. Replace restrictive screening with supportive assessment
+5. Add multiple contact options for complex cases
 
 ### Phase 2 - Core Improvements (3-4 months)
 1. Unify booking and intake forms
@@ -78,10 +83,12 @@
 4. Add provider profiles
 
 ### Phase 3 - Advanced Features (5-6 months)
-1. Telehealth integration
-2. Smart scheduling algorithm
-3. Automated communication sequences
-4. Advanced analytics and reporting
+1. Full care pathway implementation
+2. Care coordinator system
+3. Integrated multi-practitioner teams
+4. Smart scheduling algorithm
+5. Automated communication sequences
+6. Advanced analytics and reporting
 
 ## Expected Outcomes
 

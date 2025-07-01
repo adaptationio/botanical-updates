@@ -8,14 +8,20 @@ flowchart TD
     Start([User visits www.botaniqal.com.au]) --> Choice{Booking Type}
     
     %% Initial Consultation Path
-    Choice -->|Initial Consult $89| Eligibility[Eligibility Questionnaire]
+    Choice -->|Initial Consult $89| Eligibility[Health & Wellness Assessment]
     
-    Eligibility --> MentalHealth{Mental Health Questions}
-    MentalHealth -->|Yes to MH issues| NotEligible[Not Eligible Screen]
-    MentalHealth -->|No/Pass| Calendar1[Calendly Booking Page]
+    Eligibility --> HealthCheck{Assessment Results}
+    HealthCheck -->|Needs Specialized Care| SpecializedOptions[Show Specialized Care Options]
+    HealthCheck -->|Standard Care Suitable| Calendar1[Calendly Booking Page]
     
-    NotEligible --> Contact[Please email or call clinic for more options]
-    Contact --> End1([End])
+    SpecializedOptions --> ContactOptions{Contact Preferences}
+    ContactOptions -->|Call Now| PhoneInfo[Show Phone: 1800-XXX-XXX]
+    ContactOptions -->|Email| EmailForm[Quick Contact Form]
+    ContactOptions -->|Book Anyway| SpecialNote[Book with Special Note]
+    
+    PhoneInfo --> End1([End])
+    EmailForm --> End1([End])
+    SpecialNote --> Calendar1
     
     %% Follow-up Path
     Choice -->|Follow-up $69| Calendar2[Calendly Booking Page]
@@ -67,20 +73,23 @@ flowchart TD
     classDef form fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
     
     class Start,End1,End2,End3 startEnd
-    class Choice,MentalHealth,Notifications1,Notifications2 decision
+    class Choice,HealthCheck,ContactOptions,Notifications1,Notifications2 decision
     class Calendar1,Calendar2,SelectTime1,SelectTime2,Details1,Details2,Submit1,Submit2 process
     class Payment1,Payment2 payment
     class SMS1,SMS2,Email1,Email2,IntakeCopy notification
-    class Eligibility,IntakeForm,FillIntake,Consent,SubmitIntake form
+    class Eligibility,IntakeForm,FillIntake,Consent,SubmitIntake,SpecializedOptions,PhoneInfo,EmailForm,SpecialNote form
 ```
 
 ## Current Flow Details
 
 ### Initial Consultation ($89.00)
 1. User selects "Initial Consult"
-2. Completes eligibility questionnaire
-3. If mental health issues indicated → Not eligible (contact clinic)
-4. If eligible → Calendly booking with Dr. Dia
+2. Completes health & wellness assessment
+3. If specialized care needed → Offered multiple contact options
+   - Call clinic directly (1800-XXX-XXX)
+   - Submit quick contact form
+   - Book anyway with special note for provider
+4. If standard care suitable → Calendly booking with Dr. Dia
 5. Fills details and pays $89.00
 6. Completes intake form with consent
 7. Receives confirmations (SMS, Email, Intake copy)
@@ -99,9 +108,10 @@ flowchart TD
 - **Notifications**: SMS and Email automated
 
 ## Current Pain Points
-- Mental health screening may turn away eligible patients
+- Health assessment still creates barriers for some patients
 - Two-step process (booking then intake) may cause drop-offs
 - No option to save progress
 - No pre-appointment reminders mentioned
 - Single provider limitation
 - No rescheduling flow shown
+- Limited options for specialized care needs
