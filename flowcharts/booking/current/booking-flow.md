@@ -8,7 +8,7 @@ flowchart TD
     Start([User visits www.botaniqal.com.au]) --> Choice{Booking Type}
     
     %% Initial Consultation Path
-    Choice -->|Initial Consult| Eligibility[Eligibility Questionnaire]
+    Choice -->|Initial Consult $89| Eligibility[Eligibility Questionnaire]
     
     Eligibility --> MentalHealth{Mental Health Questions}
     MentalHealth -->|Yes to MH issues| NotEligible[Not Eligible Screen]
@@ -18,7 +18,7 @@ flowchart TD
     Contact --> End1([End])
     
     %% Follow-up Path
-    Choice -->|Follow-up| Calendar2[Calendly Booking Page]
+    Choice -->|Follow-up $69| Calendar2[Calendly Booking Page]
     
     %% Booking Process for Initial
     Calendar1 --> SelectTime1[Select Available Time with Dr. Dia]
@@ -34,7 +34,7 @@ flowchart TD
     %% Booking Process for Follow-up
     Calendar2 --> SelectTime2[Select Available Time with Dr. Dia]
     SelectTime2 --> Details2[Fill Patient Details]
-    Details2 --> Payment2[Pay Follow-up Fee]
+    Details2 --> Payment2[Pay $69.00]
     Payment2 --> Submit2[Submit Booking]
     
     %% Success Pages
@@ -85,10 +85,10 @@ flowchart TD
 6. Completes intake form with consent
 7. Receives confirmations (SMS, Email, Intake copy)
 
-### Follow-up Consultation
+### Follow-up Consultation ($69.00)
 1. User selects "Follow-up"
 2. Direct to Calendly booking
-3. Fills details and pays
+3. Fills details and pays $69.00
 4. Receives confirmations (SMS, Email)
 
 ## Key Components

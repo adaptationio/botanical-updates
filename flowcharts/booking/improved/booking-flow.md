@@ -14,7 +14,7 @@ flowchart TD
     InitialInfo --> StartBooking1[Start Booking]
     
     %% Follow-up Path
-    Choice -->|Follow-up Consult| FollowInfo[Show Follow-up Info & Price]
+    Choice -->|Follow-up Consult $69| FollowInfo[Show Follow-up Info & Price]
     FollowInfo --> StartBooking2[Start Booking]
     
     %% Unified Booking Flow
@@ -51,7 +51,7 @@ flowchart TD
     TimeSlots --> ConfirmTime[Confirm Date & Time]
     ConfirmTime --> Consent[Step 5: Review Consent & Terms]
     
-    Consent --> Payment[Step 6: Secure Payment]
+    Consent --> Payment[Step 6: Secure Payment - $89/$69]
     Payment --> PaymentOptions{Payment Method}
     PaymentOptions --> Card[Credit/Debit Card]
     PaymentOptions --> PayPal[PayPal]
@@ -138,7 +138,8 @@ flowchart TD
 ### 4. Payment Options
 - **Multiple Methods**: Credit/Debit, PayPal, Afterpay
 - **Secure Processing**: PCI-compliant payment handling
-- **Clear Pricing**: Transparent fee structure
+- **Clear Pricing**: Transparent fee structure ($89 initial, $69 follow-up)
+- **Flexible Payment**: Afterpay for affordability
 
 ### 5. Better Communication
 - **Instant Confirmation**: Immediate SMS and email
