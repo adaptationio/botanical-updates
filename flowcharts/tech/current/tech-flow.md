@@ -90,12 +90,29 @@ flowchart TD
 - **CDN**: CloudFront
 - **Storage**: AWS S3
 
+## Booking System Stack
+- **Booking Platform**: Calendly (Initial & Follow-up calendars)
+- **Calendar Sync**: Office 365 with MS Graph API webhooks
+- **Payment**: Stripe integrated with Calendly
+- **Serverless**: AWS API Gateway + Lambda functions
+- **EHR Integration**: MediRecords API with custom Python library
+- **Forms**: Custom intake form post-booking
+- **Notifications**: Email (Stripe/Form), SMS (MediRecords)
+
 ## Architecture Details
 - Traditional monolithic architecture
 - Session-based authentication
 - Synchronous request processing
 - Manual scaling required
 - Basic monitoring setup
+- Hybrid cloud approach (on-premises + AWS Lambda)
+
+## Booking System Architecture
+- Event-driven architecture via webhooks
+- Serverless functions for booking processing
+- Multiple API integrations (Calendly, Stripe, MediRecords)
+- Asynchronous processing for form submissions
+- See [Detailed Booking Technical Flow](./booking-tech-flow.md)
 
 ## Limitations
 - No microservices
@@ -104,3 +121,5 @@ flowchart TD
 - Manual deployment process
 - Basic error handling
 - No container orchestration
+- Complex multi-system dependencies
+- Manual webhook renewal required

@@ -76,6 +76,12 @@ botanical_updates/
 - Basic caching
 - Manual scaling
 
+#### [Current Booking Tech Flow](./flowcharts/tech/current/booking-tech-flow.md)
+- Calendly + Office 365 integration
+- AWS Lambda serverless processing
+- MediRecords EHR integration
+- Multi-step webhook architecture
+
 #### [New Update Tech Flow](./flowcharts/tech/new-update/tech-flow.md)
 - Microservices architecture
 - Kubernetes orchestration
