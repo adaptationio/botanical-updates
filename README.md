@@ -113,7 +113,13 @@ botanical_updates/
 
 ### 📅 Booking Flow (Botaniqal Specific)
 
-#### [Current Booking Flow](./flowcharts/booking/current/booking-flow.md)
+#### [Comprehensive Booking System Flow](./flowcharts/booking/current/comprehensive-booking-flow.md)
+- Complete view across all stakeholders
+- Shows integration points between systems
+- Identifies manual processes and pain points
+- Maps full journey from booking to completion
+
+#### [Current Patient Booking Flow](./flowcharts/booking/current/patient-booking-flow.md)
 - Two-step process (booking + intake)
 - Single provider (Dr. Dia)
 - Basic eligibility screening
