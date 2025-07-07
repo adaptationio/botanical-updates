@@ -85,9 +85,9 @@ flowchart TD
     
     %% Appointment Execution
     UpdateStatus --> AppointmentDay[Day of Appointment]
-    AppointmentDay --> DoctorCalls[Doctor Calls Patient]
-    DoctorCalls --> ConductAppointment[Conduct Telehealth Appointment]
-    ConductAppointment --> CompleteAppt[Update Status to Complete]
+    AppointmentDay --> DoctorFlow[Doctor Appointment Process]
+    DoctorFlow --> SeeDoctor[See Doctor Workflow]
+    SeeDoctor --> CompleteAppt[Status Updated to Complete]
     
     CompleteAppt --> End([End])
     
@@ -161,8 +161,9 @@ flowchart TD
 - → Update status to "Confirmed"
 
 ### 6. Appointment Completion
-- Doctor conducts telehealth appointment
-- Update booking status to "Complete"
+- Doctor follows appointment workflow
+- See [Doctor Appointment Flow](../../doctor/current/appointment-flow.md)
+- Booking status automatically updated to "Complete"
 
 ## Key Admin Accounts
 - **MediRecords**: Practice Manager account

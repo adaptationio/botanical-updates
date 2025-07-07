@@ -148,6 +148,11 @@ flowchart TD
   - Updates patient details from JotForm intake
 - **Booking Creation**: Syncs with MediRecords calendar
 - **Form Data Mapping**: JotForm fields mapped to MediRecords schema
+- **Doctor Access**: 
+  - Patient records and phone numbers
+  - Clinical notes system
+  - SafeScript integration
+  - eRx prescription system
 
 ### Data Flow Specifics
 
@@ -189,6 +194,9 @@ flowchart TD
 - **Email Notifications**: Both patient and enquiries receive copies
 - **Embedding**: Calendly and JotForm must load properly in Webflow
 - **Mobile Responsiveness**: All embeds must work on mobile devices
+- **Doctor Access**: MediRecords must have patient phone numbers
+- **Integration Requirements**: SafeScript and eRx must be accessible
+- **Practice Manager Contact**: Available for follow-up coordination
 
 ### Security & Compliance
 - **HTTPS**: All API communications

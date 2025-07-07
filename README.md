@@ -17,6 +17,8 @@ botanical_updates/
 │   │   ├── current/        # Current admin flow
 │   │   ├── new-update/     # Ready for deployment
 │   │   └── proposed/       # Future vision
+│   ├── doctor/
+│   │   └── current/        # Doctor appointment workflow
 │   ├── tech/
 │   │   ├── current/        # Current architecture
 │   │   ├── new-update/     # Ready for deployment
@@ -73,6 +75,15 @@ botanical_updates/
 - Predictive analytics
 - VR collaboration
 - Self-improving system
+
+### 👨‍⚕️ Doctor Workflow
+
+#### [Current Doctor Appointment Flow](./flowcharts/doctor/current/appointment-flow.md)
+- Pre-appointment preparation
+- Patient consultation process
+- SafeScript integration
+- eRx prescription system
+- Follow-up coordination
 
 ### 💻 Technical Architecture Flows
 
