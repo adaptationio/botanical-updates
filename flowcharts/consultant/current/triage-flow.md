@@ -76,10 +76,11 @@ flowchart TD
     OfferTimes --> PatientSelects[Patient Selects Time]
     
     PatientSelects --> ConfirmDetails[Confirm Appointment Details]
-    ConfirmDetails --> ExplainFees[Explain Fees]
-    ExplainFees --> ProcessPayment[Process Payment Over Phone]
+    ConfirmDetails --> ExplainFees[Explain Fees for Service]
+    ExplainFees --> ProcessPayment[Take Payment Over Phone]
+    ProcessPayment --> VerifyPayment[Verify Payment Processed]
     
-    ProcessPayment --> BookingComplete[Booking Confirmed]
+    VerifyPayment --> BookingComplete[Practitioner Booking Confirmed]
     
     %% Alternative Paths
     MHReferral --> ProvideResources[Provide MH Resources]
@@ -161,10 +162,12 @@ flowchart TD
 
 ### Phone Booking Process
 1. **Check availability**: Real-time calendar access
-2. **Offer times**: Present suitable options
-3. **Explain fees**: Clear pricing for service
-4. **Process payment**: Secure phone payment
-5. **Confirm booking**: Verify all details
+2. **Offer times**: Present suitable options  
+3. **Confirm time**: Lock in appointment slot
+4. **Explain fees**: Clear pricing for service
+5. **Take payment**: Process payment over phone
+6. **Verify payment**: Ensure payment successful
+7. **Confirm booking**: Send confirmation details
 
 ### Post-Call Tasks
 1. **Complete forms**: Finish dynamic assessment

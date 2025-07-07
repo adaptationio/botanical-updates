@@ -19,11 +19,11 @@ flowchart TD
     BasicDetails --> NoPayment[✓ No Payment Required]
     
     NoPayment --> BookingConfirmed[Booking Confirmed]
-    BookingConfirmed --> MiniIntake[Mini Intake Form]
+    BookingConfirmed --> MiniIntake[Mini Intake + Consent Form]
     
     MiniIntake --> BasicHealth[Basic Health Info]
-    BasicHealth --> ConsentSign[Digital Consent]
-    ConsentSign --> SubmitIntake[Submit Form]
+    BasicHealth --> ConsentSign[Digital Consent Signature]
+    ConsentSign --> SubmitIntake[Submit Form with Consent]
     
     SubmitIntake --> Notifications1[Receive Confirmations]
     Notifications1 --> WaitAppt[Wait for Appointment]
@@ -40,22 +40,23 @@ flowchart TD
     DetermineNext -->|GAPS Coach| RecGAPS[Recommend GAPS Coach]
     DetermineNext -->|Not Eligible| RecAlternative[Alternative Options]
     
-    RecDoctor --> PhoneBooking[Book Over Phone]
+    RecDoctor --> PhoneBooking[Book & Pay Over Phone]
     RecNurse --> PhoneBooking
     RecGAPS --> PhoneBooking
     RecAlternative --> ProvideResources[Provide Resources]
     
     PhoneBooking --> SelectPractitioner{Select Specific Practitioner}
-    SelectPractitioner -->|Doctor 1| BookDoc1[Book with Doctor 1]
-    SelectPractitioner -->|Doctor 2| BookDoc2[Book with Doctor 2]
-    SelectPractitioner -->|Nurse Practitioner| BookNurse[Book with Nurse]
-    SelectPractitioner -->|GAPS Coach| BookGAPS[Book GAPS Coach]
+    SelectPractitioner -->|Doctor 1| BookDoc1[Select Time with Doctor 1]
+    SelectPractitioner -->|Doctor 2| BookDoc2[Select Time with Doctor 2]
+    SelectPractitioner -->|Nurse Practitioner| BookNurse[Select Time with Nurse]
+    SelectPractitioner -->|GAPS Coach| BookGAPS[Select Time with GAPS Coach]
     
-    BookDoc1 --> ProcessPayment[Process Payment Over Phone]
-    BookDoc2 --> ProcessPayment
-    BookNurse --> ProcessPayment
-    BookGAPS --> ProcessPayment
+    BookDoc1 --> ConfirmTimePhone[Confirm Time Over Phone]
+    BookDoc2 --> ConfirmTimePhone
+    BookNurse --> ConfirmTimePhone
+    BookGAPS --> ConfirmTimePhone
     
+    ConfirmTimePhone --> ProcessPayment[Process Payment Over Phone]
     ProcessPayment --> SecondBookingConfirmed[Practitioner Booking Confirmed]
     SecondBookingConfirmed --> FullIntake[Full Intake Form Sent]
     FullIntake --> CompleteIntake[Complete Full Intake]
@@ -113,8 +114,9 @@ flowchart TD
 ### 1. Free Initial Consultation
 - **No Payment Required**: Initial consults are completely free
 - **Consultant-Led**: Professional consultant handles initial assessment
-- **Simplified Intake**: Smaller intake form for initial booking
+- **Mini Intake + Consent**: Combined smaller intake form with consent signature
 - **Triage Focus**: Determines best practitioner match
+- **Phone Booking & Payment**: Consultant books next appointment and takes payment over phone
 
 ### 2. Multiple Practitioners
 - **2 Doctors**: Choice between two medical doctors
