@@ -18,7 +18,10 @@ botanical_updates/
 │   │   ├── new-update/     # Ready for deployment
 │   │   └── proposed/       # Future vision
 │   ├── doctor/
-│   │   └── current/        # Doctor appointment workflow
+│   │   ├── current/        # Doctor appointment workflow
+│   │   └── new-update/     # Enhanced multi-practitioner flow
+│   ├── consultant/
+│   │   └── current/        # Consultant triage workflow
 │   ├── tech/
 │   │   ├── current/        # Current architecture
 │   │   ├── new-update/     # Ready for deployment
@@ -90,7 +93,19 @@ botanical_updates/
 - Follow-up coordination
 
 #### [New Update Doctor Flow](./flowcharts/doctor/new-update/appointment-flow.md)
-- *Ready for deployment - awaiting specifications*
+- Triage handover integration
+- Multi-practitioner referrals
+- Team collaboration features
+- Enhanced documentation
+
+### 🏥 Consultant Workflow
+
+#### [Consultant Triage Flow](./flowcharts/consultant/current/triage-flow.md)
+- Free initial consultations
+- Dynamic triage assessment
+- Practitioner matching
+- Phone booking process
+- Handover to healthcare team
 
 ### 💻 Technical Architecture Flows
 
@@ -135,11 +150,12 @@ botanical_updates/
 - Basic eligibility screening
 - Calendly integration
 
-#### [New Update Booking Flow](./flowcharts/booking/new-update/booking-flow.md)
-- Unified booking experience
-- Multiple provider support
-- Smart eligibility handling
-- Patient dashboard
+#### [New Update Patient Booking Flow](./flowcharts/booking/new-update/patient-booking-flow.md)
+- Free initial consultation with consultant
+- Triage to appropriate practitioner
+- Phone booking after assessment
+- Combined calendar for follow-ups
+- Multiple practitioners (2 doctors, nurse, GAPS coach)
 
 #### [Booking Analysis](./flowcharts/booking/analysis/improvements-summary.md)
 - Pain points identification
