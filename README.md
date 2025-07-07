@@ -25,7 +25,8 @@ botanical_updates/
 │   │   └── proposed/       # Future vision
 │   └── booking/
 │       ├── current/        # Current booking flow
-│       ├── improved/       # Improved booking flow
+│       ├── new-update/     # Ready for deployment
+│       ├── proposed/       # Future vision
 │       └── analysis/       # Pain points and improvements
 └── README.md
 ```
@@ -64,6 +65,9 @@ botanical_updates/
 - Manual intake form processing
 - LLM clinical notes generation
 
+#### [New Update Booking Admin Flow](./flowcharts/admin/new-update/booking-admin-flow.md)
+- *Ready for deployment - awaiting specifications*
+
 #### [New Update Admin Flow](./flowcharts/admin/new-update/admin-flow.md)
 - Role-based access control
 - Bulk operations
@@ -85,6 +89,9 @@ botanical_updates/
 - eRx prescription system
 - Follow-up coordination
 
+#### [New Update Doctor Flow](./flowcharts/doctor/new-update/appointment-flow.md)
+- *Ready for deployment - awaiting specifications*
+
 ### 💻 Technical Architecture Flows
 
 #### [Current Tech Flow](./flowcharts/tech/current/tech-flow.md)
@@ -98,6 +105,9 @@ botanical_updates/
 - AWS Lambda serverless processing
 - MediRecords EHR integration
 - Multi-step webhook architecture
+
+#### [New Update Booking Tech Flow](./flowcharts/tech/new-update/booking-tech-flow.md)
+- *Ready for deployment - awaiting specifications*
 
 #### [New Update Tech Flow](./flowcharts/tech/new-update/tech-flow.md)
 - Microservices architecture
@@ -125,7 +135,7 @@ botanical_updates/
 - Basic eligibility screening
 - Calendly integration
 
-#### [Improved Booking Flow](./flowcharts/booking/improved/booking-flow.md)
+#### [New Update Booking Flow](./flowcharts/booking/new-update/booking-flow.md)
 - Unified booking experience
 - Multiple provider support
 - Smart eligibility handling
