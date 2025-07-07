@@ -82,22 +82,23 @@ flowchart TD
 ```
 
 ## Current Stack
-- **Frontend**: HTML, CSS, JavaScript (jQuery)
-- **Backend**: PHP 7.4
+- **Frontend**: Webflow CMS (no-code platform)
+- **Backend**: PHP 7.4 (legacy systems)
 - **Database**: MySQL 5.7
 - **Cache**: Redis
 - **Web Server**: Apache
-- **CDN**: CloudFront
+- **CDN**: CloudFront + Webflow CDN
 - **Storage**: AWS S3
 
 ## Booking System Stack
-- **Booking Platform**: Calendly (Initial & Follow-up calendars)
+- **Website Platform**: Webflow CMS with embedded widgets
+- **Booking Platform**: Calendly (Initial & Follow-up calendars) embedded
+- **Forms Platform**: JotForm embedded for intake and consent
 - **Calendar Sync**: Office 365 with MS Graph API webhooks
 - **Payment**: Stripe integrated with Calendly
 - **Serverless**: AWS API Gateway + Lambda functions
 - **EHR Integration**: MediRecords API with custom Python library
-- **Forms**: Custom intake form post-booking
-- **Notifications**: Email (Stripe/Form), SMS (MediRecords)
+- **Notifications**: Email (Stripe/JotForm), SMS (MediRecords)
 
 ## Architecture Details
 - Traditional monolithic architecture

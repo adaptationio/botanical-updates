@@ -6,15 +6,15 @@ This flowchart represents the current technical architecture for the Botaniqal b
 ```mermaid
 flowchart TD
     %% User Interface Layer
-    User[User Browser] --> Website[Botaniqal Website]
-    Website --> BookingChoice{Booking Type}
+    User[User Browser] --> Webflow[Webflow Website]
+    Webflow --> BookingChoice{Booking Type}
     
-    BookingChoice -->|Initial $89| CalendlyInitial[Calendly Initial Consult]
-    BookingChoice -->|Follow-up $69| CalendlyFollowup[Calendly Follow-up]
+    BookingChoice -->|Initial $89| CalendlyEmbed1[Embedded Calendly Initial]
+    BookingChoice -->|Follow-up $69| CalendlyEmbed2[Embedded Calendly Follow-up]
     
     %% Calendly Layer
-    CalendlyInitial --> StripePayment1[Stripe Payment Gateway]
-    CalendlyFollowup --> StripePayment2[Stripe Payment Gateway]
+    CalendlyEmbed1 --> StripePayment1[Stripe Payment Gateway]
+    CalendlyEmbed2 --> StripePayment2[Stripe Payment Gateway]
     
     StripePayment1 --> CalendarCreate1[Create Calendar Event]
     StripePayment2 --> CalendarCreate2[Create Calendar Event]
@@ -50,19 +50,19 @@ flowchart TD
     CreateBooking --> MediCalendar[MediRecords Calendar]
     
     %% Initial Consult Additional Flow
-    CalendarCreate1 --> IntakeForm[Intake Form Page]
-    IntakeForm --> FillDetails[Patient Details Form]
+    CalendarCreate1 --> JotFormEmbed[Embedded JotForm Intake]
+    JotFormEmbed --> FillDetails[Patient Details Fields]
     FillDetails --> HealthQuestions[Health Questions]
-    HealthQuestions --> ConsentForm[Digital Consent Form]
-    ConsentForm --> SubmitForm[Submit Form]
+    HealthQuestions --> ConsentForm[Digital Consent Signature]
+    ConsentForm --> SubmitJotForm[Submit JotForm]
     
     %% Intake Form Processing
-    SubmitForm --> FormWebhook[Form Submission Webhook]
-    FormWebhook --> AWSGateway2[AWS API Gateway - Intake Endpoint]
+    SubmitJotForm --> JotFormWebhook[JotForm Webhook]
+    JotFormWebhook --> AWSGateway2[AWS API Gateway - Intake Endpoint]
     AWSGateway2 --> Lambda2[Lambda Function - Intake Processor]
     
-    Lambda2 --> ParseForm[Parse Form Data]
-    ParseForm --> MapFields[Map to MediRecords Fields]
+    Lambda2 --> ParseJotForm[Parse JotForm Data]
+    ParseJotForm --> MapFields[Map to MediRecords Fields]
     MapFields --> PythonLib2[Custom Python Library]
     PythonLib2 --> MediAPI2[MediRecords API]
     
@@ -84,9 +84,9 @@ flowchart TD
     CreateBooking --> CalendarInvite[Calendar Invite Email]
     CalendarInvite --> PatientCalendar[Patient Calendar]
     
-    SubmitForm --> FormEmails[Form Submission Emails]
-    FormEmails --> PatientCopy[Patient Form Copy]
-    FormEmails --> EnquiriesCopy[Enquiries Form Copy]
+    SubmitJotForm --> JotFormEmails[JotForm Notification Emails]
+    JotFormEmails --> PatientCopy[Patient Form Copy]
+    JotFormEmails --> EnquiriesCopy[Enquiries Form Copy]
     
     %% Data Stores
     MediCalendar -.-> MediDB[(MediRecords Database)]
@@ -96,30 +96,33 @@ flowchart TD
     
     %% Styling
     classDef user fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef webflow fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
     classDef calendly fill:#fff3e0,stroke:#e65100,stroke-width:2px
     classDef aws fill:#fff8e1,stroke:#f57c00,stroke-width:3px
     classDef medirecords fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     classDef notification fill:#ffebee,stroke:#c62828,stroke-width:2px
     classDef webhook fill:#f3e5f5,stroke:#6a1b9a,stroke-width:3px
-    classDef form fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+    classDef jotform fill:#e0f2f1,stroke:#00695c,stroke-width:3px
     classDef data fill:#f5f5f5,stroke:#616161,stroke-width:2px
     
-    class User,Website,BookingChoice user
-    class CalendlyInitial,CalendlyFollowup,StripePayment1,StripePayment2 calendly
+    class User user
+    class Webflow,BookingChoice webflow
+    class CalendlyEmbed1,CalendlyEmbed2,StripePayment1,StripePayment2 calendly
     class AWSGateway1,AWSGateway2,Lambda1,Lambda2,CloudWatch1,CloudWatch2 aws
     class MediAPI,MediAPI2,CheckUser,CreateUser,UpdateUser,CreateBooking,MediCalendar,UpdatePatient medirecords
-    class StripeEmail1,StripeEmail2,PatientEmail1,PatientEmail2,EnquiriesEmail1,EnquiriesEmail2,MediSMS,PatientSMS,CalendarInvite,FormEmails notification
-    class MSGraph,WebhookRenewal,FormWebhook webhook
-    class IntakeForm,FillDetails,HealthQuestions,ConsentForm,SubmitForm form
-    class MediDB,O365DB,CloudWatch1,CloudWatch2 data
+    class StripeEmail1,StripeEmail2,PatientEmail1,PatientEmail2,EnquiriesEmail1,EnquiriesEmail2,MediSMS,PatientSMS,CalendarInvite,JotFormEmails notification
+    class MSGraph,WebhookRenewal,JotFormWebhook webhook
+    class JotFormEmbed,FillDetails,HealthQuestions,ConsentForm,SubmitJotForm jotform
+    class MediDB,O365DB data
 ```
 
 ## Technical Components
 
 ### Frontend Layer
-- **Website**: Botaniqal website (www.botaniqal.com.au)
-- **Calendly Widgets**: Embedded for Initial ($89) and Follow-up ($69) bookings
-- **Intake Form**: Custom form for patient details post-booking
+- **Website Platform**: Webflow CMS (www.botaniqal.com.au)
+- **Calendly Integration**: Embedded widgets for Initial ($89) and Follow-up ($69) bookings
+- **Form System**: JotForm embedded for intake and consent collection
+- **Responsive Design**: Mobile-optimized Webflow templates
 
 ### Calendar Integration
 - **Calendly**: Two calendar types (Initial Consult, Follow-up)
@@ -142,26 +145,27 @@ flowchart TD
 - **Patient Management**: 
   - Checks existing patients by email
   - Creates new patients with placeholders
-  - Updates patient details from intake form
+  - Updates patient details from JotForm intake
 - **Booking Creation**: Syncs with MediRecords calendar
+- **Form Data Mapping**: JotForm fields mapped to MediRecords schema
 
 ### Data Flow Specifics
 
 #### Initial Consultation Flow
-1. User selects Initial Consult ($89) on website
-2. Calendly booking with Stripe payment
+1. User selects Initial Consult ($89) on Webflow site
+2. Embedded Calendly booking with Stripe payment
 3. Office 365 calendar event created
 4. MS Graph webhook triggers AWS Lambda
 5. Lambda processes booking data
 6. MediRecords patient/booking created
-7. User redirected to intake form
-8. Form submission triggers second Lambda
+7. User redirected to embedded JotForm intake
+8. JotForm submission triggers second Lambda
 9. Patient details updated in MediRecords
 10. Notifications sent (SMS, email, calendar)
 
 #### Follow-up Consultation Flow
-1. User selects Follow-up ($69) on website
-2. Calendly booking with Stripe payment
+1. User selects Follow-up ($69) on Webflow site
+2. Embedded Calendly booking with Stripe payment
 3. Office 365 calendar event created
 4. MS Graph webhook triggers AWS Lambda
 5. Lambda processes booking data
@@ -169,8 +173,11 @@ flowchart TD
 7. Notifications sent (SMS, email, calendar)
 
 ### Key Integration Points
+- **Webflow → Calendly**: Embedded widget integration
+- **Webflow → JotForm**: Embedded form integration
 - **Calendly ↔ Office 365**: Direct calendar sync
 - **Office 365 → AWS**: MS Graph webhooks
+- **JotForm → AWS**: Form submission webhooks
 - **AWS → MediRecords**: Custom Python library
 - **Stripe → Email**: Payment confirmations
 - **MediRecords → SMS**: Booking confirmations
@@ -178,8 +185,10 @@ flowchart TD
 ### Critical Requirements
 - **Calendar Sync**: MediRecords availability must match Calendly
 - **Webhook Renewal**: MS Graph webhooks renewed every few days
-- **Data Mapping**: Form fields mapped to MediRecords schema
+- **Data Mapping**: JotForm fields mapped to MediRecords schema
 - **Email Notifications**: Both patient and enquiries receive copies
+- **Embedding**: Calendly and JotForm must load properly in Webflow
+- **Mobile Responsiveness**: All embeds must work on mobile devices
 
 ### Security & Compliance
 - **HTTPS**: All API communications
