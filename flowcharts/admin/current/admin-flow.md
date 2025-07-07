@@ -15,6 +15,7 @@ flowchart TD
     Menu --> Users[User Management]
     Menu --> Content[Content Management]
     Menu --> Reports[Basic Reports]
+    Menu --> Bookings[Booking Management]
     
     %% Product Management
     Products --> ProdActions{Product Actions}
@@ -60,7 +61,23 @@ flowchart TD
     Inventory2 --> Export
     UserReport --> Export
     
+    %% Booking Management
+    Bookings --> BookingTasks{Booking Tasks}
+    BookingTasks --> AvailabilitySync[Sync Availability]
+    BookingTasks --> ProcessIntake[Process Intake Forms]
+    BookingTasks --> ConfirmBookings[Confirm Bookings]
+    BookingTasks --> ClinicalNotes[Generate Clinical Notes]
+    
+    AvailabilitySync --> MediRecords[MediRecords Setup]
+    ProcessIntake --> SharePoint[Save to SharePoint]
+    ConfirmBookings --> CheckList[Verification Checklist]
+    ClinicalNotes --> LLM[LLM Processing]
+    
     Export --> End([End Session])
+    MediRecords --> End
+    SharePoint --> End
+    CheckList --> End
+    LLM --> End
     
     %% Styling
     classDef startEnd fill:#ffebee,stroke:#c62828,stroke-width:2px
@@ -69,9 +86,9 @@ flowchart TD
     classDef action fill:#fff3e0,stroke:#e65100,stroke-width:2px
     
     class Start,End startEnd
-    class Dashboard,Products,Orders,Users,Content,Reports,OrderList,UserList process
-    class Menu,ProdActions,OrderActions,UserActions,ContentTypes,ReportTypes decision
-    class AddProd,EditProd,DeleteProd,Inventory,UpdateStatus,PrintInvoice,RefundOrder action
+    class Dashboard,Products,Orders,Users,Content,Reports,Bookings,OrderList,UserList,MediRecords,SharePoint process
+    class Menu,ProdActions,OrderActions,UserActions,ContentTypes,ReportTypes,BookingTasks decision
+    class AddProd,EditProd,DeleteProd,Inventory,UpdateStatus,PrintInvoice,RefundOrder,AvailabilitySync,ProcessIntake,ConfirmBookings,ClinicalNotes,CheckList,LLM action
 ```
 
 ## Current Features
@@ -80,6 +97,15 @@ flowchart TD
 - User account management
 - Static content editing
 - Basic reporting with CSV export
+- Manual booking management workflow
+- See [Detailed Booking Admin Flow](./booking-admin-flow.md)
+
+## Booking Management Features
+- Manual availability synchronization (MediRecords ↔ Calendly)
+- Email monitoring (enquiries@botaniqal.com.au)
+- Intake form processing and storage
+- Clinical notes generation via LLM
+- Manual booking confirmation process
 
 ## Limitations
 - No bulk operations
@@ -88,3 +114,7 @@ flowchart TD
 - No real-time updates
 - Manual inventory tracking
 - No role-based permissions
+- Manual availability synchronization
+- Manual clinical notes generation
+- Manual booking confirmation process
+- No automated workflow for bookings

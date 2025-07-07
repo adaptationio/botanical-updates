@@ -56,6 +56,12 @@ botanical_updates/
 - Manual processes
 - Limited reporting
 
+#### [Current Booking Admin Flow](./flowcharts/admin/current/booking-admin-flow.md)
+- Manual availability sync (MediRecords ↔ Calendly)
+- Email-based booking monitoring
+- Manual intake form processing
+- LLM clinical notes generation
+
 #### [New Update Admin Flow](./flowcharts/admin/new-update/admin-flow.md)
 - Role-based access control
 - Bulk operations
