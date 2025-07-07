@@ -138,11 +138,18 @@ botanical_updates/
 
 ### 📅 Booking Flow (Botaniqal Specific)
 
-#### [Comprehensive Booking System Flow](./flowcharts/booking/current/comprehensive-booking-flow.md)
-- Complete view across all stakeholders
+#### [Current Comprehensive Booking System Flow](./flowcharts/booking/current/comprehensive-booking-flow.md)
+- Complete view across all stakeholders (current system)
 - Shows integration points between systems
 - Identifies manual processes and pain points
 - Maps full journey from booking to completion
+
+#### [New Update Comprehensive Booking System Flow](./flowcharts/booking/new-update/comprehensive-booking-flow.md)
+- Enhanced multi-stakeholder view with 5 user types
+- Free initial consultation with consultant triage
+- Multi-practitioner booking system
+- Phone booking and payment integration
+- Dynamic forms and improved handover process
 
 #### [Current Patient Booking Flow](./flowcharts/booking/current/patient-booking-flow.md)
 - Two-step process (booking + intake)
