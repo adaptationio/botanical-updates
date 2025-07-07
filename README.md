@@ -21,7 +21,7 @@ botanical_updates/
 │   │   ├── current/        # Doctor appointment workflow
 │   │   └── new-update/     # Enhanced multi-practitioner flow
 │   ├── consultant/
-│   │   └── current/        # Consultant triage workflow
+│   │   └── new-update/     # Consultant triage workflow (new role)
 │   ├── tech/
 │   │   ├── current/        # Current architecture
 │   │   ├── new-update/     # Ready for deployment
@@ -100,11 +100,11 @@ botanical_updates/
 
 ### 🏥 Consultant Workflow
 
-#### [Consultant Triage Flow](./flowcharts/consultant/current/triage-flow.md)
+#### [New Update Consultant Triage Flow](./flowcharts/consultant/new-update/triage-flow.md)
 - Free initial consultations
 - Dynamic triage assessment
 - Practitioner matching
-- Phone booking process
+- Phone booking process with payment collection
 - Handover to healthcare team
 
 ### 💻 Technical Architecture Flows
