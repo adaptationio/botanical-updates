@@ -35,9 +35,17 @@ tmp/
 temp/
 *.tmp
 
-# TaskMaster
-.taskmaster/cache/
-.taskmaster/logs/
+# TaskMaster and AI Tools
+.taskmaster/
+CLAUDE.md
+AGENTS.md
+
+# AI Editor Rules
+.clinerules
+.cursor/
+.roo/
+.windsurf/
+.trae/
 
 # Testing
 coverage/
