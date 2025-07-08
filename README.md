@@ -6,63 +6,41 @@
 
 ## Project Overview
 
-This project contains comprehensive flow charts documenting the Botanical website's architecture across three perspectives (User Experience, Admin, Tech) and three implementation stages (Current, New Update, Proposed).
+This project contains comprehensive flow charts documenting the Botaniqal medical booking system architecture, including patient flows, practitioner workflows, technical architecture, and service expansion options.
 
 ## Directory Structure
 
 ```
 botanical_updates/
-├── REVIEW_SUMMARY.md       # Comprehensive review findings and action items
+├── SERVICES_AND_PRICING.md # Official pricing and service reference
+├── REVIEW_SUMMARY.md       # Comprehensive review findings
 ├── flowcharts/
-│   ├── user-experience/
-│   │   ├── current/        # Current user flow
-│   │   ├── new-update/     # Ready for deployment
-│   │   └── proposed/       # Future vision
 │   ├── admin/
 │   │   ├── current/        # Current admin flow
-│   │   ├── new-update/     # Ready for deployment
-│   │   └── proposed/       # Future vision
+│   │   └── new-update/     # Ready for deployment
 │   ├── doctor/
 │   │   ├── current/        # Doctor appointment workflow
 │   │   └── new-update/     # Enhanced multi-practitioner flow
 │   ├── consultant/
-│   │   └── new-update/     # Consultant triage workflow (new role)
+│   │   └── new-update/     # Consultant triage workflow
 │   ├── tech/
 │   │   ├── current/        # Current architecture
-│   │   ├── new-update/     # Ready for deployment
-│   │   └── proposed/       # Future vision
+│   │   └── new-update/     # Ready for deployment
 │   ├── booking/
 │   │   ├── current/        # Current booking flow
 │   │   ├── new-update/     # Ready for deployment
-│   │   ├── proposed/       # Future vision
 │   │   └── analysis/       # Pain points and improvements
 │   └── variations/
 │       ├── coming-soon/    # Weight loss active, others waitlist
 │       ├── fully-operational/ # All 5 services active
 │       └── service-funnels/   # Marketing funnel designs
-└── README.md
+└── docs/
+    ├── security/           # HIPAA compliance and security
+    ├── technical/          # API and deployment docs
+    └── integration/        # Third-party integrations
 ```
 
 ## Flow Chart Navigation
-
-### 🌱 User Experience Flows
-
-#### [Current User Flow](./flowcharts/user-experience/current/user-flow.md)
-- Basic e-commerce functionality
-- Standard browsing and checkout
-- Account-based system
-
-#### [New Update User Flow](./flowcharts/user-experience/new-update/user-flow.md)
-- AI-powered recommendations
-- Guest checkout option
-- Wishlist and comparison features
-- Interactive care guides
-
-#### [Proposed User Flow](./flowcharts/user-experience/proposed/user-flow.md)
-- Full AI assistant integration
-- AR/VR plant preview
-- Community features
-- Gamified experience
 
 ### 🔧 Admin Flows
 
@@ -78,7 +56,9 @@ botanical_updates/
 - LLM clinical notes generation
 
 #### [New Update Booking Admin Flow](./flowcharts/admin/new-update/booking-admin-flow.md)
-- *Ready for deployment - awaiting specifications*
+- Multi-practitioner calendar management
+- Enhanced form processing
+- Phone booking tracking
 
 #### [New Update Admin Flow](./flowcharts/admin/new-update/admin-flow.md)
 - Role-based access control
@@ -86,11 +66,6 @@ botanical_updates/
 - Advanced analytics
 - Marketing automation
 
-#### [Proposed Admin Flow](./flowcharts/admin/proposed/admin-flow.md)
-- AI-driven operations (75% automated)
-- Predictive analytics
-- VR collaboration
-- Self-improving system
 
 ### 👨‍⚕️ Doctor Workflow
 
@@ -179,17 +154,25 @@ botanical_updates/
 - Expected outcomes
 - Technical requirements
 
-## Key Improvements by Version
+## Key Improvements in New Update (Ready for Deployment)
 
-### New Update (Ready for Deployment)
-- **User**: Enhanced discovery, streamlined checkout, engagement features
-- **Admin**: Automation, analytics, role-based access
-- **Tech**: Microservices, containerization, improved performance
+### Patient Experience
+- Free initial consultation with triage
+- Multiple practitioner options
+- Phone booking support
+- Combined calendar for easy follow-ups
 
-### Proposed (Future Vision)
-- **User**: Immersive AR/VR, AI personalization, community platform
-- **Admin**: 90% automation, predictive operations, AI decision support
-- **Tech**: Edge AI, quantum computing, blockchain, sustainability focus
+### Admin Efficiency
+- Multi-calendar synchronization
+- Automated form processing
+- Phone booking tracking
+- Enhanced reporting
+
+### Technical Architecture
+- Multiple Calendly integrations
+- Dynamic form support
+- Webhook automation
+- Scalable microservices
 
 ## Viewing the Flowcharts
 
