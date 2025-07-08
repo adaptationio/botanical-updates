@@ -26,11 +26,15 @@ botanical_updates/
 │   │   ├── current/        # Current architecture
 │   │   ├── new-update/     # Ready for deployment
 │   │   └── proposed/       # Future vision
-│   └── booking/
-│       ├── current/        # Current booking flow
-│       ├── new-update/     # Ready for deployment
-│       ├── proposed/       # Future vision
-│       └── analysis/       # Pain points and improvements
+│   ├── booking/
+│   │   ├── current/        # Current booking flow
+│   │   ├── new-update/     # Ready for deployment
+│   │   ├── proposed/       # Future vision
+│   │   └── analysis/       # Pain points and improvements
+│   └── variations/
+│       ├── coming-soon/    # Weight loss active, others waitlist
+│       ├── fully-operational/ # All 5 services active
+│       └── service-funnels/   # Marketing funnel designs
 └── README.md
 ```
 
@@ -191,22 +195,61 @@ All flowcharts are created using Mermaid markdown syntax. To view them:
 3. **Online**: Use [Mermaid Live Editor](https://mermaid.live)
 4. **Other Tools**: Most modern markdown viewers support Mermaid
 
+## Service Expansion Variations
+
+### 🚀 New Service Offerings
+The team is evaluating expansion into additional services beyond Alternative Medicine and GAPS Coaching:
+
+#### [Service Expansion Overview](./flowcharts/variations/service-expansion-overview.md)
+- Weight Loss Program (Ready to launch)
+- Counseling Services (Planned)
+- Equine Therapy (Planned)
+- Service-specific funnels and pricing
+
+#### Variation 1: Coming Soon
+- **[Patient Booking Flow](./flowcharts/variations/coming-soon/patient-booking-flow.md)**: Weight loss active, others on waitlist
+- **[Technical Architecture](./flowcharts/variations/coming-soon/technical-architecture.md)**: Multi-service support
+- **[Admin Workflow](./flowcharts/variations/coming-soon/admin-workflow.md)**: Service-level management
+- **Benefits**: Lower risk, gradual expansion, market testing
+- **Timeline**: 4-6 weeks implementation
+
+#### Variation 2: Fully Operational
+- **[Patient Booking Flow](./flowcharts/variations/fully-operational/patient-booking-flow.md)**: All 5 services active
+- **Practitioners**: 7 total (adding counselor and equine therapist)
+- **Appointment Types**: 15+ variations
+- **Benefits**: Complete offering, integrated care, maximum revenue
+- **Timeline**: 8-12 weeks implementation
+
+#### [Comparison Matrix](./flowcharts/variations/comparison-matrix.md)
+- Side-by-side comparison of variations
+- Revenue projections
+- Risk assessment
+- Implementation phases
+- Decision framework
+
+### Marketing Funnels
+#### [Weight Loss Funnel Example](./flowcharts/variations/service-funnels/weight-loss-funnel.md)
+- Landing page structure
+- Conversion optimization
+- Trust building elements
+- Email nurture sequences
+
 ## Implementation Priority
 
 1. **Phase 1**: Deploy "New Update" features
-   - User experience enhancements
-   - Admin automation tools
-   - Microservices migration
+   - Free consultations with triage
+   - Multi-practitioner support
+   - Enhanced booking system
 
-2. **Phase 2**: Incremental "Proposed" features
-   - AI integration
+2. **Phase 2**: Service Expansion (Choose Variation)
+   - Launch weight loss program
+   - Implement waitlist or full launch
+   - Service-specific funnels
+
+3. **Phase 3**: Future Enhancements
    - Advanced analytics
-   - Community features
-
-3. **Phase 3**: Revolutionary features
-   - AR/VR experiences
-   - Blockchain integration
-   - Quantum-ready systems
+   - Integrated care packages
+   - Automated care planning
 
 ## Using These Flowcharts
 
