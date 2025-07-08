@@ -106,11 +106,11 @@ flowchart TD
     
     PhoneBookingMatrix --> ServiceSchedule{Service Scheduling}
     
-    ServiceSchedule -->|Alt Med 30min| BookAlt[Book Alternative Medicine]
-    ServiceSchedule -->|GAPS 45min| BookGAPS[Book GAPS Session]
-    ServiceSchedule -->|Weight 45min| BookWeight[Book Weight Loss]
-    ServiceSchedule -->|Counsel 60min| BookCounsel[Book Counseling]
-    ServiceSchedule -->|Equine 90min| BookEquine[Book Equine Session]
+    ServiceSchedule -->|Alt Med 15min| BookAlt[Book Alternative Medicine]
+    ServiceSchedule -->|GAPS 60min| BookGAPS[Book GAPS Session]
+    ServiceSchedule -->|Weight TBD| BookWeight[Book Weight Loss]
+    ServiceSchedule -->|Counsel TBD| BookCounsel[Book Counseling]
+    ServiceSchedule -->|Equine TBD| BookEquine[Book Equine Session]
     ServiceSchedule -->|Multiple| BookMultiple[Schedule Multiple Services]
     
     %% Payment Processing by Service
@@ -123,11 +123,11 @@ flowchart TD
     
     PaymentCalc --> PaymentProcess
     
-    PaymentProcess -->|Alt Med $69| ProcessPay1[Process Payment]
-    PaymentProcess -->|GAPS $69| ProcessPay2[Process Payment]
-    PaymentProcess -->|Weight $89| ProcessPay3[Process Payment]
-    PaymentProcess -->|Counsel $99| ProcessPay4[Process Payment]
-    PaymentProcess -->|Equine $129| ProcessPay5[Process Payment]
+    PaymentProcess -->|Alt Med $119| ProcessPay1[Process Payment]
+    PaymentProcess -->|GAPS $195| ProcessPay2[Process Payment]
+    PaymentProcess -->|Weight TBD| ProcessPay3[Process Payment]
+    PaymentProcess -->|Counsel TBD| ProcessPay4[Process Payment]
+    PaymentProcess -->|Equine TBD| ProcessPay5[Process Payment]
     
     ProcessPay1 --> AppointmentsConfirmed[All Appointments Confirmed]
     ProcessPay2 --> AppointmentsConfirmed
@@ -158,11 +158,11 @@ flowchart TD
     NextAppt --> ServiceGrid[Service Selection Grid]
     ServiceGrid --> ServiceOptions{Select Service & Duration}
     
-    ServiceOptions -->|Alt Med 30min| FollowAlt[Alternative Medicine]
-    ServiceOptions -->|GAPS 45min| FollowGAPS[GAPS Coaching]
-    ServiceOptions -->|Weight 45min| FollowWeight[Weight Loss]
-    ServiceOptions -->|Counsel 60min| FollowCounsel[Counseling]
-    ServiceOptions -->|Equine 90min| FollowEquine[Equine Therapy]
+    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine]
+    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching]
+    ServiceOptions -->|Weight TBD| FollowWeight[Weight Loss]
+    ServiceOptions -->|Counsel TBD| FollowCounsel[Counseling]
+    ServiceOptions -->|Equine TBD| FollowEquine[Equine Therapy]
     
     FollowAlt --> PractitionerSelect[Select Practitioner]
     FollowGAPS --> PractitionerSelect

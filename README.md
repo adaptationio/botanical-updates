@@ -1,5 +1,7 @@
 # Botanical Updates - Comprehensive Flow Charts
 
+> **📋 Note**: A comprehensive review has been completed. See [REVIEW_SUMMARY.md](./REVIEW_SUMMARY.md) for findings and action items.
+
 ## Project Overview
 
 This project contains comprehensive flow charts documenting the Botanical website's architecture across three perspectives (User Experience, Admin, Tech) and three implementation stages (Current, New Update, Proposed).
@@ -8,6 +10,7 @@ This project contains comprehensive flow charts documenting the Botanical websit
 
 ```
 botanical_updates/
+├── REVIEW_SUMMARY.md       # Comprehensive review findings and action items
 ├── flowcharts/
 │   ├── user-experience/
 │   │   ├── current/        # Current user flow
@@ -166,7 +169,7 @@ botanical_updates/
 - Triage to appropriate practitioner
 - Phone booking after assessment
 - Combined calendar for follow-ups
-- Multiple practitioners (2 doctors, nurse, GAPS coach)
+- Multiple practitioners (2 telehealth doctors, Dr Shivani in-person, nurse, GAPS coach, consultant)
 
 #### [Booking Analysis](./flowcharts/booking/analysis/improvements-summary.md)
 - Pain points identification
@@ -194,6 +197,18 @@ All flowcharts are created using Mermaid markdown syntax. To view them:
 2. **VS Code**: Install the "Markdown Preview Mermaid Support" extension
 3. **Online**: Use [Mermaid Live Editor](https://mermaid.live)
 4. **Other Tools**: Most modern markdown viewers support Mermaid
+
+## Current Pricing Structure
+
+### Active Services (New Update)
+- **Free Initial Consultation**: 20 minutes with consultant (triage assessment)
+- **Alternative Medicine**: 
+  - Initial: $119 (15 minutes) - Telehealth
+  - Follow-up: $79 (10 minutes) - Telehealth
+  - In-Person (Melbourne): $119/$79 (20/15 minutes)
+- **GAPS Diet Coaching**:
+  - Initial: $195 (60 minutes)
+  - Follow-up: $79 (15 minutes)
 
 ## Service Expansion Variations
 
