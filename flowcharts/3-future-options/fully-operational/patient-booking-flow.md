@@ -3,6 +3,11 @@
 ## Overview
 This flowchart shows the complete patient experience with all services active: Alternative Medicine, GAPS Coaching, Weight Loss, Counseling, and Equine Therapy.
 
+### Key Process Points:
+1. **Free Consultation**: Consultant uses dynamic forms during call - questions adapt based on patient's interests
+2. **Specialty Intake Forms**: Sent via email AFTER booking is confirmed - service-specific detailed forms
+3. **Follow-up Booking**: Direct service selection page, no patient portal required
+
 ```mermaid
 flowchart TD
     Start([User visits www.botaniqal.com.au]) --> Homepage[Comprehensive Service Homepage]
@@ -223,12 +228,12 @@ flowchart TD
 - Varied appointment durations by service
 - Tiered pricing structure
 
-### Follow-up Booking Features
-- Direct follow-up page (no portal required)
-- Service type selection upfront
-- Practitioner continuity options
-- Package deals for multiple services
-- Streamlined rebooking process
+### Follow-up Booking Process
+- Direct follow-up page (no patient portal)
+- Select service type first
+- Choose practitioner and time
+- Online payment for follow-ups
+- No additional forms needed for follow-ups
 
 ### Marketing & Funnels
 - 5 dedicated service funnels
