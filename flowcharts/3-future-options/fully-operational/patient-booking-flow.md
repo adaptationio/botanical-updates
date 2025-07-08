@@ -46,28 +46,24 @@ flowchart TD
     BasicDetails --> NoPayment[✓ Free Consultation]
     NoPayment --> InitialConfirmed[Booking Confirmed]
     
-    %% Enhanced Intake with All Services
-    InitialConfirmed --> MiniIntake[Mini Intake + Consent Form]
-    MiniIntake --> ServiceChecklist{Service Interests - Check All}
+    %% Free Consultation Process
+    InitialConfirmed --> ConsultantCall[Consultant Calls]
+    ConsultantCall --> DynamicForm{Dynamic Form Process}
     
-    ServiceChecklist --> CheckAlt[☐ Alternative Medicine]
-    ServiceChecklist --> CheckGAPS[☐ GAPS/Nutrition]
-    ServiceChecklist --> CheckWeight[☐ Weight Loss]
-    ServiceChecklist --> CheckCounsel[☐ Counseling/Mental Health]
-    ServiceChecklist --> CheckEquine[☐ Equine Therapy]
+    %% Dynamic form paths based on patient needs
+    DynamicForm -->|Weight Loss Interest| WeightLossQuestions[Weight Loss Specific Questions]
+    DynamicForm -->|Alt Medicine Interest| AltMedQuestions[Health History Questions]
+    DynamicForm -->|GAPS Interest| GAPSQuestions[Digestive Health Questions]
+    DynamicForm -->|Mental Health| MentalHealthQuestions[Counseling Readiness]
+    DynamicForm -->|Multiple Concerns| GeneralHealthQuestions[Comprehensive Assessment]
     
-    CheckAlt --> HealthBackground[Health Background]
-    CheckGAPS --> HealthBackground
-    CheckWeight --> HealthBackground
-    CheckCounsel --> HealthBackground
-    CheckEquine --> HealthBackground
+    WeightLossQuestions --> ConsultantFills[Consultant Fills Form During Call]
+    AltMedQuestions --> ConsultantFills
+    GAPSQuestions --> ConsultantFills
+    MentalHealthQuestions --> ConsultantFills
+    GeneralHealthQuestions --> ConsultantFills
     
-    HealthBackground --> ConsentSign[Digital Consent]
-    ConsentSign --> SubmitMini[Submit Initial Form]
-    
-    %% Enhanced Consultant Triage
-    SubmitMini --> ConsultantCall[Consultant Calls]
-    ConsultantCall --> MultiServiceAssess{Multi-Service Assessment}
+    ConsultantFills --> MultiServiceAssess{Multi-Service Assessment}
     
     MultiServiceAssess --> ReviewAll[Review All Interests]
     ReviewAll --> ComprehensiveTriage[Holistic Health Assessment]
@@ -135,28 +131,27 @@ flowchart TD
     ProcessPay4 --> AppointmentsConfirmed
     ProcessPay5 --> AppointmentsConfirmed
     
-    %% Service-Specific Intake Forms
-    AppointmentsConfirmed --> ServiceIntakes{Service-Specific Intakes}
+    %% Specialty Intake Forms (After Booking)
+    AppointmentsConfirmed --> IntakeEmail[Email with Specialty Forms]
+    IntakeEmail --> ServiceIntakes{Service-Specific Intake Forms}
     
-    ServiceIntakes -->|Alternative| MedicalIntake[Medical History Form]
-    ServiceIntakes -->|GAPS| NutritionIntake[Nutrition Assessment]
-    ServiceIntakes -->|Weight Loss| WeightIntake[Weight & Lifestyle Form]
-    ServiceIntakes -->|Counseling| MentalHealthIntake[Mental Health Assessment]
-    ServiceIntakes -->|Equine| EquineIntake[Equine Experience Form]
+    ServiceIntakes -->|Alternative| MedicalIntake[Detailed Medical History]
+    ServiceIntakes -->|GAPS| NutritionIntake[GAPS Nutrition Assessment]
+    ServiceIntakes -->|Weight Loss| WeightIntake[Weight Loss Questionnaire]
+    ServiceIntakes -->|Counseling| MentalHealthIntake[Mental Health History]
+    ServiceIntakes -->|Equine| EquineIntake[Equine Experience & Safety]
     
-    MedicalIntake --> SubmitForms[Submit All Forms]
+    MedicalIntake --> SubmitForms[Submit Before Appointment]
     NutritionIntake --> SubmitForms
     WeightIntake --> SubmitForms
     MentalHealthIntake --> SubmitForms
     EquineIntake --> SubmitForms
     
-    %% Follow-up Booking - Enhanced
-    Homepage -->|Returning Patient| FollowUpPortal[Patient Portal]
-    FollowUpPortal --> ServiceHistory[View Service History]
-    ServiceHistory --> NextAppt{Book Next Appointment}
+    %% Follow-up Booking - Direct
+    Homepage -->|Returning Patient| FollowUpPage[Follow-up Booking Page]
+    FollowUpPage --> ServiceSelection{Select Service Type}
     
-    NextAppt --> ServiceGrid[Service Selection Grid]
-    ServiceGrid --> ServiceOptions{Select Service & Duration}
+    ServiceSelection --> ServiceOptions{Choose Service & Duration}
     
     ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine]
     ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching]
@@ -219,19 +214,21 @@ flowchart TD
 - **Equine Therapist**: Equine therapy (when available)
 
 ### Enhanced Booking Features
-- Multi-service interest selection
-- Integrated care planning
+- Dynamic forms during free consultation (consultant fills based on patient needs)
+- Different question paths based on service interest (weight loss, GAPS, etc.)
+- Consultant-assisted form completion over phone
+- Specialty intake forms sent AFTER booking (service-specific)
+- Integrated care planning for multiple services
 - Care team approach for complex cases
-- Service-specific intake forms
-- Varied appointment durations
+- Varied appointment durations by service
 - Tiered pricing structure
 
-### Patient Portal Enhancements
-- Service history tracking
-- Multi-service booking
-- Practitioner continuity
+### Follow-up Booking Features
+- Direct follow-up page (no portal required)
+- Service type selection upfront
+- Practitioner continuity options
 - Package deals for multiple services
-- Progress tracking across services
+- Streamlined rebooking process
 
 ### Marketing & Funnels
 - 5 dedicated service funnels

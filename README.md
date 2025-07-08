@@ -1,8 +1,5 @@
 # Botanical Updates - Comprehensive Flow Charts
 
-> **📋 Note**: A comprehensive review has been completed. See [REVIEW_SUMMARY.md](./REVIEW_SUMMARY.md) for findings and action items.
-> 
-> **🧹 Cleanup Required**: See [CLEANUP_PLAN.md](./CLEANUP_PLAN.md) for detailed cleanup instructions and [CLEANUP_VISUAL_GUIDE.md](./CLEANUP_VISUAL_GUIDE.md) for what to delete vs keep.
 
 ## Project Overview
 
