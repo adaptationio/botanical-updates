@@ -29,7 +29,9 @@ This folder contains flowcharts for the **NEW** multi-practitioner booking syste
 - `booking/patient-booking-flow.md` - Triage-first patient journey
 
 ## New Features
-- Free initial consultation
+- Free initial consultation with dynamic intake forms
+- Consultant uses specialty forms during call (not sent to patient)
+- Different forms based on service interest (weight loss, GAPS, alt medicine)
 - Practitioner matching based on needs
 - Phone payment collection
 - Multiple service types (Alternative Medicine, GAPS, etc.)

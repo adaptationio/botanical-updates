@@ -5,6 +5,13 @@ This folder explores potential future expansions beyond the immediate new-update
 ## Overview
 These flowcharts represent **FUTURE POSSIBILITIES** for service expansion, not current or immediately planned features.
 
+### Key Process Consistency
+All variations maintain the same core process:
+- Free consultation with consultant-completed specialty intake forms
+- Dynamic form selection based on patient's service interests
+- Phone booking after assessment
+- Direct follow-up booking (no patient portal)
+
 ## Contents
 
 ### 🚀 Coming Soon Variation

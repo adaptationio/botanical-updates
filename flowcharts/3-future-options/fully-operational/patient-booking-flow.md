@@ -4,8 +4,8 @@
 This flowchart shows the complete patient experience with all services active: Alternative Medicine, GAPS Coaching, Weight Loss, Counseling, and Equine Therapy.
 
 ### Key Process Points:
-1. **Free Consultation**: Consultant uses dynamic forms during call - questions adapt based on patient's interests
-2. **Specialty Intake Forms**: Sent via email AFTER booking is confirmed - service-specific detailed forms
+1. **Free Consultation**: Consultant uses specialty intake forms during call - different forms based on patient's service interests
+2. **Dynamic Form Selection**: Consultant chooses appropriate intake form (weight loss, GAPS, etc.) based on initial discussion
 3. **Follow-up Booking**: Direct service selection page, no patient portal required
 
 ```mermaid
@@ -55,18 +55,18 @@ flowchart TD
     InitialConfirmed --> ConsultantCall[Consultant Calls]
     ConsultantCall --> DynamicForm{Dynamic Form Process}
     
-    %% Dynamic form paths based on patient needs
-    DynamicForm -->|Weight Loss Interest| WeightLossQuestions[Weight Loss Specific Questions]
-    DynamicForm -->|Alt Medicine Interest| AltMedQuestions[Health History Questions]
-    DynamicForm -->|GAPS Interest| GAPSQuestions[Digestive Health Questions]
-    DynamicForm -->|Mental Health| MentalHealthQuestions[Counseling Readiness]
-    DynamicForm -->|Multiple Concerns| GeneralHealthQuestions[Comprehensive Assessment]
+    %% Consultant selects appropriate intake form
+    DynamicForm -->|Weight Loss Interest| WeightLossIntake[Weight Loss Intake Form]
+    DynamicForm -->|Alt Medicine Interest| MedicalIntake[Medical History Intake]
+    DynamicForm -->|GAPS Interest| GAPSIntake[GAPS Nutrition Intake]
+    DynamicForm -->|Mental Health| MentalHealthIntake[Counseling Intake Form]
+    DynamicForm -->|Multiple Concerns| ComprehensiveIntake[Multi-Service Intake]
     
-    WeightLossQuestions --> ConsultantFills[Consultant Fills Form During Call]
-    AltMedQuestions --> ConsultantFills
-    GAPSQuestions --> ConsultantFills
-    MentalHealthQuestions --> ConsultantFills
-    GeneralHealthQuestions --> ConsultantFills
+    WeightLossIntake --> ConsultantFills[Consultant Completes During Call]
+    MedicalIntake --> ConsultantFills
+    GAPSIntake --> ConsultantFills
+    MentalHealthIntake --> ConsultantFills
+    ComprehensiveIntake --> ConsultantFills
     
     ConsultantFills --> MultiServiceAssess{Multi-Service Assessment}
     
@@ -136,21 +136,8 @@ flowchart TD
     ProcessPay4 --> AppointmentsConfirmed
     ProcessPay5 --> AppointmentsConfirmed
     
-    %% Specialty Intake Forms (After Booking)
-    AppointmentsConfirmed --> IntakeEmail[Email with Specialty Forms]
-    IntakeEmail --> ServiceIntakes{Service-Specific Intake Forms}
-    
-    ServiceIntakes -->|Alternative| MedicalIntake[Detailed Medical History]
-    ServiceIntakes -->|GAPS| NutritionIntake[GAPS Nutrition Assessment]
-    ServiceIntakes -->|Weight Loss| WeightIntake[Weight Loss Questionnaire]
-    ServiceIntakes -->|Counseling| MentalHealthIntake[Mental Health History]
-    ServiceIntakes -->|Equine| EquineIntake[Equine Experience & Safety]
-    
-    MedicalIntake --> SubmitForms[Submit Before Appointment]
-    NutritionIntake --> SubmitForms
-    WeightIntake --> SubmitForms
-    MentalHealthIntake --> SubmitForms
-    EquineIntake --> SubmitForms
+    %% Ready for appointments
+    AppointmentsConfirmed --> ReadyForServices[Ready for Appointments]
     
     %% Follow-up Booking - Direct
     Homepage -->|Returning Patient| FollowUpPage[Follow-up Booking Page]
@@ -176,9 +163,8 @@ flowchart TD
     OnlinePayment --> FollowUpBooked[Follow-up Booked]
     
     %% Completion
-    SubmitForms --> ReadyForServices[Ready for Appointments]
-    FollowUpBooked --> ReadyForServices
     ReadyForServices --> End([Service Journey Active])
+    FollowUpBooked --> End
     
     %% Styling
     classDef service fill:#e1f5fe,stroke:#01579b,stroke-width:3px
@@ -219,10 +205,11 @@ flowchart TD
 - **Equine Therapist**: Equine therapy (when available)
 
 ### Enhanced Booking Features
-- Dynamic forms during free consultation (consultant fills based on patient needs)
-- Different question paths based on service interest (weight loss, GAPS, etc.)
-- Consultant-assisted form completion over phone
-- Specialty intake forms sent AFTER booking (service-specific)
+- Specialty intake forms used by consultant during free consultation
+- Consultant selects appropriate form based on patient's interests
+- Different forms for: weight loss, GAPS, alternative medicine, counseling, equine therapy
+- Multi-service intake form for patients with multiple concerns
+- Consultant completes forms during phone call with patient input
 - Integrated care planning for multiple services
 - Care team approach for complex cases
 - Varied appointment durations by service

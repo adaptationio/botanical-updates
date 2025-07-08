@@ -44,16 +44,21 @@ flowchart TD
     BasicDetails --> NoPayment[✓ No Payment Required]
     NoPayment --> BookingConfirmed[Booking Confirmed]
     
-    BookingConfirmed --> MiniIntake[Mini Intake + Consent Form]
-    MiniIntake --> InterestArea[Indicate Service Interest]
-    InterestArea --> HealthInfo[Basic Health Info]
-    HealthInfo --> ConsentSign[Digital Consent Signature]
-    ConsentSign --> SubmitIntake[Submit Form]
+    BookingConfirmed --> ConsultantCall[Consultant Calls Patient]
     
-    %% Consultant Triage with Service Awareness
-    SubmitIntake --> ConsultantCall[Consultant Calls Patient]
-    ConsultantCall --> ReviewInterest[Review Patient's Interest]
-    ReviewInterest --> TriageAssessment[Comprehensive Assessment]
+    %% Consultant uses specialty intake forms
+    ConsultantCall --> FormSelection{Select Intake Form}
+    FormSelection -->|Weight Loss| WeightLossForm[Weight Loss Intake]
+    FormSelection -->|Alt Medicine| MedicalForm[Medical History Intake]
+    FormSelection -->|GAPS| GAPSForm[GAPS Nutrition Intake]
+    FormSelection -->|Multiple| GeneralForm[General Health Intake]
+    
+    WeightLossForm --> ConsultantCompletes[Consultant Fills During Call]
+    MedicalForm --> ConsultantCompletes
+    GAPSForm --> ConsultantCompletes
+    GeneralForm --> ConsultantCompletes
+    
+    ConsultantCompletes --> TriageAssessment[Comprehensive Assessment]
     
     TriageAssessment --> ServiceRecommend{Service Recommendation}
     
@@ -81,7 +86,6 @@ flowchart TD
     BookInPerson --> ProcessPayment
     
     ProcessPayment --> PractitionerBooked[Practitioner Appointment Confirmed]
-    PractitionerBooked --> FullIntake[Full Intake Form Sent]
     
     %% Follow-up Path with Service Types
     Homepage -->|Returning Patient| FollowUpBooking[Book Follow-up]
