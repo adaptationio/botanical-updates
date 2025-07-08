@@ -112,16 +112,17 @@ flowchart TD
 ## Key Changes in New Update
 
 ### 1. Free Initial Consultation
-- **No Payment Required**: Initial consults are completely free
+- **No Payment Required**: Initial consults are completely free (20 minutes)
 - **Consultant-Led**: Professional consultant handles initial assessment
 - **Mini Intake + Consent**: Combined smaller intake form with consent signature
 - **Triage Focus**: Determines best practitioner match
 - **Phone Booking & Payment**: Consultant books next appointment and takes payment over phone
 
 ### 2. Multiple Practitioners
-- **2 Doctors**: Choice between two medical doctors
-- **1 Nurse Practitioner**: Alternative medical professional
-- **1 GAPS Coach**: Specialized coaching option
+- **2 Doctors**: Telehealth alternative medicine
+- **Dr Shivani**: In-person consultations (Melbourne clinic)
+- **1 Nurse Practitioner**: Telehealth alternative medicine
+- **1 GAPS Coach**: Specialized nutrition coaching
 - **Individual Calendars**: Each practitioner has dedicated Calendly
 
 ### 3. Smart Triage Process

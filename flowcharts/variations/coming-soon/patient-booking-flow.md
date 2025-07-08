@@ -70,13 +70,15 @@ flowchart TD
     RecCombined --> PhoneBooking1
     
     PhoneBooking1 --> SelectServiceType{Select Service Type}
-    SelectServiceType -->|Alternative 30min $69| BookAltMed[Book Alternative Medicine]
-    SelectServiceType -->|GAPS 45min $69| BookGAPS[Book GAPS Session]
-    SelectServiceType -->|Weight Loss 45min $89| BookWeightLoss[Book Weight Loss]
+    SelectServiceType -->|Alternative 15min $119| BookAltMed[Book Alternative Medicine]
+    SelectServiceType -->|GAPS 60min $195| BookGAPS[Book GAPS Session]
+    SelectServiceType -->|Weight Loss TBD| BookWeightLoss[Book Weight Loss]
+    SelectServiceType -->|In-Person 20min $119| BookInPerson[Book Melbourne Clinic]
     
     BookAltMed --> ProcessPayment[Process Payment Over Phone]
     BookGAPS --> ProcessPayment
     BookWeightLoss --> ProcessPayment
+    BookInPerson --> ProcessPayment
     
     ProcessPayment --> PractitionerBooked[Practitioner Appointment Confirmed]
     PractitionerBooked --> FullIntake[Full Intake Form Sent]
@@ -100,13 +102,15 @@ flowchart TD
     SelectTimeSlot --> ServiceDetails[Confirm Service Details]
     ServiceDetails --> PaymentByService{Payment by Service Type}
     
-    PaymentByService -->|Alternative $69| PayOnline1[Pay Online]
-    PaymentByService -->|GAPS $69| PayOnline2[Pay Online]
-    PaymentByService -->|Weight Loss $89| PayOnline3[Pay Online]
+    PaymentByService -->|Alternative $79| PayOnline1[Pay Online]
+    PaymentByService -->|GAPS $79| PayOnline2[Pay Online]
+    PaymentByService -->|Weight Loss TBD| PayOnline3[Pay Online]
+    PaymentByService -->|In-Person $79| PayOnline4[Pay Online]
     
     PayOnline1 --> FollowUpConfirmed[Follow-up Confirmed]
     PayOnline2 --> FollowUpConfirmed
     PayOnline3 --> FollowUpConfirmed
+    PayOnline4 --> FollowUpConfirmed
     
     %% Completion
     FullIntake --> ReadyForAppt[Ready for Appointment]
@@ -134,29 +138,28 @@ flowchart TD
 
 ### Active Services
 1. **Alternative Medicine** - Fully operational
-   - 30-minute appointments
-   - $69 follow-ups
-   - Doctors & Nurse Practitioner
+   - Initial: 15 minutes, $119
+   - Follow-up: 10 minutes, $79
+   - Doctors & Nurse Practitioner (Telehealth)
+   - Dr Shivani (In-person Melbourne - 20 min initial, 15 min follow-up)
 
 2. **GAPS Diet Coaching** - Fully operational
-   - 45-minute appointments
-   - $69 follow-ups
+   - Initial: 60 minutes, $195
+   - Follow-up: 15 minutes, $79
    - GAPS Coach
 
 3. **Weight Loss Program** - Newly launched
-   - 45-minute appointments
-   - $89 follow-ups (premium pricing)
-   - Doctors, Nurse & GAPS Coach support
+   - Pricing and duration TBD
+   - Multiple practitioner support
 
 ### Coming Soon Services
 1. **Counseling** - Waitlist active
-   - Planned: 60-minute sessions
-   - Planned: $99 follow-ups
+   - Online counseling planned
+   - Pricing and duration TBD
    - Building interest list
 
 2. **Equine Therapy** - Waitlist active
-   - Planned: 90-minute sessions
-   - Planned: $129 follow-ups
+   - Pricing and duration TBD
    - Building interest list
 
 ### Booking Enhancements

@@ -8,7 +8,7 @@ flowchart TD
     Start([User visits www.botaniqal.com.au]) --> Choice{Booking Type}
     
     %% Initial Consultation Path
-    Choice -->|Initial Consult $89| Eligibility[Health & Wellness Assessment]
+    Choice -->|Initial Consult $119| Eligibility[Health & Wellness Assessment]
     
     Eligibility --> HealthCheck{Assessment Results}
     HealthCheck -->|Needs Specialized Care| SpecializedOptions[Show Specialized Care Options]
@@ -24,12 +24,12 @@ flowchart TD
     SpecialNote --> Calendar1
     
     %% Follow-up Path
-    Choice -->|Follow-up $69| Calendar2[Calendly Booking Page]
+    Choice -->|Follow-up $79| Calendar2[Calendly Booking Page]
     
     %% Booking Process for Initial
-    Calendar1 --> SelectTime1[Select Available Time with Dr. Dia]
+    Calendar1 --> SelectTime1[Select Available Time with Dr. Dia - 15 min]
     SelectTime1 --> Details1[Fill Patient Details]
-    Details1 --> Payment1[Pay $89.00]
+    Details1 --> Payment1[Pay $119.00]
     Payment1 --> Submit1[Submit Booking]
     Submit1 --> IntakeForm[Intake Form]
     
@@ -38,9 +38,9 @@ flowchart TD
     Consent --> SubmitIntake[Submit Intake Form]
     
     %% Booking Process for Follow-up
-    Calendar2 --> SelectTime2[Select Available Time with Dr. Dia]
+    Calendar2 --> SelectTime2[Select Available Time with Dr. Dia - 10 min]
     SelectTime2 --> Details2[Fill Patient Details]
-    Details2 --> Payment2[Pay $69.00]
+    Details2 --> Payment2[Pay $79.00]
     Payment2 --> Submit2[Submit Booking]
     
     %% Success Pages
@@ -82,22 +82,22 @@ flowchart TD
 
 ## Current Flow Details
 
-### Initial Consultation ($89.00)
+### Initial Consultation ($119.00 - 15 minutes)
 1. User selects "Initial Consult"
 2. Completes health & wellness assessment
 3. If specialized care needed → Offered multiple contact options
    - Call clinic directly (1800-XXX-XXX)
    - Submit quick contact form
    - Book anyway with special note for provider
-4. If standard care suitable → Calendly booking with Dr. Dia
-5. Fills details and pays $89.00
+4. If standard care suitable → Calendly booking with Dr. Dia (15 min slot)
+5. Fills details and pays $119.00
 6. Completes intake form with consent
 7. Receives confirmations (SMS, Email, Intake copy)
 
-### Follow-up Consultation ($69.00)
+### Follow-up Consultation ($79.00 - 10 minutes)
 1. User selects "Follow-up"
-2. Direct to Calendly booking
-3. Fills details and pays $69.00
+2. Direct to Calendly booking (10 min slot)
+3. Fills details and pays $79.00
 4. Receives confirmations (SMS, Email)
 
 ## Key Components

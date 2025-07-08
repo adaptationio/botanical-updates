@@ -197,20 +197,26 @@ flowchart TD
 ## Fully Operational Features
 
 ### Complete Service Portfolio
-1. **Alternative Medicine** (30 min, $69)
-2. **GAPS Diet Coaching** (45 min, $69)
-3. **Weight Loss Program** (45 min, $89)
-4. **Counseling Services** (60 min, $99)
-5. **Equine Therapy** (90 min, $129)
+1. **Alternative Medicine** 
+   - Initial: 15 min, $119 (Telehealth)
+   - Follow-up: 10 min, $79
+   - In-Person (Melbourne): 20 min initial, 15 min follow-up
+2. **GAPS Diet Coaching**
+   - Initial: 60 min, $195
+   - Follow-up: 15 min, $79
+3. **Weight Loss Program** (TBD)
+4. **Counseling Services** (Online - TBD)
+5. **Equine Therapy** (TBD)
 
-### Practitioner Team (7 Total)
-- **Consultant**: All initial assessments
-- **Doctor 1**: Alternative Medicine, Weight Loss
-- **Doctor 2**: Alternative Medicine, Counseling supervision
-- **Nurse Practitioner**: Alternative Medicine, Weight Loss
-- **GAPS Coach**: GAPS Diet, Weight Loss support
-- **Counselor**: Mental health and counseling
-- **Equine Therapist**: Equine-assisted therapy
+### Practitioner Team (8 Total)
+- **Consultant**: All initial assessments (20 min free)
+- **Doctor 1**: Alternative Medicine (Telehealth)
+- **Doctor 2**: Alternative Medicine (Telehealth)
+- **Dr Shivani**: In-Person (Melbourne clinic)
+- **Nurse Practitioner**: Alternative Medicine (Telehealth)
+- **GAPS Coach**: GAPS Diet coaching
+- **Counselor**: Online counseling (when available)
+- **Equine Therapist**: Equine therapy (when available)
 
 ### Enhanced Booking Features
 - Multi-service interest selection

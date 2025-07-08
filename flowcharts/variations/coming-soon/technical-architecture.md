@@ -38,44 +38,48 @@ flowchart TD
     ConsultantCal --> FreeConsult[initial-consult-free]
     
     AltMedCal --> AltTypes{Alt Med Types}
-    AltTypes --> AltFollow30[followup-alternative-30min]
-    AltTypes --> AltExtended45[followup-alternative-extended-45min]
+    AltTypes --> AltInitial15[initial-alternative-15min]
+    AltTypes --> AltFollow10[followup-alternative-10min]
+    AltTypes --> InPersonInitial20[initial-inperson-20min]
+    AltTypes --> InPersonFollow15[followup-inperson-15min]
     
     GAPSCal --> GAPSTypes{GAPS Types}
-    GAPSTypes --> GAPSStandard45[followup-gaps-45min]
-    GAPSTypes --> GAPSIntensive60[followup-gaps-intensive-60min]
+    GAPSTypes --> GAPSInitial60[initial-gaps-60min]
+    GAPSTypes --> GAPSFollow15[followup-gaps-15min]
     
     WeightCal --> WeightTypes{Weight Loss Types}
-    WeightTypes --> WeightStandard45[followup-weight-45min]
-    WeightTypes --> WeightCheck15[followup-weight-checkin-15min]
+    WeightTypes --> WeightTBD[weight-types-TBD]
     
     %% Booking Flow
     FreeConsult --> NoPaymentFlow[Skip Payment Gateway]
-    AltFollow30 --> PaymentGateway[Stripe Payment Gateway]
-    AltExtended45 --> PaymentGateway
-    GAPSStandard45 --> PaymentGateway
-    GAPSIntensive60 --> PaymentGateway
-    WeightStandard45 --> PaymentGateway
-    WeightCheck15 --> PaymentGateway
+    AltInitial15 --> PaymentGateway[Stripe Payment Gateway]
+    AltFollow10 --> PaymentGateway
+    InPersonInitial20 --> PaymentGateway
+    InPersonFollow15 --> PaymentGateway
+    GAPSInitial60 --> PaymentGateway
+    GAPSFollow15 --> PaymentGateway
+    WeightTBD --> PaymentGateway
     
     %% Payment Processing
     PaymentGateway --> PriceMatrix{Dynamic Pricing}
     
-    PriceMatrix -->|Alt 30min| Price69[Process $69]
-    PriceMatrix -->|Alt 45min| Price89[Process $89]
-    PriceMatrix -->|GAPS 45min| Price69_2[Process $69]
-    PriceMatrix -->|GAPS 60min| Price99[Process $99]
-    PriceMatrix -->|Weight 45min| Price89_2[Process $89]
-    PriceMatrix -->|Weight 15min| Price39[Process $39]
+    PriceMatrix -->|Alt Initial 15min| Price119[Process $119]
+    PriceMatrix -->|Alt Follow 10min| Price79[Process $79]
+    PriceMatrix -->|In-Person Initial 20min| Price119_2[Process $119]
+    PriceMatrix -->|In-Person Follow 15min| Price79_2[Process $79]
+    PriceMatrix -->|GAPS Initial 60min| Price195[Process $195]
+    PriceMatrix -->|GAPS Follow 15min| Price79_3[Process $79]
+    PriceMatrix -->|Weight TBD| PriceTBD[Process TBD]
     
     %% Calendar Integration
     NoPaymentFlow --> CreateEvent[Create Calendar Event]
-    Price69 --> CreateEvent
-    Price89 --> CreateEvent
-    Price69_2 --> CreateEvent
-    Price99 --> CreateEvent
-    Price89_2 --> CreateEvent
-    Price39 --> CreateEvent
+    Price119 --> CreateEvent
+    Price79 --> CreateEvent
+    Price119_2 --> CreateEvent
+    Price79_2 --> CreateEvent
+    Price195 --> CreateEvent
+    Price79_3 --> CreateEvent
+    PriceTBD --> CreateEvent
     
     CreateEvent --> O365Integration{Office 365 Integration}
     

@@ -55,33 +55,40 @@ Each service will have dedicated landing pages:
 ## Appointment Type Matrix
 
 ### Service Types & Durations
-| Service | Initial Consult | Follow-up | Duration | Price |
-|---------|----------------|-----------|----------|-------|
-| Alternative Medicine | Free (with consultant) | $69 | 30 min | Standard |
-| GAPS Coaching | Free (with consultant) | $69 | 45 min | Standard |
-| Weight Loss | Free (with consultant) | $89 | 45 min | Premium |
-| Counseling | Free (with consultant) | $99 | 60 min | Premium |
-| Equine Therapy | Free (with consultant) | $129 | 90 min | Specialty |
+| Service | Initial Consult | Follow-up | Initial Duration | Follow-up Duration |
+|---------|----------------|-----------|------------------|-------------------|
+| Free Consult (Consultant) | FREE | N/A | 20 min | N/A |
+| Alternative Medicine | $119 | $79 | 15 min | 10 min |
+| GAPS Coaching | $195 | $79 | 60 min | 15 min |
+| Weight Loss | TBD | TBD | TBD | TBD |
+| Counseling (Online) | TBD | TBD | TBD | TBD |
+| Equine Therapy | TBD | TBD | TBD | TBD |
+| In-Person (Dr Shivani - Melbourne) | $119 | $79 | 20 min | 15 min |
 
 ### Practitioner Specializations
-- **Doctor 1**: Alternative Medicine, Weight Loss
-- **Doctor 2**: Alternative Medicine, Counseling supervision
-- **Nurse Practitioner**: Alternative Medicine, Weight Loss
-- **GAPS Coach**: GAPS Diet, Weight Loss support
-- **Counselor** (new): Counseling services
+- **Doctor 1**: Alternative Medicine (Telehealth)
+- **Doctor 2**: Alternative Medicine (Telehealth)
+- **Dr Shivani**: In-Person consultations (Melbourne clinic)
+- **Nurse Practitioner**: Alternative Medicine (Telehealth)
+- **GAPS Coach**: GAPS Diet coaching
+- **Counselor** (new): Online counseling services
 - **Equine Therapist** (new): Equine therapy
-- **Consultant**: All initial assessments
+- **Consultant**: Free initial assessments (20 min)
 
 ## Technical Implementation
 
 ### Calendly Setup
 Each service type needs separate appointment types:
-- `initial-consult-free` (all services)
-- `followup-alternative-30min`
-- `followup-gaps-45min`
-- `followup-weightloss-45min`
-- `followup-counseling-60min`
-- `followup-equine-90min`
+- `free-consult-20min` (consultant triage)
+- `initial-alternative-15min` ($119)
+- `followup-alternative-10min` ($79)
+- `initial-gaps-60min` ($195)
+- `followup-gaps-15min` ($79)
+- `initial-inperson-20min` ($119)
+- `followup-inperson-15min` ($79)
+- Weight loss types (TBD)
+- Counseling types (TBD)
+- Equine therapy types (TBD)
 
 ### MediRecords Configuration
 - Create appointment types matching Calendly

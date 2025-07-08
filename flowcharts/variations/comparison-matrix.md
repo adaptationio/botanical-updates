@@ -8,9 +8,9 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 | Aspect | Current (New-Update) | Coming Soon | Fully Operational |
 |--------|---------------------|-------------|-------------------|
 | **Services** | 2 (Alt Med, GAPS) | 3 Active + 2 Waitlist | 5 Active |
-| **Practitioners** | 5 | 5 | 7 |
-| **Appointment Types** | 4 | 6 | 15+ |
-| **Price Points** | 2 ($69) | 3 ($69, $89) | 5 ($69-$129) |
+| **Practitioners** | 6 | 6 | 8 |
+| **Appointment Types** | 6 | 8+ | 15+ |
+| **Price Points** | 3 ($79, $119, $195) | 3+ ($79, $119, $195, TBD) | 5+ (Various) |
 | **Marketing Funnels** | 1 | 3 + 2 Waitlist | 5 |
 | **Technical Complexity** | Medium | Medium-High | High |
 | **Admin Overhead** | Medium | Medium-High | High |
@@ -21,12 +21,17 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 
 #### Coming Soon Variation
 **Active Services:**
-- Alternative Medicine (30 min, $69)
-- GAPS Diet Coaching (45 min, $69)
-- Weight Loss Program (45 min, $89)
+- Alternative Medicine 
+  - Initial: 15 min, $119 (Telehealth)
+  - Follow-up: 10 min, $79
+  - In-Person (Melbourne): 20/15 min, same price
+- GAPS Diet Coaching
+  - Initial: 60 min, $195
+  - Follow-up: 15 min, $79
+- Weight Loss Program (TBD pricing/duration)
 
 **Waitlist Services:**
-- Counseling (Coming Soon)
+- Counseling (Online - Coming Soon)
 - Equine Therapy (Coming Soon)
 
 **Benefits:**
@@ -42,11 +47,16 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 
 #### Fully Operational Variation
 **All Services Active:**
-- Alternative Medicine (30 min, $69)
-- GAPS Diet Coaching (45 min, $69)
-- Weight Loss Program (45 min, $89)
-- Counseling Services (60 min, $99)
-- Equine Therapy (90 min, $129)
+- Alternative Medicine 
+  - Initial: 15 min, $119 (Telehealth)
+  - Follow-up: 10 min, $79
+  - In-Person (Melbourne): 20/15 min, same price
+- GAPS Diet Coaching
+  - Initial: 60 min, $195
+  - Follow-up: 15 min, $79
+- Weight Loss Program (TBD)
+- Counseling Services (Online - TBD)
+- Equine Therapy (TBD)
 
 **Benefits:**
 - Complete service offering
@@ -94,14 +104,16 @@ Technical Stack:
 ### Practitioner Requirements
 
 #### Coming Soon
-- Uses existing 5 practitioners
+- Uses existing 6 practitioners (including Dr Shivani)
+- Consultant for free initial assessments
 - Weight loss can leverage current team
 - No immediate hiring needed
 
 #### Fully Operational
 - Requires 2 additional practitioners
-- Counselor (licensed mental health)
+- Counselor (licensed for online therapy)
 - Equine Therapist (certified)
+- Total of 8 practitioners
 - Higher payroll costs
 
 ### Marketing Approach
@@ -146,28 +158,32 @@ Technical Stack:
 ```
 Assumptions: 
 - 200 total appointments/month
-- Service mix: 50% Alt Med, 30% GAPS, 20% Weight
+- Mix of initial and follow-up appointments
 
 Revenue Breakdown:
-- Alt Med: 100 × $69 = $6,900
-- GAPS: 60 × $69 = $4,140
-- Weight: 40 × $89 = $3,560
-Total: $14,600/month
+- Alt Med Initial: 20 × $119 = $2,380
+- Alt Med Follow-up: 80 × $79 = $6,320
+- GAPS Initial: 10 × $195 = $1,950
+- GAPS Follow-up: 50 × $79 = $3,950
+- Weight Loss: 40 × TBD
+Total: $14,600+ /month (excluding weight loss)
 ```
 
 #### Fully Operational (Monthly)
 ```
 Assumptions:
 - 300 total appointments/month
-- Even service distribution
+- All services active
 
 Revenue Breakdown:
-- Alt Med: 80 × $69 = $5,520
-- GAPS: 60 × $69 = $4,140
-- Weight: 60 × $89 = $5,340
-- Counseling: 60 × $99 = $5,940
-- Equine: 40 × $129 = $5,160
-Total: $26,100/month
+- Alt Med Initial: 30 × $119 = $3,570
+- Alt Med Follow-up: 100 × $79 = $7,900
+- GAPS Initial: 15 × $195 = $2,925
+- GAPS Follow-up: 60 × $79 = $4,740
+- Weight Loss: 50 × TBD
+- Counseling: 30 × TBD
+- Equine: 15 × TBD
+Total: $19,135+ /month (excluding TBD services)
 ```
 
 ### Risk Assessment
