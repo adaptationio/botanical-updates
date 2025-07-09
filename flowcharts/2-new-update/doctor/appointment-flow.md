@@ -70,7 +70,7 @@ flowchart TD
     ReferralProcess --> ReferralType{Referral Type}
     ReferralType -->|Specialist| SpecialistReferral[Create Specialist Referral]
     ReferralType -->|Allied Health| AlliedReferral[Allied Health Referral]
-    ReferralType -->|GAPS Coach| InternalReferral[Refer to Ramona (GAPS Coach)]
+    ReferralType -->|GAPS Coach| InternalReferral[Refer to Ramona - GAPS Coach]
     
     %% Follow-up Planning
     SendSMS --> FollowUpPlan[Plan Follow-up]
@@ -89,7 +89,7 @@ flowchart TD
     
     ScheduleType -->|With Me| BookFollowUp[Book Follow-up]
     ScheduleType -->|Other Practitioner| CrossRefer[Cross-refer to Colleague]
-    ScheduleType -->|Ramona| CoachRefer[Refer to Ramona (GAPS Coach)]
+    ScheduleType -->|Ramona| CoachRefer[Refer to Ramona - GAPS Coach]
     
     BookFollowUp --> CompleteNotes
     CrossRefer --> NotifyColleague[Notify Other Practitioner]
@@ -173,7 +173,7 @@ flowchart TD
 - **With Consultant**: Review triage recommendations
 - **With Other Doctors**: Cross-referral for specialty needs
 - **With Nurse Practitioner**: Routine care handover
-- **With Ramona (GAPS Coach)**: Lifestyle intervention referrals
+- **With Ramona - GAPS Coach**: Lifestyle intervention referrals
 - **With Admin**: Booking and scheduling support
 
 ## Enhanced Features
