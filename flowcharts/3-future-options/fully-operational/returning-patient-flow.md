@@ -50,14 +50,9 @@ graph TD
     TimeSelect --> ReviewDetails[Review Appointment]
     ReviewDetails --> Payment[Online Payment]
     
-    Payment --> PayType{Payment Method}
-    PayType --> Card[Credit Card]
-    PayType --> Saved[Saved Payment]
-    PayType --> Alternative[Other Methods]
+    Payment --> Card[Credit Card Payment via Stripe]
     
     Card --> Confirmed[Booking Confirmed]
-    Saved --> Confirmed
-    Alternative --> Confirmed
     
     %% Confirmation
     Confirmed --> Notifications[Email + SMS Confirmation]

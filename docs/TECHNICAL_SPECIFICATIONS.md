@@ -386,7 +386,7 @@ Request:
   "appointmentType": "initial",
   "scheduledTime": "2024-02-01T14:00:00Z",
   "paymentCollected": true,
-  "paymentMethod": "credit_card_phone",
+  "paymentMethod": "credit_card_phone", // Credit card only - no other payment methods accepted
   "amountCollected": 119.00,
   "notes": "Patient prefers afternoon appointments"
 }

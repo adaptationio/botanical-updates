@@ -121,7 +121,7 @@
 
 ### Integrations
 - Calendar APIs (Google, Outlook)
-- Payment gateways (Stripe, PayPal)
+- Payment gateway (Stripe - credit card only)
 - SMS/Email services (Twilio, SendGrid)
 - Telehealth platforms
 

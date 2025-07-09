@@ -411,7 +411,7 @@ CREATE TABLE payment_transactions (
     currency VARCHAR(3) DEFAULT 'AUD',
     
     -- Payment Method
-    payment_method VARCHAR(50) NOT NULL, -- 'card', 'bank_transfer', 'cash', 'insurance'
+    payment_method VARCHAR(50) NOT NULL, -- 'credit_card' only
     payment_provider VARCHAR(50), -- 'stripe', 'manual', etc.
     
     -- External References

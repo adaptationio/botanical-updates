@@ -87,11 +87,11 @@ graph TD
 - Availability optimization
 - Specialty matching
 
-### 💰 Flexible Payment Options
-- Phone payment for new patients
-- Online payment for follow-ups
+### 💰 Payment Processing
+- Credit card only (no other payment methods)
+- Phone collection for new patients
+- Online payment via Stripe/Calendly for follow-ups
 - Service-specific pricing
-- Package deals available
 
 ### 📱 Booking Channels
 - Service landing pages → Free consultation

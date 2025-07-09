@@ -44,15 +44,9 @@ graph TD
     ProceedPayment --> CalcTotal[Calculate Total]
     CalcTotal --> ReviewCharges[Review Charges with Patient]
     
-    ReviewCharges --> PayMethod{Payment Method}
-    
-    PayMethod -->|Credit Card| CCProcess[Process Card]
-    PayMethod -->|HSA/FSA| HSAProcess[Process HSA]
-    PayMethod -->|Payment Plan| PlanSetup[Setup Plan]
+    ReviewCharges --> CCProcess[Process Credit Card]
     
     CCProcess --> PaySuccess{Payment Success?}
-    HSAProcess --> PaySuccess
-    PlanSetup --> PaySuccess
     
     PaySuccess -->|No| PayIssue[Resolve Issue]
     PayIssue --> PayMethod
@@ -141,8 +135,8 @@ Service 2: GAPS Coaching - $195 AUD
 Total: $314 AUD
 ```
 
-#### Payment Options
-- **Credit/Debit Cards** - Processed immediately
+#### Payment Method
+- **Credit Cards Only** - Processed immediately over phone
 - **HSA/FSA Cards** - Health savings accounts
 - **Payment Plans** - For amounts over $200 AUD
 - **Insurance** - If applicable (rare)

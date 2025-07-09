@@ -4,7 +4,7 @@
 - **Initial Consultation**: $89 AUD (15 minutes)
 - **Follow-up Consultation**: $69 AUD (10 minutes)
 - **Single Provider**: Dr Dia only
-- **Payment Method**: Online via Calendly/Stripe
+- **Payment Method**: Credit card online via Calendly/Stripe
 
 ## New System Pricing (What needs to be implemented)
 
@@ -55,9 +55,10 @@ New Setup:
 ```
 
 ### Payment Collection Change
-- **Current**: Automated via Calendly Stripe integration
-- **New**: Manual collection over phone by consultant
+- **Current**: Automated credit card payment via Calendly/Stripe integration
+- **New**: Credit card collection over phone by consultant OR online via Stripe/Calendly
 - **Reason**: Allows triage before payment commitment
+- **Payment Methods**: Credit card only (no cash, check, or other payment methods)
 
 ### Database Updates Required
 ```sql

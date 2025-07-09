@@ -78,7 +78,7 @@ flowchart TD
     PatientSelects --> ConfirmDetails[Confirm Appointment Details]
     ConfirmDetails --> ExplainFees[Explain Fees for Service]
     ExplainFees --> ProcessPayment[Take Payment Over Phone]
-    ProcessPayment --> VerifyPayment[Verify Payment Processed]
+    ProcessPayment --> VerifyPayment[Verify Credit Card Payment Processed]
     
     VerifyPayment --> BookingComplete[Practitioner Booking Confirmed]
     

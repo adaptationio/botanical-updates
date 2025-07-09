@@ -14,7 +14,7 @@
 | Pay $89 AUD upfront (initial) | Free 20-min consultation first |
 | Book with Dr. Dia only | 6 practitioners to choose from |
 | Fill intake form after booking | Assessment during consultation |
-| Online payment only | Phone payment option available |
+| Credit card online only (Stripe) | Credit card via phone or online (Stripe/Calendly) |
 
 ### Technical Changes
 
@@ -22,7 +22,7 @@
 |-----------|--------|-------|
 | **Calendars** | 1 (Dr. Dia) | 7 (Triage + 6 practitioners) |
 | **Booking Flow** | Direct → Pay → Form | Free Consult → Triage → Phone Book |
-| **Payment** | Calendly integration | Phone collection by consultant |
+| **Payment** | Calendly/Stripe integration | Credit card collection by phone or online |
 | **Database** | Single doctor field | Multi-practitioner support |
 
 ## 🏗️ What Needs Building

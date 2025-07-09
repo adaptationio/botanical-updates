@@ -45,7 +45,7 @@
 - **Follow-up**: $79 AUD for 10 minutes
 - **Providers**: Dr Dia, Dr. Shivani (Doctor 2 - also offers in-person), Nurse Practitioner
 - **Booking**: After consultant triage or direct for follow-ups
-- **Payment**: Processed during phone booking or online
+- **Payment**: Credit card only (collected over phone during booking or online via Stripe)
 
 ### Alternative Medicine (Dr. Shivani - Telehealth & In-Person Melbourne)
 - **Initial**: $119 AUD for 20 minutes
@@ -53,7 +53,7 @@
 - **Provider**: Dr. Shivani (Doctor 2)
 - **Location**: Offers both telehealth AND Melbourne clinic appointments
 - **Booking**: After consultant triage or direct for follow-ups
-- **Payment**: Processed during phone booking or online
+- **Payment**: Credit card only (collected over phone during booking or online via Stripe)
 
 ### GAPS Diet Coaching
 - **Initial**: $195 AUD for 60 minutes
@@ -61,18 +61,21 @@
 - **Provider**: Ramona (GAPS Coach)
 - **Focus**: Gut and Psychology/Physiology Syndrome dietary protocol
 - **Booking**: After consultant triage or direct for follow-ups
-- **Payment**: Processed during phone booking or online
+- **Payment**: Credit card only (collected over phone during booking or online via Stripe)
 
 ## Booking Process Overview
 
 1. **New Patients**: Book free consultation → Triage → Practitioner booking
 2. **Returning Patients**: Direct booking through combined calendar
-3. **Payment**: Initial bookings via phone, follow-ups online
+3. **Payment**: Credit card only - Initial bookings via phone, follow-ups online (Stripe/Calendly)
 4. **Forms**: Mini intake (initial), Full intake (before practitioner)
 
 ## Important Notes
 
 - All prices are in AUD
+- **Payment Method**: Credit card only (no cash, check, or other payment methods accepted)
+- **Online Payments**: Processed securely via Stripe integration with Calendly
+- **Phone Payments**: Credit card details collected securely over the phone by consultant
 - Telehealth appointments via secure video platform
 - Dr. Shivani (Doctor 2) offers both telehealth and in-person appointments in Melbourne
 - Medicare rebates may apply (check with practitioner)

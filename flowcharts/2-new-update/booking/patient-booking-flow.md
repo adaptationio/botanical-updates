@@ -116,7 +116,7 @@ flowchart TD
 - **Consultant-Led**: Professional consultant handles initial assessment
 - **Mini Intake + Consent**: Combined smaller intake form with consent signature
 - **Triage Focus**: Determines best practitioner match
-- **Phone Booking & Payment**: Consultant books next appointment and takes payment over phone
+- **Phone Booking & Payment**: Consultant books next appointment and takes credit card payment over phone
 
 ### 2. Multiple Practitioners
 - **Dr Dia**: Telehealth alternative medicine
