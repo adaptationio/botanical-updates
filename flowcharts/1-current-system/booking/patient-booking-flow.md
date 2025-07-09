@@ -82,7 +82,7 @@ flowchart TD
 
 ## Current Flow Details
 
-### Initial Consultation ($119.00 AUD - 15 minutes)
+### Initial Consultation ($89.00 AUD - 15 minutes)
 1. User selects "Initial Consult"
 2. Completes health & wellness assessment
 3. If specialized care needed → Offered multiple contact options
@@ -90,14 +90,14 @@ flowchart TD
    - Submit quick contact form
    - Book anyway with special note for provider
 4. If standard care suitable → Calendly booking with Dr. Dia (15 min slot)
-5. Fills details and pays $119.00 AUD
+5. Fills details and pays $89.00 AUD
 6. Completes intake form with consent
 7. Receives confirmations (SMS, Email, Intake copy)
 
-### Follow-up Consultation ($79.00 AUD - 10 minutes)
+### Follow-up Consultation ($69.00 AUD - 10 minutes)
 1. User selects "Follow-up"
 2. Direct to Calendly booking (10 min slot)
-3. Fills details and pays $79.00 AUD
+3. Fills details and pays $69.00 AUD
 4. Receives confirmations (SMS, Email)
 
 ## Key Components

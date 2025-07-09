@@ -132,9 +132,16 @@ All flowcharts are created using Mermaid markdown syntax. To view them:
 
 ## Current Pricing Structure
 
-### Active Services (New Update)
+### Active Services (Current System)
+- **Alternative Medicine with Dr Dia**: 
+  - Initial: $89 AUD (15 minutes) - Telehealth only
+  - Follow-up: $69 AUD (10 minutes) - Telehealth only
+  - Single practitioner: Dr Dia
+  - Direct booking via Calendly/Stripe
+
+### Planned Services (New Update - To Be Implemented)
 - **Free Initial Consultation**: 20 minutes with consultant (triage assessment)
-- **Alternative Medicine**: 
+- **Alternative Medicine (Multi-practitioner)**: 
   - Initial: $119 AUD (15 minutes) - Telehealth
   - Follow-up: $79 AUD (10 minutes) - Telehealth
   - In-Person (Melbourne): $119 AUD/$79 AUD (20/15 minutes)

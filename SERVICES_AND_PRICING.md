@@ -3,33 +3,55 @@
 > **Last Updated**: July 8, 2025  
 > **Status**: This is the authoritative source for all service offerings and pricing
 
-## Current Services & Pricing
+## CURRENT SYSTEM (What exists now)
 
+### Active Service
+| Service | Initial Consult | Follow-up | Provider | Payment Method |
+|---------|----------------|-----------|----------|----------------|
+| **Alternative Medicine** | $89 AUD (15 min) | $69 AUD (10 min) | Dr Dia only | Credit card via Calendly/Stripe |
+
+## NEW SYSTEM (To be implemented)
+
+### Planned Services & Pricing
 | Service | Initial Consult | Follow-up | Provider | Status |
-|---------|----------------|-----------|----------|---------|
-| **Free Consultation** | FREE (20 min) | N/A | Ramona (GAPS Coach)* | ✅ Active |
-| **Alternative Medicine** | $119 AUD (15 min) | $79 AUD (10 min) | Dr Dia, Nurse Practitioner | ✅ Active |
-| **Alternative Medicine** | $119 AUD (20 min) | $79 AUD (15 min) | Dr. Shivani - Telehealth & Melbourne | ✅ Active |
-| **GAPS Diet Coaching** | $195 AUD (60 min) | $79 AUD (15 min) | Ramona (GAPS Coach) | ✅ Active |
-| **Weight Loss Program** | TBD | TBD | Multiple | 🔜 Coming Soon |
-| **Online Counseling** | TBD | TBD | Counselor | 🔜 Coming Soon |
-| **Equine Therapy** | TBD | TBD | Equine Therapist | 🔜 Coming Soon |
+|---------|----------------|-----------|----------|---------|  
+| **Free Consultation** | FREE (20 min) | N/A | Ramona (GAPS Coach)* | 📋 Planned |
+| **Alternative Medicine** | $119 AUD (15 min) | $79 AUD (10 min) | Dr Dia, Nurse Practitioner | 📋 Planned |
+| **Alternative Medicine** | $119 AUD (20 min) | $79 AUD (15 min) | Dr. Shivani - Telehealth & Melbourne | 📋 Planned |
+| **GAPS Diet Coaching** | $195 AUD (60 min) | $79 AUD (15 min) | Ramona (GAPS Coach) | 📋 Planned |
+| **Weight Loss Program** | TBD | TBD | Multiple | 🔮 Future |
+| **Online Counseling** | TBD | TBD | Counselor | 🔮 Future |
+| **Equine Therapy** | TBD | TBD | Equine Therapist | 🔮 Future |
 
-## Current Practitioners (6 Total)
+## CURRENT PRACTITIONER
 
-1. **Consultant** - Free initial assessments and triage (role currently performed by Ramona)
+- **Dr Dia** - Telehealth alternative medicine only (current system)
+
+## PLANNED PRACTITIONERS (New System - 6 Total)
+
+1. **Consultant** - Free initial assessments and triage (role to be performed by Ramona)
 2. **Dr Dia** - Telehealth alternative medicine & weight loss
 3. **Dr. Shivani** - Telehealth & In-person Melbourne clinic (alternative medicine & weight loss)
 4. **Nurse Practitioner** - Telehealth alternative medicine & weight loss
-5. **Ramona (GAPS Coach)** - Nutrition and GAPS diet specialist (currently also performing free consultations)
+5. **Ramona (GAPS Coach)** - Nutrition and GAPS diet specialist (also performing free consultations)
 6. *(One practitioner position)*
 
-## Future Practitioners (When Fully Operational: 8 Total)
+## FUTURE PRACTITIONERS (When Fully Operational: 8 Total)
 
-7. **Counselor** - Online mental health services (Coming Soon)
-8. **Equine Therapist** - Equine-assisted therapy (Coming Soon)
+7. **Counselor** - Online mental health services
+8. **Equine Therapist** - Equine-assisted therapy
 
-## Service Details
+## CURRENT SERVICE DETAILS
+
+### Alternative Medicine (Dr Dia - Current System)
+- **Initial**: $89 AUD for 15 minutes
+- **Follow-up**: $69 AUD for 10 minutes
+- **Provider**: Dr Dia only
+- **Booking**: Direct via Calendly
+- **Payment**: Credit card via Calendly/Stripe integration
+- **Location**: Telehealth only
+
+## NEW SYSTEM SERVICE DETAILS (To be implemented)
 
 ### Free Initial Consultation
 - **Duration**: 20 minutes
@@ -40,9 +62,9 @@
 - **Payment**: None required
 - **Note**: This role may transition to a dedicated consultant in future
 
-### Alternative Medicine (Telehealth)
-- **Initial**: $119 AUD for 15 minutes
-- **Follow-up**: $79 AUD for 10 minutes
+### Alternative Medicine (Telehealth - New System)
+- **Initial**: $119 AUD for 15 minutes (+$30 from current)
+- **Follow-up**: $79 AUD for 10 minutes (+$10 from current)
 - **Providers**: Dr Dia, Dr. Shivani (Doctor 2 - also offers in-person), Nurse Practitioner
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Credit card only (collected over phone during booking or online via Stripe)
@@ -63,8 +85,14 @@
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Credit card only (collected over phone during booking or online via Stripe)
 
-## Booking Process Overview
+## Booking Process
 
+### CURRENT SYSTEM
+1. **All Patients**: Direct booking via Calendly with Dr Dia
+2. **Payment**: Credit card via Calendly/Stripe at time of booking
+3. **Forms**: Full intake form after payment
+
+### NEW SYSTEM (To be implemented)
 1. **New Patients**: Book free consultation → Triage → Practitioner booking
 2. **Returning Patients**: Direct booking through combined calendar
 3. **Payment**: Credit card only - Initial bookings via phone, follow-ups online (Stripe/Calendly)
@@ -83,7 +111,7 @@
 - 24-hour cancellation policy applies
 - *Ramona (GAPS Coach) is temporarily handling free consultations (this may change in future)
 
-## Service Provider Matrix
+## Service Provider Matrix (NEW SYSTEM)
 
 | Service | Providers |
 |---------|----------|
