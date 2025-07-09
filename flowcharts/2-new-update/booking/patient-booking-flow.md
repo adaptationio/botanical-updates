@@ -29,7 +29,7 @@ flowchart TD
     Notifications1 --> WaitAppt[Wait for Appointment]
     
     %% Consultant Appointment
-    WaitAppt --> ConsultantCall[Consultant/Ramona Calls Patient<br/>(Ramona (GAPS Coach) currently<br/>handles free consults)]
+    WaitAppt --> ConsultantCall[Consultant/Ramona Calls Patient<br/>Ramona - GAPS Coach currently<br/>handles free consults]
     ConsultantCall --> Triage[Triage Assessment]
     
     Triage --> DynamicForm[Complete Dynamic Intake Form<br/>Consultant fills during call]
@@ -46,7 +46,7 @@ flowchart TD
     
     DetermineNext -->|Doctor Needed| RecDoctor[Recommend Doctor]
     DetermineNext -->|Nurse Practitioner| RecNurse[Recommend Nurse Practitioner]
-    DetermineNext -->|GAPS Coach| RecGAPS[Recommend Ramona (GAPS Coach)]
+    DetermineNext -->|GAPS Coach| RecGAPS[Recommend Ramona - GAPS Coach]
     DetermineNext -->|Not Eligible| RecAlternative[Alternative Options]
     
     RecDoctor --> PhoneBooking[Book & Pay Over Phone]
@@ -134,7 +134,7 @@ flowchart TD
 - **Dr Dia**: Telehealth alternative medicine
 - **Doctor 2 (Dr. Shivani)**: Telehealth & In-person consultations (Melbourne clinic)
 - **1 Nurse Practitioner**: Telehealth alternative medicine
-- **Ramona (GAPS Coach)**: Specialized nutrition coaching (currently also performs free consultations)
+- **Ramona - GAPS Coach**: Specialized nutrition coaching (currently also performs free consultations)
 - **Individual Calendars**: Each practitioner has dedicated Calendly
 
 **Service Assignments:**
