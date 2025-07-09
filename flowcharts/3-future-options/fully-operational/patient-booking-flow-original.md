@@ -1,6 +1,6 @@
 # Fully Operational Variation - Patient Booking Flow (Original Comprehensive Version - Fixed)
 
-> **Note**: This is the original comprehensive flowchart with syntax fixes applied. The duplicate node IDs have been resolved to ensure proper rendering. For a more accessible version broken into focused sub-flows, see [patient-booking-flow.md](./patient-booking-flow.md).
+> **Note**: This is the original comprehensive flowchart with syntax fixes applied. The duplicate node IDs have been resolved and special characters that could cause GitHub mermaid parsing errors have been simplified (parentheses removed from multi-line labels, dollar signs replaced with USD, arrows replaced with dashes). For a more accessible version broken into focused sub-flows, see [patient-booking-flow.md](./patient-booking-flow.md).
 
 ## Overview
 This flowchart shows the complete patient experience with all services active: Alternative Medicine, GAPS Coaching, Weight Loss, Counseling, and Equine Therapy.
@@ -25,11 +25,11 @@ flowchart TD
     ServiceHub -->|Explore All| GeneralBooking[Book Free Consultation]
     
     %% Service-Specific Value Props
-    AltMedFunnel --> AltMedCTA[Natural Health Solutions → Book Free]
-    GAPSFunnel --> GAPSCTA[Gut Health Journey → Book Free]
-    WeightLossFunnel --> WeightCTA[Transform Your Health → Book Free]
-    CounselingFunnel --> CounselCTA[Mental Wellness Support → Book Free]
-    EquineFunnel --> EquineCTA[Healing with Horses → Book Free]
+    AltMedFunnel --> AltMedCTA[Natural Health Solutions - Book Free]
+    GAPSFunnel --> GAPSCTA[Gut Health Journey - Book Free]
+    WeightLossFunnel --> WeightCTA[Transform Your Health - Book Free]
+    CounselingFunnel --> CounselCTA[Mental Wellness Support - Book Free]
+    EquineFunnel --> EquineCTA[Healing with Horses - Book Free]
     
     %% Converge to Booking
     AltMedCTA --> UnifiedBooking[Free Initial Consultation]
@@ -50,11 +50,11 @@ flowchart TD
     
     BookConsultant --> SelectTime[Select Available Time]
     SelectTime --> BasicDetails[Enter Contact Details]
-    BasicDetails --> NoPayment[✓ Free Consultation]
+    BasicDetails --> NoPayment[FREE Consultation]
     NoPayment --> InitialConfirmed[Booking Confirmed]
     
     %% Free Consultation Process
-    InitialConfirmed --> ConsultantCall[Consultant/GAPS Coach Calls<br/>(GAPS Coach currently<br/>handles free consultations)]
+    InitialConfirmed --> ConsultantCall[Consultant/GAPS Coach Calls<br/>GAPS Coach currently<br/>handles free consultations]
     ConsultantCall --> DynamicForm{Dynamic Form Process}
     
     %% Consultant selects appropriate intake form
@@ -126,8 +126,8 @@ flowchart TD
     
     PaymentCalc --> PaymentProcess
     
-    PaymentProcess -->|Alt Med $119| ProcessPay1[Process Initial Payment]
-    PaymentProcess -->|GAPS $195| ProcessPay2[Process Initial Payment]
+    PaymentProcess -->|Alt Med 119 USD| ProcessPay1[Process Initial Payment]
+    PaymentProcess -->|GAPS 195 USD| ProcessPay2[Process Initial Payment]
     PaymentProcess -->|Weight TBD| ProcessPay3[Process Payment]
     PaymentProcess -->|Counsel TBD| ProcessPay4[Process Payment]
     PaymentProcess -->|Equine TBD| ProcessPay5[Process Payment]
@@ -147,15 +147,15 @@ flowchart TD
     
     ServiceSelection --> ServiceOptions{Choose Service & Duration}
     
-    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine<br/>$79 follow-up]
-    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching<br/>$79 follow-up]
+    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine<br/>79 USD follow-up]
+    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching<br/>79 USD follow-up]
     ServiceOptions -->|Weight TBD| FollowWeight[Weight Loss]
     ServiceOptions -->|Counsel TBD| FollowCounsel[Counseling]
     ServiceOptions -->|Equine TBD| FollowEquine[Equine Therapy]
     
-    FollowAlt --> PractSelectAlt[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
+    FollowAlt --> PractSelectAlt[Combined Calendar View<br/>Doctor 1 - Dr. Shivani - Nurse]
     FollowGAPS --> PractSelectGAPS[GAPS Coach Calendar]
-    FollowWeight --> PractSelectWeight[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
+    FollowWeight --> PractSelectWeight[Combined Calendar View<br/>Doctor 1 - Dr. Shivani - Nurse]
     FollowCounsel --> PractSelectCounsel[Counselor Calendar]
     FollowEquine --> PractSelectEquine[Equine Therapist Calendar]
     
