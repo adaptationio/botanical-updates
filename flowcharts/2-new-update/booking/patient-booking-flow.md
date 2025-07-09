@@ -32,8 +32,17 @@ flowchart TD
     WaitAppt --> ConsultantCall[Consultant/Ramona Calls Patient<br/>(Ramona (GAPS Coach) currently<br/>handles free consults)]
     ConsultantCall --> Triage[Triage Assessment]
     
-    Triage --> DynamicForm[Dynamic Question Form]
-    DynamicForm --> DetermineNext{Determine Best Next Step}
+    Triage --> DynamicForm[Complete Dynamic Intake Form<br/>Consultant fills during call]
+    DynamicForm --> FormSubmission[Submit Dynamic Form]
+    
+    FormSubmission --> FormProcessing{Form Processing}
+    FormProcessing --> UpdateMediRecords[Update MediRecords]
+    FormProcessing --> EmailAdmin[Copy to enquiries@botaniqal.com.au]
+    FormProcessing --> EmailPatient[Copy to Patient]
+    
+    UpdateMediRecords --> DetermineNext{Determine Best Next Step}
+    EmailAdmin --> DetermineNext
+    EmailPatient --> DetermineNext
     
     DetermineNext -->|Doctor Needed| RecDoctor[Recommend Doctor]
     DetermineNext -->|Nurse Practitioner| RecNurse[Recommend Nurse Practitioner]
@@ -58,9 +67,7 @@ flowchart TD
     
     ConfirmTimePhone --> ProcessPayment[Process Payment Over Phone]
     ProcessPayment --> SecondBookingConfirmed[Practitioner Booking Confirmed]
-    SecondBookingConfirmed --> FullIntake[Full Intake Form Sent]
-    FullIntake --> CompleteIntake[Complete Full Intake]
-    CompleteIntake --> ReadyForAppt[Ready for Practitioner Appointment]
+    SecondBookingConfirmed --> ReadyForAppt[Ready for Practitioner Appointment<br/>No additional intake needed]
     
     %% Follow-up Path
     Choice -->|Follow-up Consult| FollowUpInfo[Follow-up Options]
@@ -106,7 +113,7 @@ flowchart TD
     class ProcessPayment,PayFollowUp payment
     class Choice,ViewOptions,FilterTabs,TabChoice,SelectPractitioner choice
     class CalendlyConsultant,CombinedCalendar,ShowAll,ShowDoc1,ShowDoc2,ShowNurse,ShowGAPS calendar
-    class MiniIntake,BasicHealth,ConsentSign,DynamicForm,FullIntake form
+    class MiniIntake,BasicHealth,ConsentSign,DynamicForm,FormSubmission,UpdateMediRecords form
 ```
 
 ## Key Changes in New Update
@@ -114,8 +121,13 @@ flowchart TD
 ### 1. Free Initial Consultation
 - **No Payment Required**: Initial consults are completely free (20 minutes)
 - **Consultant-Led**: Professional consultant handles initial assessment
-- **Mini Intake + Consent**: Combined smaller intake form with consent signature
-- **Triage Focus**: Determines best practitioner match
+- **Mini Intake + Consent**: Basic info collected during booking with consent signature
+- **Dynamic Intake Form**: Complete intake done during consultation call
+- **Form Processing**: Dynamic form automatically:
+  - Updates MediRecords
+  - Sends copy to admin (enquiries@botaniqal.com.au)
+  - Sends copy to patient
+- **No Additional Forms**: Dynamic form contains all needed information - no separate intake later
 - **Phone Booking & Payment**: Consultant books next appointment and takes credit card payment over phone
 
 ### 2. Multiple Practitioners

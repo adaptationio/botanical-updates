@@ -93,14 +93,22 @@ flowchart TD
     BookingComplete --> CompleteForm[Complete Dynamic Form]
     DocumentReferral --> CompleteForm
     
-    CompleteForm --> SubmitForm[Submit Triage Form]
-    SubmitForm --> UpdateNotes[Update Clinical Notes]
+    CompleteForm --> SubmitForm[Submit Dynamic Form]
+    
+    SubmitForm --> FormProcessing{Automatic Processing}
+    FormProcessing --> UpdateMediRecords[Update MediRecords]
+    FormProcessing --> SendAdmin[Copy to enquiries@botaniqal.com.au]
+    FormProcessing --> SendPatient[Copy to Patient Email]
+    
+    UpdateMediRecords --> UpdateNotes[Clinical Notes Updated]
+    SendAdmin --> NotifyAdmin[Admin Notified]
+    SendPatient --> PatientRecord[Patient Has Record]
+    
     UpdateNotes --> PrepareHandover[Prepare Practitioner Handover]
+    NotifyAdmin --> PrepareHandover
+    PatientRecord --> PrepareHandover
     
-    PrepareHandover --> NotifyAdmin[Notify Admin of Booking]
-    NotifyAdmin --> SendIntake[Send Full Intake Form Link]
-    
-    SendIntake --> FollowUp{Follow-up Needed?}
+    PrepareHandover --> FollowUp{Follow-up Needed?}
     FollowUp -->|Yes| ScheduleFollowUp[Schedule Follow-up Call]
     FollowUp -->|No| Complete[Complete Consultation]
     
@@ -170,10 +178,13 @@ flowchart TD
 7. **Confirm booking**: Send confirmation details
 
 ### Post-Call Tasks
-1. **Complete forms**: Finish dynamic assessment
-2. **Update notes**: Add triage summary
-3. **Prepare handover**: Brief for practitioner
-4. **Send intake**: Full form for appointment
+1. **Complete dynamic form**: Finish assessment during call
+2. **Submit form**: Triggers automatic processing:
+   - Updates MediRecords with patient data
+   - Sends copy to admin email (enquiries@botaniqal.com.au)
+   - Sends copy to patient for their records
+3. **Prepare handover**: Brief for practitioner with all info from dynamic form
+4. **No additional forms**: Dynamic form is complete intake - nothing else needed
 5. **Admin notification**: Alert to new booking
 
 ### Alternative Pathways

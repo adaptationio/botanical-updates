@@ -109,11 +109,16 @@ flowchart TD
     IdentifyFormType -->|Dynamic Triage| ProcessDynamic[Process Triage Data]
     
     ProcessMini --> PythonLib2[Custom Python Library]
-    ProcessFull --> PythonLib2
     ProcessDynamic --> PythonLib2
     
     PythonLib2 --> MediRecordsAPI2[MediRecords API]
     MediRecordsAPI2 --> UpdatePatientDetails[Update Patient Details]
+    
+    %% Dynamic Form Processing
+    ProcessDynamic --> DynamicFormNotify{Send Copies}
+    DynamicFormNotify --> AdminCopy[Copy to enquiries@botaniqal.com.au]
+    DynamicFormNotify --> PatientCopy[Copy to Patient Email]
+    
     UpdatePatientDetails --> ReplacePlaceholders[Replace Placeholders]
     
     %% Notifications - Enhanced
@@ -200,9 +205,8 @@ flowchart TD
 ### API Endpoints
 - `/booking/consultant` - Free consultation bookings
 - `/booking/practitioner` - Paid practitioner bookings
-- `/forms/mini` - Mini intake processing
-- `/forms/full` - Full intake processing
-- `/forms/triage` - Dynamic triage form processing
+- `/forms/mini` - Mini intake with consent processing
+- `/forms/dynamic` - Dynamic complete intake processing (includes auto-distribution)
 - `/calendars/combined` - Aggregated availability
 
 ### Security Considerations

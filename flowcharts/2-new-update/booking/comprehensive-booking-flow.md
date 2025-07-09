@@ -18,7 +18,7 @@ flowchart TB
         P8 --> P9[Answer Triage Questions]
         P9 --> P10[Receive Practitioner Recommendation]
         P10 --> P11[Book & Pay Over Phone]
-        P11 --> P12[Complete Full Intake]
+        P11 --> P12[Ready for Appointment - No Additional Forms]
         P12 --> P13[Attend Practitioner Appointment]
         
         P4 --> P14[Filter by Practitioner Tab]
@@ -213,10 +213,14 @@ flowchart TB
 1. Patient books free slot with consultant
 2. Completes mini intake + consent
 3. Consultant calls for triage
-4. Consultant books practitioner appointment
-5. Patient pays over phone
-6. Completes full intake
-7. Attends practitioner appointment
+4. During call: Completes dynamic intake form (consultant fills)
+5. Dynamic form automatically:
+   - Updates MediRecords
+   - Sends copy to admin (enquiries@botaniqal.com.au)
+   - Sends copy to patient
+6. Consultant books practitioner appointment
+7. Patient pays over phone
+8. Attends practitioner appointment (no additional forms needed)
 
 ### Follow-up Consultation
 1. Patient views combined calendar
