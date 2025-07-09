@@ -1,246 +1,157 @@
-# Fully Operational Variation - Patient Booking Flow
+# Fully Operational Variation - Patient Booking System
 
-## Overview
-This flowchart shows the complete patient experience with all services active: Alternative Medicine, GAPS Coaching, Weight Loss, Counseling, and Equine Therapy.
+## System Overview
+The fully operational booking system supports 5 distinct services with 8 practitioners, offering both new patient triage and self-service follow-up booking.
 
-### Key Process Points:
-1. **Free Consultation**: Consultant uses specialty intake forms during call - different forms based on patient's service interests
-2. **Dynamic Form Selection**: Consultant chooses appropriate intake form (weight loss, GAPS, etc.) based on initial discussion
-3. **Follow-up Booking**: Direct service selection page, no patient portal required
+### 🔍 Quick Navigation
+- **[Master Overview](./patient-booking-overview.md)** - High-level system view
+- **[New Patient Journey](./new-patient-journey.md)** - First-time patient experience  
+- **[Returning Patient Flow](./returning-patient-flow.md)** - Follow-up booking process
+- **[Service Triage Process](./service-triage-process.md)** - Assessment and matching
+- **[Phone Booking Process](./phone-booking-process.md)** - Consultant-assisted booking
+
+## Simplified System Flow
 
 ```mermaid
-flowchart TD
-    Start([User visits www.botaniqal.com.au]) --> Homepage[Comprehensive Service Homepage]
+graph LR
+    subgraph "Entry Points"
+        A1[Service Landing Pages]
+        A2[Direct Website]
+        A3[Referrals]
+    end
     
-    Homepage --> ServiceHub{Service Selection Hub}
+    subgraph "Patient Type"
+        B1{New or Returning?}
+    end
     
-    %% All Service Funnels Active
-    ServiceHub -->|Alternative Medicine| AltMedFunnel[Alternative Medicine Landing]
-    ServiceHub -->|GAPS Coaching| GAPSFunnel[GAPS Diet Landing]
-    ServiceHub -->|Weight Loss| WeightLossFunnel[Weight Loss Program Landing]
-    ServiceHub -->|Counseling| CounselingFunnel[Mental Health & Counseling Landing]
-    ServiceHub -->|Equine Therapy| EquineFunnel[Equine Therapy Landing]
-    ServiceHub -->|Explore All| GeneralBooking[Book Free Consultation]
+    subgraph "New Patient Path"
+        C1[FREE Consultation]
+        C2[Triage Assessment]
+        C3[Phone Booking]
+        C4[First Appointment]
+    end
     
-    %% Service-Specific Value Props
-    AltMedFunnel --> AltMedCTA[Natural Health Solutions → Book Free]
-    GAPSFunnel --> GAPSCTA[Gut Health Journey → Book Free]
-    WeightLossFunnel --> WeightCTA[Transform Your Health → Book Free]
-    CounselingFunnel --> CounselCTA[Mental Wellness Support → Book Free]
-    EquineFunnel --> EquineCTA[Healing with Horses → Book Free]
+    subgraph "Returning Path"
+        D1[Select Service]
+        D2[View Practitioners]
+        D3[Book Online]
+        D4[Follow-up]
+    end
     
-    %% Converge to Booking
-    AltMedCTA --> UnifiedBooking[Free Initial Consultation]
-    GAPSCTA --> UnifiedBooking
-    WeightCTA --> UnifiedBooking
-    CounselCTA --> UnifiedBooking
-    EquineCTA --> UnifiedBooking
-    GeneralBooking --> UnifiedBooking
+    A1 --> B1
+    A2 --> B1
+    A3 --> B1
     
-    UnifiedBooking --> ServiceInterest{Primary Interest}
+    B1 -->|New| C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> C4
     
-    ServiceInterest -->|Alternative Medicine| BookConsultant[Book Consultant Time]
-    ServiceInterest -->|GAPS Diet| BookConsultant
-    ServiceInterest -->|Weight Loss| BookConsultant
-    ServiceInterest -->|Counseling| BookConsultant
-    ServiceInterest -->|Equine Therapy| BookConsultant
-    ServiceInterest -->|Multiple/Unsure| BookConsultant
+    B1 -->|Returning| D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
     
-    BookConsultant --> SelectTime[Select Available Time]
-    SelectTime --> BasicDetails[Enter Contact Details]
-    BasicDetails --> NoPayment[✓ Free Consultation]
-    NoPayment --> InitialConfirmed[Booking Confirmed]
+    classDef entry fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    classDef decision fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef newpath fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef returnpath fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
     
-    %% Free Consultation Process
-    InitialConfirmed --> ConsultantCall[Consultant/GAPS Coach Calls<br/>(GAPS Coach currently<br/>handles free consultations)]
-    ConsultantCall --> DynamicForm{Dynamic Form Process}
-    
-    %% Consultant selects appropriate intake form
-    DynamicForm -->|Weight Loss Interest| WeightLossIntake[Weight Loss Intake Form]
-    DynamicForm -->|Alt Medicine Interest| MedicalIntake[Medical History Intake]
-    DynamicForm -->|GAPS Interest| GAPSIntake[GAPS Nutrition Intake]
-    DynamicForm -->|Mental Health| MentalHealthIntake[Counseling Intake Form]
-    DynamicForm -->|Multiple Concerns| ComprehensiveIntake[Multi-Service Intake]
-    
-    WeightLossIntake --> ConsultantFills[Consultant Completes During Call]
-    MedicalIntake --> ConsultantFills
-    GAPSIntake --> ConsultantFills
-    MentalHealthIntake --> ConsultantFills
-    ComprehensiveIntake --> ConsultantFills
-    
-    ConsultantFills --> MultiServiceAssess{Multi-Service Assessment}
-    
-    MultiServiceAssess --> ReviewAll[Review All Interests]
-    ReviewAll --> ComprehensiveTriage[Holistic Health Assessment]
-    ComprehensiveTriage --> PriorityDetermine[Determine Priority Needs]
-    
-    PriorityDetermine --> RecommendPath{Recommendation Path}
-    
-    %% Multiple Service Paths
-    RecommendPath -->|Single Service| SingleService[Focused Approach]
-    RecommendPath -->|Multi-Service| IntegratedCare[Integrated Care Plan]
-    RecommendPath -->|Specialty First| SpecialtyPath[Equine/Counseling Priority]
-    
-    %% Practitioner Matching by Service
-    SingleService --> MatchPractitioner{Match to Specialist}
-    IntegratedCare --> CareTeam[Build Care Team]
-    SpecialtyPath --> SpecialtyMatch[Match Specialty Provider]
-    
-    MatchPractitioner -->|Alt Med| AssignDoctor[Assign Doctor/Nurse]
-    MatchPractitioner -->|GAPS| AssignGAPS[Assign GAPS Coach]
-    MatchPractitioner -->|Weight Loss| AssignWeightTeam[Assign Weight Loss Team]
-    MatchPractitioner -->|Counseling| AssignCounselor[Assign Counselor]
-    MatchPractitioner -->|Equine| AssignEquine[Assign Equine Therapist]
-    
-    %% Care Team Approach
-    CareTeam --> PrimaryCare[Select Primary Practitioner]
-    PrimaryCare --> SecondarySupport[Add Support Services]
-    
-    %% Phone Booking with Service Matrix
-    AssignDoctor --> PhoneBookingMatrix[Complex Booking Process]
-    AssignGAPS --> PhoneBookingMatrix
-    AssignWeightTeam --> PhoneBookingMatrix
-    AssignCounselor --> PhoneBookingMatrix
-    AssignEquine --> PhoneBookingMatrix
-    SpecialtyMatch --> PhoneBookingMatrix
-    SecondarySupport --> PhoneBookingMatrix
-    
-    PhoneBookingMatrix --> ServiceSchedule{Service Scheduling}
-    
-    ServiceSchedule -->|Alt Med 15min| BookAlt[Book Alternative Medicine]
-    ServiceSchedule -->|GAPS 60min| BookGAPS[Book GAPS Session]
-    ServiceSchedule -->|Weight TBD| BookWeight[Book Weight Loss]
-    ServiceSchedule -->|Counsel TBD| BookCounsel[Book Counseling]
-    ServiceSchedule -->|Equine TBD| BookEquine[Book Equine Session]
-    ServiceSchedule -->|Multiple| BookMultiple[Schedule Multiple Services]
-    
-    %% Payment Processing by Service
-    BookAlt --> PaymentProcess{Process Payment}
-    BookGAPS --> PaymentProcess
-    BookWeight --> PaymentProcess
-    BookCounsel --> PaymentProcess
-    BookEquine --> PaymentProcess
-    BookMultiple --> PaymentCalc[Calculate Combined Services]
-    
-    PaymentCalc --> PaymentProcess
-    
-    PaymentProcess -->|Alt Med $119| ProcessPay1[Process Initial Payment]
-    PaymentProcess -->|GAPS $195| ProcessPay2[Process Initial Payment]
-    PaymentProcess -->|Weight TBD| ProcessPay3[Process Payment]
-    PaymentProcess -->|Counsel TBD| ProcessPay4[Process Payment]
-    PaymentProcess -->|Equine TBD| ProcessPay5[Process Payment]
-    
-    ProcessPay1 --> AppointmentsConfirmed[All Appointments Confirmed]
-    ProcessPay2 --> AppointmentsConfirmed
-    ProcessPay3 --> AppointmentsConfirmed
-    ProcessPay4 --> AppointmentsConfirmed
-    ProcessPay5 --> AppointmentsConfirmed
-    
-    %% Ready for appointments
-    AppointmentsConfirmed --> ReadyForServices[Ready for Appointments]
-    
-    %% Follow-up Booking - Direct
-    Homepage -->|Returning Patient| FollowUpPage[Follow-up Booking Page]
-    FollowUpPage --> ServiceSelection{Select Service Type<br/>Shows Available Practitioners<br/>For That Service}
-    
-    ServiceSelection --> ServiceOptions{Choose Service & Duration}
-    
-    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine<br/>$79 follow-up]
-    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching<br/>$79 follow-up]
-    ServiceOptions -->|Weight TBD| FollowWeight[Weight Loss]
-    ServiceOptions -->|Counsel TBD| FollowCounsel[Counseling]
-    ServiceOptions -->|Equine TBD| FollowEquine[Equine Therapy]
-    
-    FollowAlt --> PractitionerSelect[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
-    FollowGAPS --> PractitionerSelect[GAPS Coach Calendar]
-    FollowWeight --> PractitionerSelect[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
-    FollowCounsel --> PractitionerSelect[Counselor Calendar]
-    FollowEquine --> PractitionerSelect[Equine Therapist Calendar]
-    
-    PractitionerSelect --> TimeSelect[Select Time Slot]
-    TimeSelect --> ServiceConfirm[Confirm Service Details]
-    ServiceConfirm --> OnlinePayment[Pay Online by Service Type]
-    OnlinePayment --> FollowUpBooked[Follow-up Booked]
-    
-    %% Completion
-    ReadyForServices --> End([Service Journey Active])
-    FollowUpBooked --> End
-    
-    %% Styling
-    classDef service fill:#e1f5fe,stroke:#01579b,stroke-width:3px
-    classDef free fill:#c8e6c9,stroke:#1b5e20,stroke-width:3px
-    classDef specialty fill:#f3e5f5,stroke:#6a1b9a,stroke-width:3px
-    classDef booking fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    classDef multi fill:#e8eaf6,stroke:#283593,stroke-width:3px
-    
-    class ServiceHub,ServiceChecklist,ServiceSchedule,ServiceOptions service
-    class UnifiedBooking,NoPayment,ConsultantCall free
-    class CounselingFunnel,EquineFunnel,BookCounsel,BookEquine specialty
-    class PhoneBookingMatrix,PaymentProcess,TimeSelect booking
-    class CareTeam,IntegratedCare,BookMultiple,ServiceGrid multi
+    class A1,A2,A3 entry
+    class B1 decision
+    class C1,C2,C3,C4 newpath
+    class D1,D2,D3,D4 returnpath
 ```
 
-## Fully Operational Features
+## Complete Service Portfolio
 
-### Complete Service Portfolio
-1. **Alternative Medicine** 
-   - Initial: 15 min, $119 (Telehealth)
-   - Follow-up: 10 min, $79
-   - Dr. Shivani (Telehealth & In-Person Melbourne): 20 min initial, 15 min follow-up, same price
-2. **GAPS Diet Coaching**
-   - Initial: 60 min, $195
-   - Follow-up: 15 min, $79
-3. **Weight Loss Program** (TBD)
-4. **Counseling Services** (Online - TBD)
-5. **Equine Therapy** (TBD)
+### Active Services
+
+| Service | Initial Consult | Follow-up | Practitioners |
+|---------|----------------|-----------|---------------|
+| **Alternative Medicine** | $119 (15-20 min) | $79 (10-15 min) | Doctor 1, Dr. Shivani*, Nurse |
+| **GAPS Diet Coaching** | $195 (60 min) | $79 (15 min) | GAPS Coach |
+| **Weight Loss Program** | TBD | TBD | Doctor 1, Dr. Shivani*, Nurse |
+| **Counseling Services** | TBD | TBD | Counselor |
+| **Equine Therapy** | TBD | TBD | Equine Therapist |
+
+*Dr. Shivani offers both telehealth and in-person appointments in Melbourne
 
 ### Practitioner Team (8 Total)
-- **Consultant**: Initial assessments (NOTE: GAPS Coach currently performs free consultations)
-- **Doctor 1**: Alternative Medicine & Weight Loss (Telehealth)
-- **Doctor 2 (Dr. Shivani)**: Alternative Medicine & Weight Loss (Telehealth & In-Person Melbourne)
-- **Nurse Practitioner**: Alternative Medicine & Weight Loss (Telehealth)
-- **GAPS Coach**: GAPS Diet coaching (currently also doing free consultations)
-- **Counselor**: Online counseling (when available)
-- **Equine Therapist**: Equine therapy (when available)
 
-**Service Assignments:**
-- Alternative Medicine: Doctor 1, Dr. Shivani, Nurse Practitioner
-- Weight Loss: Doctor 1, Dr. Shivani, Nurse Practitioner  
-- GAPS Coaching: GAPS Coach only
-- Counseling: Counselor only
-- Equine Therapy: Equine Therapist only
+1. **Consultant Role** - Currently performed by GAPS Coach
+2. **Doctor 1** - Telehealth (Alt Med & Weight Loss)
+3. **Doctor 2 (Dr. Shivani)** - Telehealth & Melbourne (Alt Med & Weight Loss)
+4. **Nurse Practitioner** - Telehealth (Alt Med & Weight Loss)
+5. **GAPS Coach** - GAPS specialty + free consultations
+6. **Counselor** - Online mental health
+7. **Equine Therapist** - In-person therapy
+8. *(One additional practitioner)*
 
-### Enhanced Booking Features
-- Specialty intake forms used by consultant during free consultation
-- Consultant selects appropriate form based on patient's interests
-- Different forms for: weight loss, GAPS, alternative medicine, counseling, equine therapy
-- Multi-service intake form for patients with multiple concerns
-- Consultant completes forms during phone call with patient input
-- Integrated care planning for multiple services
-- Care team approach for complex cases
-- Varied appointment durations by service
-- Tiered pricing structure
+## Key System Features
 
-### Follow-up Booking Process
-- Direct follow-up page (no patient portal)
-- Select service type first
-- Combined calendar shows all practitioners who can service that appointment type
-- For Alt Med/Weight Loss: See availability for Doctor 1, Dr. Shivani, and Nurse Practitioner
-- For GAPS: Only GAPS Coach calendar
-- Choose practitioner and time from available options
-- Online payment for follow-ups
-- No additional forms needed for follow-ups
+### 🎯 For New Patients
+- **FREE 20-minute consultation** with no upfront payment
+- **Dynamic intake forms** selected during consultation
+- **Personalized triage** to match with right practitioner
+- **Phone-assisted booking** for first appointment
+- **Multiple service options** with integrated care planning
 
-### Marketing & Funnels
-- 5 dedicated service funnels
-- Cross-service promotions
-- Integrated wellness packages
-- Referral incentives
-- Service bundling options
+### 🔄 For Returning Patients  
+- **Direct online booking** without phone calls
+- **Service-filtered calendars** showing only relevant practitioners
+- **Combined practitioner view** for services with multiple providers
+- **Self-service payment** with multiple options
+- **24/7 accessibility** for convenient scheduling
 
-### Technical Implementation
-- 15+ appointment types in Calendly
-- Service-practitioner matrix
-- Complex availability management
-- Integrated billing for multiple services
-- Comprehensive reporting by service line
+### 💻 Technical Capabilities
+- **15+ appointment types** across all services
+- **Service-practitioner matrix** for smart routing
+- **Dynamic form system** for customized intake
+- **Integrated billing** supporting multiple services
+- **Comprehensive reporting** by service line
+
+## Process Highlights
+
+### New Patient Experience
+1. Enter through service-specific marketing funnel
+2. Book free consultation (no payment required)
+3. Receive triage call from GAPS Coach/Consultant
+4. Complete dynamic intake form during call
+5. Get matched with appropriate practitioner(s)
+6. Book and pay for first appointment over phone
+
+### Returning Patient Experience
+1. Access follow-up booking page directly
+2. Select service type needed
+3. View combined calendar of available practitioners
+4. Choose preferred time and practitioner
+5. Complete booking and payment online
+6. Receive instant confirmation
+
+## Implementation Complexity
+
+### Why Multiple Documents?
+The fully operational system involves:
+- 5 distinct service lines
+- 8 practitioners with different specialties
+- Complex triage and matching logic
+- Multiple booking pathways
+- Integrated care coordination
+
+Breaking this into focused documents improves:
+- **Readability**: Each flow is digestible
+- **Maintenance**: Updates are localized
+- **Training**: Staff can focus on their area
+- **Development**: Teams can work in parallel
+
+### Integration Points
+- Webflow CMS for content management
+- Calendly for appointment scheduling
+- MediRecords for clinical records
+- AWS Lambda for complex routing logic
+- Payment gateway for transactions
+
+---
+
+📚 **For detailed flows, please refer to the linked documents above. Each provides a focused view of specific aspects of the booking system.**
