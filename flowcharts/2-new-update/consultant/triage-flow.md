@@ -51,7 +51,7 @@ flowchart TD
     DoctorChoice -->|Based on Availability| RecDoc2[Recommend Doctor 2]
     
     NurseAppropriate --> RecNurse[Recommend Nurse Practitioner]
-    CoachingAssess --> RecGAPS[Recommend Ramona (GAPS Coach)]
+    CoachingAssess --> RecGAPS[Recommend Ramona - GAPS Coach]
     
     %% Information Gathering
     RecDoc1 --> GatherInfo[Gather Additional Info Needed]
@@ -152,7 +152,7 @@ flowchart TD
 2. **Match practitioner**:
    - Dr Dia or Dr. Shivani: Complex medical needs
    - Nurse Practitioner: Routine care
-   - Ramona (GAPS Coach): Lifestyle/nutrition focus
+   - Ramona - GAPS Coach: Lifestyle/nutrition focus
 3. **Consider availability**: Factor in scheduling
 
 ### Information Gathering
