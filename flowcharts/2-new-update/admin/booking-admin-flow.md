@@ -11,7 +11,7 @@ flowchart TD
     MultiPractitioner --> SetupDoc1[Setup Dr Dia - MediRecords]
     MultiPractitioner --> SetupDoc2[Setup Doctor 2 - MediRecords]
     MultiPractitioner --> SetupNurse[Setup Nurse Practitioner - MediRecords]
-    MultiPractitioner --> SetupGAPS[Setup Ramona (GAPS Coach) - MediRecords]
+    MultiPractitioner --> SetupGAPS[Setup Ramona - GAPS Coach - MediRecords]
     MultiPractitioner --> SetupConsultant[Setup Consultant - MediRecords]
     
     SetupDoc1 --> SyncDoc1[Sync to Dr Dia Calendly]
@@ -130,7 +130,7 @@ flowchart TD
 - **5 Calendars to Manage**:
   - 2 Doctors
   - 1 Nurse Practitioner
-  - Ramona (GAPS Coach)
+  - Ramona - GAPS Coach
   - 1 Consultant (for initial free consults)
 - **Individual Availability**: Each practitioner has separate MediRecords and Calendly setup
 - **Sync Verification**: Must ensure all 5 calendars are properly synced
