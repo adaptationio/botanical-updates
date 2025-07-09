@@ -1,6 +1,6 @@
-# Fully Operational Variation - Patient Booking Flow (Original Comprehensive Version)
+# Fully Operational Variation - Patient Booking Flow (Original Comprehensive Version - Fixed)
 
-> **Note**: This is the original comprehensive flowchart with 245 lines and 100+ nodes in a single diagram. Due to its complexity, it may have display issues in some Markdown viewers. For a more accessible version broken into focused sub-flows, see [patient-booking-flow.md](./patient-booking-flow.md).
+> **Note**: This is the original comprehensive flowchart with syntax fixes applied. The duplicate node IDs have been resolved to ensure proper rendering. For a more accessible version broken into focused sub-flows, see [patient-booking-flow.md](./patient-booking-flow.md).
 
 ## Overview
 This flowchart shows the complete patient experience with all services active: Alternative Medicine, GAPS Coaching, Weight Loss, Counseling, and Equine Therapy.
@@ -153,20 +153,25 @@ flowchart TD
     ServiceOptions -->|Counsel TBD| FollowCounsel[Counseling]
     ServiceOptions -->|Equine TBD| FollowEquine[Equine Therapy]
     
-    FollowAlt --> PractitionerSelect[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
-    FollowGAPS --> PractitionerSelect[GAPS Coach Calendar]
-    FollowWeight --> PractitionerSelect[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
-    FollowCounsel --> PractitionerSelect[Counselor Calendar]
-    FollowEquine --> PractitionerSelect[Equine Therapist Calendar]
+    FollowAlt --> PractSelectAlt[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
+    FollowGAPS --> PractSelectGAPS[GAPS Coach Calendar]
+    FollowWeight --> PractSelectWeight[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
+    FollowCounsel --> PractSelectCounsel[Counselor Calendar]
+    FollowEquine --> PractSelectEquine[Equine Therapist Calendar]
     
-    PractitionerSelect --> TimeSelect[Select Time Slot]
+    PractSelectAlt --> TimeSelect[Select Time Slot]
+    PractSelectGAPS --> TimeSelect
+    PractSelectWeight --> TimeSelect
+    PractSelectCounsel --> TimeSelect
+    PractSelectEquine --> TimeSelect
+    
     TimeSelect --> ServiceConfirm[Confirm Service Details]
     ServiceConfirm --> OnlinePayment[Pay Online by Service Type]
     OnlinePayment --> FollowUpBooked[Follow-up Booked]
     
     %% Completion
-    ReadyForServices --> End([Service Journey Active])
-    FollowUpBooked --> End
+    ReadyForServices --> EndServices([Service Journey Active])
+    FollowUpBooked --> EndFollowUp([Follow-up Complete])
     
     %% Styling
     classDef service fill:#e1f5fe,stroke:#01579b,stroke-width:3px
@@ -175,11 +180,11 @@ flowchart TD
     classDef booking fill:#fff3e0,stroke:#e65100,stroke-width:2px
     classDef multi fill:#e8eaf6,stroke:#283593,stroke-width:3px
     
-    class ServiceHub,ServiceChecklist,ServiceSchedule,ServiceOptions service
+    class ServiceHub,ServiceSelection,ServiceSchedule,ServiceOptions service
     class UnifiedBooking,NoPayment,ConsultantCall free
     class CounselingFunnel,EquineFunnel,BookCounsel,BookEquine specialty
     class PhoneBookingMatrix,PaymentProcess,TimeSelect booking
-    class CareTeam,IntegratedCare,BookMultiple,ServiceGrid multi
+    class CareTeam,IntegratedCare,BookMultiple,PaymentCalc multi
 ```
 
 ## Fully Operational Features
