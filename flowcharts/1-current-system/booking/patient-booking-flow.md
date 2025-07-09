@@ -3,33 +3,29 @@
 ## Overview
 This flowchart represents the current booking flow for Botaniqal website (www.botaniqal.com.au).
 
+**Key Feature**: Initial consultations require an eligibility assessment that determines whether you can book online or must contact the practice.
+
 ```mermaid
 flowchart TD
     Start([User visits www.botaniqal.com.au]) --> Choice{Booking Type}
     
     %% Initial Consultation Path
-    Choice -->|Initial Consult $119 AUD| Eligibility[Health & Wellness Assessment]
+    Choice -->|Initial Consult $89 AUD| Eligibility[Health & Wellness Assessment]
     
-    Eligibility --> HealthCheck{Assessment Results}
-    HealthCheck -->|Needs Specialized Care| SpecializedOptions[Show Specialized Care Options]
-    HealthCheck -->|Standard Care Suitable| Calendar1[Calendly Booking Page]
+    Eligibility --> HealthCheck{Eligibility Check:<br/>Are you suitable for<br/>standard telehealth care?}
+    HealthCheck -->|YES - Standard Care| Calendar1[Proceed to Calendly Booking]
+    HealthCheck -->|NO - Special Needs| ContactRequired[Must Contact Practice]
     
-    SpecializedOptions --> ContactOptions{Contact Preferences}
-    ContactOptions -->|Call Now| PhoneInfo[Show Phone: 1800-XXX-XXX]
-    ContactOptions -->|Email| EmailForm[Quick Contact Form]
-    ContactOptions -->|Book Anyway| SpecialNote[Book with Special Note]
-    
-    PhoneInfo --> End1([End])
-    EmailForm --> End1([End])
-    SpecialNote --> Calendar1
+    ContactRequired --> ContactInfo[📞 Call: 1800-XXX-XXX<br/>📧 Email: enquiries@botaniqal.com.au<br/>❌ Cannot book online]
+    ContactInfo --> End1([End - Contact Required])
     
     %% Follow-up Path
-    Choice -->|Follow-up $79 AUD| Calendar2[Calendly Booking Page]
+    Choice -->|Follow-up $69 AUD| Calendar2[Direct to Calendly Booking]
     
     %% Booking Process for Initial
     Calendar1 --> SelectTime1[Select Available Time with Dr. Dia - 15 min]
     SelectTime1 --> Details1[Fill Patient Details]
-    Details1 --> Payment1[Pay $119.00 AUD]
+    Details1 --> Payment1[Pay $89.00 AUD via Stripe]
     Payment1 --> Submit1[Submit Booking]
     Submit1 --> IntakeForm[Intake Form]
     
@@ -40,7 +36,7 @@ flowchart TD
     %% Booking Process for Follow-up
     Calendar2 --> SelectTime2[Select Available Time with Dr. Dia - 10 min]
     SelectTime2 --> Details2[Fill Patient Details]
-    Details2 --> Payment2[Pay $79.00 AUD]
+    Details2 --> Payment2[Pay $69.00 AUD via Stripe]
     Payment2 --> Submit2[Submit Booking]
     
     %% Success Pages
@@ -73,11 +69,12 @@ flowchart TD
     classDef form fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
     
     class Start,End1,End2,End3 startEnd
-    class Choice,HealthCheck,ContactOptions,Notifications1,Notifications2 decision
+    class Choice,HealthCheck,Notifications1,Notifications2 decision
     class Calendar1,Calendar2,SelectTime1,SelectTime2,Details1,Details2,Submit1,Submit2 process
     class Payment1,Payment2 payment
     class SMS1,SMS2,Email1,Email2,IntakeCopy notification
-    class Eligibility,IntakeForm,FillIntake,Consent,SubmitIntake,SpecializedOptions,PhoneInfo,EmailForm,SpecialNote form
+    class Eligibility,IntakeForm,FillIntake,Consent,SubmitIntake form
+    class ContactRequired,ContactInfo blocked
 ```
 
 ## Current Flow Details
@@ -107,11 +104,30 @@ flowchart TD
 - **Consent**: Part of intake form
 - **Notifications**: SMS and Email automated
 
+## Business Rules
+
+### Eligibility Assessment (Initial Consultations Only)
+The health assessment determines if you can book online:
+
+✅ **CAN Book Online (Standard Care)**:
+- General health consultations
+- Common conditions suitable for telehealth
+- No complex medication requirements
+- Standard alternative medicine consultations
+
+❌ **CANNOT Book Online (Must Contact Practice)**:
+- Controlled substance prescriptions needed
+- Complex mental health conditions
+- Pregnancy-related care
+- Chronic pain management
+- Any condition requiring specialized care
+
+**Important**: If eligibility check fails, online booking is BLOCKED. Patient must call or email the practice.
+
 ## Current Pain Points
-- Health assessment still creates barriers for some patients
+- Eligibility assessment blocks some patients from booking
+- No option to override eligibility decision
 - Two-step process (booking then intake) may cause drop-offs
 - No option to save progress
-- No pre-appointment reminders mentioned
-- Single provider limitation
+- Single provider limitation (Dr. Dia only)
 - No rescheduling flow shown
-- Limited options for specialized care needs
