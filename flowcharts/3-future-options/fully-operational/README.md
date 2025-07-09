@@ -12,6 +12,12 @@ The fully operational variation represents the complete vision with all 5 servic
    - System overview and key features
    - Complete service and practitioner listings
 
+1a. **[patient-booking-flow-original.md](./patient-booking-flow-original.md)** 📜
+   - Original comprehensive flowchart (245 lines)
+   - Single diagram with all 100+ nodes
+   - Complete flow in one view
+   - *Note: May have display issues due to complexity*
+
 2. **[patient-booking-overview.md](./patient-booking-overview.md)** 
    - Simplified 20-node master flowchart
    - High-level system view
@@ -83,7 +89,7 @@ The fully operational variation represents the complete vision with all 5 servic
 ## 🔄 System Complexity
 
 The fully operational system is broken into multiple documents because:
-- Single diagram had 180+ lines with 100+ nodes
+- Single diagram had 180+ lines with 100+ nodes (see [original version](./patient-booking-flow-original.md))
 - Multiple overlapping pathways created visual confusion
 - Different audiences need different levels of detail
 - Maintenance is easier with modular documentation

@@ -3,6 +3,8 @@
 ## System Overview
 The fully operational booking system supports 5 distinct services with 8 practitioners, offering both new patient triage and self-service follow-up booking.
 
+> **Note**: This is the simplified, modular version. For the original comprehensive flowchart, see [patient-booking-flow-original.md](./patient-booking-flow-original.md)
+
 ### 🔍 Quick Navigation
 - **[Master Overview](./patient-booking-overview.md)** - High-level system view
 - **[New Patient Journey](./new-patient-journey.md)** - First-time patient experience  
