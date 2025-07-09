@@ -1,194 +1,98 @@
-# Weight Loss Program Funnel Flow
+# Weight Loss Program Funnel
 
 ## Overview
-This flowchart shows the dedicated weight loss marketing funnel from ad/search to booking.
+This flowchart shows the dedicated weight loss marketing funnel from awareness to booking conversion.
+
+## Main Funnel Flow
 
 ```mermaid
-flowchart TD
-    %% Entry Points
-    Start([Multiple Entry Points]) --> Entry{Traffic Source}
+graph TD
+    Start([Traffic Sources]) --> Landing[Weight Loss Landing Page]
     
-    Entry -->|Google Ads| AdLanding[Weight Loss Ad Landing]
-    Entry -->|Facebook/Meta| SocialLanding[Social Proof Landing]
-    Entry -->|Organic Search| SEOLanding[SEO Optimized Landing]
-    Entry -->|Email Campaign| EmailLanding[Personalized Landing]
-    Entry -->|Main Website| DirectLanding[Weight Loss Section]
+    Landing --> Hero[Hero: Lose Weight Naturally<br/>Medical Supervision]
+    Hero --> Trust[Trust Elements<br/>✓ Doctor Credentials<br/>✓ Success Stories<br/>✓ Medical Approach]
     
-    %% Landing Page Elements
-    AdLanding --> Hero[Hero Section: "Lose Weight Naturally"]
-    SocialLanding --> Hero
-    SEOLanding --> Hero
-    EmailLanding --> Hero
-    DirectLanding --> Hero
+    Trust --> Program[Program Details<br/>✓ Health Assessment<br/>✓ Custom Meal Plans<br/>✓ Weekly Check-ins<br/>✓ GAPS Integration]
     
-    Hero --> ValueProps{Value Propositions}
+    Program --> Social[Social Proof<br/>Before/After Photos<br/>Video Testimonials]
     
-    ValueProps --> Prop1[✓ Medical Supervision]
-    ValueProps --> Prop2[✓ Personalized Plans]
-    ValueProps --> Prop3[✓ GAPS Integration]
-    ValueProps --> Prop4[✓ Sustainable Results]
+    Social --> Pricing[Special Offer<br/>~~$129~~ $89/session<br/>FREE Consultation]
     
-    Prop1 --> SocialProof[Success Stories]
-    Prop2 --> SocialProof
-    Prop3 --> SocialProof
-    Prop4 --> SocialProof
+    Pricing --> CTA1{Primary CTA}
+    CTA1 -->|Book Now| Booking[Enter Booking Flow]
+    CTA1 -->|Learn More| FAQ[FAQ Section]
     
-    SocialProof --> BeforeAfter[Before/After Gallery]
-    BeforeAfter --> Testimonials[Video Testimonials]
+    FAQ --> Objections[Address Concerns<br/>✓ Safety<br/>✓ Timeline<br/>✓ Medications<br/>✓ Affordability]
     
-    %% Trust Building
-    Testimonials --> TrustSection{Trust Elements}
+    Objections --> CTA2[Secondary CTA<br/>Book Free Consult]
+    CTA2 --> Booking
     
-    TrustSection --> Doctors[Meet Our Doctors]
-    TrustSection --> Credentials[Medical Credentials]
-    TrustSection --> Reviews[Google Reviews Widget]
-    TrustSection --> Guarantee[Satisfaction Guarantee]
+    Booking --> Success([Patient Enters<br/>Main Booking System])
     
-    %% Program Details
-    Doctors --> ProgramDetails[Program Overview]
-    Credentials --> ProgramDetails
-    Reviews --> ProgramDetails
-    Guarantee --> ProgramDetails
+    CTA1 -->|Exit Intent| Capture[Email Capture<br/>Free Weight Loss Guide]
+    Capture --> Nurture[Email Nurture<br/>Campaign]
+    Nurture --> Return[Return to Site]
+    Return --> Landing
     
-    ProgramDetails --> WhatIncluded{What's Included}
+    classDef primary fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    classDef trust fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    classDef cta fill:#fff3e0,stroke:#ff9800,stroke-width:3px
     
-    WhatIncluded --> Include1[Initial Health Assessment]
-    WhatIncluded --> Include2[Custom Meal Plans]
-    WhatIncluded --> Include3[Weekly Check-ins]
-    WhatIncluded --> Include4[GAPS Protocol Option]
-    WhatIncluded --> Include5[Progress Tracking]
-    
-    %% Pricing Strategy
-    Include1 --> PricingSection[Investment in Your Health]
-    Include2 --> PricingSection
-    Include3 --> PricingSection
-    Include4 --> PricingSection
-    Include5 --> PricingSection
-    
-    PricingSection --> PriceAnchor[Regular Price: $129/session]
-    PriceAnchor --> SpecialOffer[New Patient Special: $89/session]
-    SpecialOffer --> FreeConsult[Plus: FREE Initial Consultation]
-    
-    %% Call to Action
-    FreeConsult --> MainCTA{Primary CTA}
-    
-    MainCTA --> BookNow["Start Your Journey - Book Free Consult"]
-    MainCTA --> LearnMore[Want More Info?]
-    
-    %% Objection Handling
-    LearnMore --> FAQ[Comprehensive FAQ]
-    FAQ --> Objections{Common Concerns}
-    
-    Objections --> Obj1[Is it safe?]
-    Objections --> Obj2[How fast are results?]
-    Objections --> Obj3[What about medications?]
-    Objections --> Obj4[Can I afford it?]
-    
-    Obj1 --> Answer1[Medical supervision ensures safety]
-    Obj2 --> Answer2[Sustainable 1-2kg/week]
-    Obj3 --> Answer3[Work with your current meds]
-    Obj4 --> Answer4[Payment plans available]
-    
-    Answer1 --> SecondCTA[Ready? Book Free Consult]
-    Answer2 --> SecondCTA
-    Answer3 --> SecondCTA
-    Answer4 --> SecondCTA
-    
-    %% Alternative Paths
-    BookNow --> BookingFlow[Enter Booking System]
-    SecondCTA --> BookingFlow
-    
-    BookingFlow --> ServiceSelected[Weight Loss Pre-selected]
-    ServiceSelected --> ConsultantCalendar[Show Consultant Availability]
-    ConsultantCalendar --> SelectTime[Select Convenient Time]
-    SelectTime --> ContactDetails[Enter Contact Info]
-    
-    %% Lead Capture
-    ContactDetails --> EmailCapture{Capture Email}
-    EmailCapture --> InstantConfirm[Instant Confirmation]
-    InstantConfirm --> EmailSequence[Automated Email Sequence]
-    
-    %% Exit Intent
-    LearnMore -->|Exit Intent| ExitPopup[Wait! Special Offer]
-    ExitPopup --> DownloadGuide[Free Weight Loss Guide]
-    DownloadGuide --> EmailCapture2[Email Required]
-    EmailCapture2 --> NurtureSequence[Email Nurture Campaign]
-    
-    %% Retargeting
-    MainCTA -->|No Action| PixelFire[Retargeting Pixel Fires]
-    PixelFire --> RetargetAds[Follow-up Ad Campaign]
-    RetargetAds --> Entry
-    
-    %% Success Path
-    EmailSequence --> AppointmentReminder[Appointment Reminders]
-    AppointmentReminder --> ConsultationReady[Ready for Consultation]
-    
-    %% Nurture Path
-    NurtureSequence --> EducationalEmails[Weekly Tips & Education]
-    EducationalEmails --> ReengageCTA[Ready to Start? Book Now]
-    ReengageCTA --> BookingFlow
-    
-    %% Completion
-    ConsultationReady --> End([Enter Main Booking Flow])
-    
-    %% Styling
-    classDef landing fill:#fff3e0,stroke:#e65100,stroke-width:3px
-    classDef trust fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    classDef cta fill:#e1f5fe,stroke:#01579b,stroke-width:3px
-    classDef capture fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
-    classDef nurture fill:#fff8e1,stroke:#f57c00,stroke-width:2px
-    
-    class Hero,ValueProps,ProgramDetails landing
-    class TrustSection,Doctors,Credentials,Reviews trust
-    class MainCTA,BookNow,SecondCTA cta
-    class EmailCapture,EmailCapture2,DownloadGuide capture
-    class EmailSequence,NurtureSequence,EducationalEmails nurture
+    class Landing,Hero,Program primary
+    class Trust,Social trust
+    class CTA1,CTA2,Pricing cta
 ```
 
-## Weight Loss Funnel Key Elements
+## Conversion Elements
 
-### Landing Page Components
-1. **Hero Section**
-   - Clear value proposition
-   - Emotional connection
-   - Immediate CTA
+### 1. Landing Page Components
+- **Hero Section**: Clear value proposition with emotional appeal
+- **Trust Indicators**: Medical credentials, safety assurances
+- **Program Benefits**: Specific deliverables and outcomes
+- **Social Proof**: Real patient transformations
 
-2. **Social Proof**
-   - Before/after photos
-   - Success stories
-   - Video testimonials
-   - Review scores
+### 2. Traffic Sources
+- Google Ads (weight loss keywords)
+- Facebook/Instagram (interest targeting)
+- Organic search (SEO-optimized content)
+- Email campaigns (segmented lists)
+- Referrals from other services
 
-3. **Trust Building**
-   - Doctor credentials
-   - Medical approach
-   - Safety assurances
-   - Guarantees
+### 3. Objection Handling
+| Common Objection | Response |
+|-----------------|----------|
+| "Is it safe?" | Medical supervision by qualified doctors |
+| "How fast will I see results?" | Sustainable 1-2kg/week approach |
+| "What about my medications?" | We work with your current treatments |
+| "Can I afford it?" | Payment plans available |
 
-4. **Program Details**
-   - What's included
-   - Expected timeline
-   - Support provided
-   - Unique differentiators
+### 4. Email Nurture Sequence
+**Immediate Download**: Free Weight Loss Guide
+1. **Day 0**: Welcome & guide delivery
+2. **Day 2**: Success story spotlight
+3. **Day 4**: Common weight loss myths
+4. **Day 7**: Special offer reminder
+5. **Day 10**: Doctor introduction
+6. **Day 14**: Last chance offer
+7. **Ongoing**: Weekly tips until booking
 
-### Conversion Optimization
-- Multiple CTAs throughout
-- Objection handling FAQ
-- Exit intent capture
-- Email nurture sequences
-- Retargeting setup
+### 5. Tracking & Analytics
+- Entry source attribution
+- Conversion rate by source
+- Drop-off points in funnel
+- A/B test variations
+- ROI by campaign
 
-### Tracking Points
-- Entry source tracking
-- Scroll depth monitoring
-- CTA click tracking
-- Form abandonment
-- Conversion attribution
+## Integration Points
 
-### Email Sequences
-1. **Immediate**: Booking confirmation
-2. **Day 1**: Welcome & what to expect
-3. **Day 3**: Success story
-4. **Day 5**: Program details
-5. **Day 7**: Special offer reminder
-6. **Ongoing**: Weekly tips until booking
+### With Main Booking System
+- Service pre-selected as "Weight Loss"
+- Free consultation booking
+- Consultant briefed on weight loss interest
+- Appropriate practitioner matching
+
+### With Other Services
+- Cross-sell opportunities (GAPS diet)
+- Referral pathways (counseling for emotional eating)
+- Integrated care packages
+- Follow-up service recommendations

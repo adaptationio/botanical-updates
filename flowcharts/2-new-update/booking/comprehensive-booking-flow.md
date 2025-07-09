@@ -156,17 +156,19 @@ flowchart TB
 - Phone booking with payment for practitioner
 
 ### 2. **Multi-Practitioner Environment**
-- 2 Doctors
-- 1 Nurse Practitioner
-- 1 GAPS Coach
-- 1 Consultant (for triage)
+- Doctor 1 (Telehealth alternative medicine & weight loss)
+- Doctor 2: Dr. Shivani (Telehealth & Melbourne - alternative medicine & weight loss)
+- 1 Nurse Practitioner (alternative medicine & weight loss)
+- 1 GAPS Coach (GAPS diet + currently performs free consultations)
+- 1 Consultant role (currently performed by GAPS Coach)
 - Each with dedicated Calendly calendar
 
 ### 3. **Enhanced Booking Options**
-- Combined calendar view for follow-ups
+- Combined calendar view for follow-ups (shows all practitioners who can service that appointment type)
 - Tab-based filtering by practitioner
 - Direct booking for returning patients
 - Phone booking for new patients after triage
+- Service-specific practitioner display (Alt Med/Weight Loss: Doctors + Nurse, GAPS: Coach only)
 
 ### 4. **Improved Information Flow**
 - Triage assessment captures detailed info

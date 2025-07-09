@@ -29,7 +29,7 @@ flowchart TD
     Notifications1 --> WaitAppt[Wait for Appointment]
     
     %% Consultant Appointment
-    WaitAppt --> ConsultantCall[Consultant Calls Patient]
+    WaitAppt --> ConsultantCall[Consultant/GAPS Coach Calls Patient<br/>(GAPS Coach currently<br/>handles free consults)]
     ConsultantCall --> Triage[Triage Assessment]
     
     Triage --> DynamicForm[Dynamic Question Form]
@@ -47,7 +47,7 @@ flowchart TD
     
     PhoneBooking --> SelectPractitioner{Select Specific Practitioner}
     SelectPractitioner -->|Doctor 1| BookDoc1[Select Time with Doctor 1]
-    SelectPractitioner -->|Doctor 2| BookDoc2[Select Time with Doctor 2]
+    SelectPractitioner -->|Dr. Shivani| BookDoc2[Select Time with Dr. Shivani]
     SelectPractitioner -->|Nurse Practitioner| BookNurse[Select Time with Nurse]
     SelectPractitioner -->|GAPS Coach| BookGAPS[Select Time with GAPS Coach]
     
@@ -64,7 +64,7 @@ flowchart TD
     
     %% Follow-up Path
     Choice -->|Follow-up Consult| FollowUpInfo[Follow-up Options]
-    FollowUpInfo --> CombinedCalendar[Combined Availability Calendar]
+    FollowUpInfo --> CombinedCalendar[Combined Availability Calendar<br/>Shows All Practitioners<br/>For Your Service Type]
     
     CombinedCalendar --> ViewOptions{View Options}
     ViewOptions -->|All Available| ShowAll[Show All Practitioners]
@@ -72,7 +72,7 @@ flowchart TD
     
     FilterTabs --> TabChoice{Select Tab}
     TabChoice -->|Doctor 1| ShowDoc1[Doctor 1 Calendar]
-    TabChoice -->|Doctor 2| ShowDoc2[Doctor 2 Calendar]
+    TabChoice -->|Dr. Shivani| ShowDoc2[Dr. Shivani Calendar]
     TabChoice -->|Nurse| ShowNurse[Nurse Calendar]
     TabChoice -->|GAPS Coach| ShowGAPS[GAPS Calendar]
     TabChoice -->|All| ShowAll
@@ -119,11 +119,16 @@ flowchart TD
 - **Phone Booking & Payment**: Consultant books next appointment and takes payment over phone
 
 ### 2. Multiple Practitioners
-- **2 Doctors**: Telehealth alternative medicine
-- **Dr Shivani**: Telehealth & In-person consultations (Melbourne clinic)
+- **Doctor 1**: Telehealth alternative medicine
+- **Doctor 2 (Dr. Shivani)**: Telehealth & In-person consultations (Melbourne clinic)
 - **1 Nurse Practitioner**: Telehealth alternative medicine
-- **1 GAPS Coach**: Specialized nutrition coaching
+- **1 GAPS Coach**: Specialized nutrition coaching (currently also performs free consultations)
 - **Individual Calendars**: Each practitioner has dedicated Calendly
+
+**Service Assignments:**
+- Alternative Medicine: Doctor 1, Dr. Shivani, Nurse Practitioner
+- Weight Loss: Doctor 1, Dr. Shivani, Nurse Practitioner
+- GAPS Coaching: GAPS Coach only
 
 ### 3. Smart Triage Process
 - **Dynamic Forms**: Consultant uses dynamic question forms
@@ -132,10 +137,11 @@ flowchart TD
 - **Eligibility Check**: Ensures patients get appropriate care
 
 ### 4. Enhanced Follow-up Booking
-- **Combined Calendar**: View all practitioner availability
+- **Combined Calendar**: View availability of all practitioners who can service your appointment type
+- **Service-Based Display**: Only shows relevant practitioners (e.g., Alt Med shows Doctors + Nurse, GAPS shows only GAPS Coach)
 - **Dynamic Filtering**: Tab-based filtering by practitioner
 - **Direct Booking**: Self-service for returning patients
-- **Practitioner Choice**: Select preferred provider
+- **Practitioner Choice**: Select preferred provider from available options
 
 ### 5. Improved User Experience
 - **Clear Path Separation**: Initial vs Follow-up clearly defined

@@ -52,7 +52,7 @@ flowchart TD
     NoPayment --> InitialConfirmed[Booking Confirmed]
     
     %% Free Consultation Process
-    InitialConfirmed --> ConsultantCall[Consultant Calls]
+    InitialConfirmed --> ConsultantCall[Consultant/GAPS Coach Calls<br/>(GAPS Coach currently<br/>handles free consultations)]
     ConsultantCall --> DynamicForm{Dynamic Form Process}
     
     %% Consultant selects appropriate intake form
@@ -124,8 +124,8 @@ flowchart TD
     
     PaymentCalc --> PaymentProcess
     
-    PaymentProcess -->|Alt Med $119| ProcessPay1[Process Payment]
-    PaymentProcess -->|GAPS $195| ProcessPay2[Process Payment]
+    PaymentProcess -->|Alt Med $119| ProcessPay1[Process Initial Payment]
+    PaymentProcess -->|GAPS $195| ProcessPay2[Process Initial Payment]
     PaymentProcess -->|Weight TBD| ProcessPay3[Process Payment]
     PaymentProcess -->|Counsel TBD| ProcessPay4[Process Payment]
     PaymentProcess -->|Equine TBD| ProcessPay5[Process Payment]
@@ -141,21 +141,21 @@ flowchart TD
     
     %% Follow-up Booking - Direct
     Homepage -->|Returning Patient| FollowUpPage[Follow-up Booking Page]
-    FollowUpPage --> ServiceSelection{Select Service Type}
+    FollowUpPage --> ServiceSelection{Select Service Type<br/>Shows Available Practitioners<br/>For That Service}
     
     ServiceSelection --> ServiceOptions{Choose Service & Duration}
     
-    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine]
-    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching]
+    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine<br/>$79 follow-up]
+    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching<br/>$79 follow-up]
     ServiceOptions -->|Weight TBD| FollowWeight[Weight Loss]
     ServiceOptions -->|Counsel TBD| FollowCounsel[Counseling]
     ServiceOptions -->|Equine TBD| FollowEquine[Equine Therapy]
     
-    FollowAlt --> PractitionerSelect[Select Practitioner]
-    FollowGAPS --> PractitionerSelect
-    FollowWeight --> PractitionerSelect
-    FollowCounsel --> PractitionerSelect
-    FollowEquine --> PractitionerSelect
+    FollowAlt --> PractitionerSelect[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
+    FollowGAPS --> PractitionerSelect[GAPS Coach Calendar]
+    FollowWeight --> PractitionerSelect[Combined Calendar View<br/>Doctor 1, Dr. Shivani, Nurse]
+    FollowCounsel --> PractitionerSelect[Counselor Calendar]
+    FollowEquine --> PractitionerSelect[Equine Therapist Calendar]
     
     PractitionerSelect --> TimeSelect[Select Time Slot]
     TimeSelect --> ServiceConfirm[Confirm Service Details]
@@ -186,7 +186,7 @@ flowchart TD
 1. **Alternative Medicine** 
    - Initial: 15 min, $119 (Telehealth)
    - Follow-up: 10 min, $79
-   - Telehealth & In-Person (Melbourne): 20 min initial, 15 min follow-up
+   - Dr. Shivani (Telehealth & In-Person Melbourne): 20 min initial, 15 min follow-up, same price
 2. **GAPS Diet Coaching**
    - Initial: 60 min, $195
    - Follow-up: 15 min, $79
@@ -195,14 +195,20 @@ flowchart TD
 5. **Equine Therapy** (TBD)
 
 ### Practitioner Team (8 Total)
-- **Consultant**: All initial assessments (20 min free)
-- **Doctor 1**: Alternative Medicine (Telehealth)
-- **Doctor 2**: Alternative Medicine (Telehealth)
-- **Dr Shivani**: Telehealth & In-Person (Melbourne clinic)
-- **Nurse Practitioner**: Alternative Medicine (Telehealth)
-- **GAPS Coach**: GAPS Diet coaching
+- **Consultant**: Initial assessments (NOTE: GAPS Coach currently performs free consultations)
+- **Doctor 1**: Alternative Medicine & Weight Loss (Telehealth)
+- **Doctor 2 (Dr. Shivani)**: Alternative Medicine & Weight Loss (Telehealth & In-Person Melbourne)
+- **Nurse Practitioner**: Alternative Medicine & Weight Loss (Telehealth)
+- **GAPS Coach**: GAPS Diet coaching (currently also doing free consultations)
 - **Counselor**: Online counseling (when available)
 - **Equine Therapist**: Equine therapy (when available)
+
+**Service Assignments:**
+- Alternative Medicine: Doctor 1, Dr. Shivani, Nurse Practitioner
+- Weight Loss: Doctor 1, Dr. Shivani, Nurse Practitioner  
+- GAPS Coaching: GAPS Coach only
+- Counseling: Counselor only
+- Equine Therapy: Equine Therapist only
 
 ### Enhanced Booking Features
 - Specialty intake forms used by consultant during free consultation
@@ -218,7 +224,10 @@ flowchart TD
 ### Follow-up Booking Process
 - Direct follow-up page (no patient portal)
 - Select service type first
-- Choose practitioner and time
+- Combined calendar shows all practitioners who can service that appointment type
+- For Alt Med/Weight Loss: See availability for Doctor 1, Dr. Shivani, and Nurse Practitioner
+- For GAPS: Only GAPS Coach calendar
+- Choose practitioner and time from available options
 - Online payment for follow-ups
 - No additional forms needed for follow-ups
 

@@ -144,17 +144,17 @@ flowchart TD
 1. **Alternative Medicine** - Fully operational
    - Initial: 15 minutes, $119
    - Follow-up: 10 minutes, $79
-   - Doctors & Nurse Practitioner (Telehealth)
-   - Dr Shivani (Telehealth & Melbourne - 20 min initial, 15 min follow-up)
+   - Doctor 1 & Nurse Practitioner (Telehealth)
+   - Dr. Shivani/Doctor 2 (Telehealth & Melbourne - 20 min initial, 15 min follow-up)
 
 2. **GAPS Diet Coaching** - Fully operational
    - Initial: 60 minutes, $195
    - Follow-up: 15 minutes, $79
-   - GAPS Coach
+   - GAPS Coach (also currently performs free consultations)
 
 3. **Weight Loss Program** - Newly launched
    - Pricing and duration TBD
-   - Multiple practitioner support
+   - Serviced by: Doctor 1, Dr. Shivani (Doctor 2), Nurse Practitioner
 
 ### Coming Soon Services
 1. **Counseling** - Waitlist active

@@ -7,9 +7,9 @@
 
 | Service | Initial Consult | Follow-up | Provider | Status |
 |---------|----------------|-----------|----------|---------|
-| **Free Consultation** | FREE (20 min) | N/A | Consultant | ✅ Active |
-| **Alternative Medicine** | $119 (15 min) | $79 (10 min) | Telehealth Doctors/Nurse | ✅ Active |
-| **Alternative Medicine** | $119 (20 min) | $79 (15 min) | Dr. Shivani (Telehealth & Melbourne) | ✅ Active |
+| **Free Consultation** | FREE (20 min) | N/A | GAPS Coach* | ✅ Active |
+| **Alternative Medicine** | $119 (15 min) | $79 (10 min) | Doctor 1, Nurse Practitioner | ✅ Active |
+| **Alternative Medicine** | $119 (20 min) | $79 (15 min) | Dr. Shivani (Doctor 2) - Telehealth & Melbourne | ✅ Active |
 | **GAPS Diet Coaching** | $195 (60 min) | $79 (15 min) | GAPS Coach | ✅ Active |
 | **Weight Loss Program** | TBD | TBD | Multiple | 🔜 Coming Soon |
 | **Online Counseling** | TBD | TBD | Counselor | 🔜 Coming Soon |
@@ -17,12 +17,12 @@
 
 ## Current Practitioners (6 Total)
 
-1. **Consultant** - Free initial assessments and triage
-2. **Doctor 1** - Telehealth alternative medicine
-3. **Doctor 2** - Telehealth alternative medicine
-4. **Dr. Shivani** - Telehealth & In-person Melbourne clinic
-5. **Nurse Practitioner** - Telehealth alternative medicine
-6. **GAPS Coach** - Nutrition and GAPS diet specialist
+1. **Consultant** - Free initial assessments and triage (role currently performed by GAPS Coach)
+2. **Doctor 1** - Telehealth alternative medicine & weight loss
+3. **Doctor 2 (Dr. Shivani)** - Telehealth & In-person Melbourne clinic (alternative medicine & weight loss)
+4. **Nurse Practitioner** - Telehealth alternative medicine & weight loss
+5. **GAPS Coach** - Nutrition and GAPS diet specialist (currently also performing free consultations)
+6. *(One practitioner position)*
 
 ## Future Practitioners (When Fully Operational: 8 Total)
 
@@ -33,24 +33,25 @@
 
 ### Free Initial Consultation
 - **Duration**: 20 minutes
-- **Provider**: Consultant
+- **Provider**: GAPS Coach (currently performing this role)
 - **Purpose**: Triage assessment to determine best practitioner match
-- **Includes**: Mini intake form with consent
-- **Booking**: Direct through consultant's Calendly
+- **Includes**: Dynamic intake forms completed by coach during call
+- **Booking**: Direct through consultation calendar
 - **Payment**: None required
+- **Note**: This role may transition to a dedicated consultant in future
 
 ### Alternative Medicine (Telehealth)
 - **Initial**: $119 for 15 minutes
 - **Follow-up**: $79 for 10 minutes
-- **Providers**: Doctor 1, Doctor 2, Nurse Practitioner
+- **Providers**: Doctor 1, Dr. Shivani (Doctor 2 - also offers in-person), Nurse Practitioner
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Processed during phone booking or online
 
-### Alternative Medicine (In-Person - Melbourne)
+### Alternative Medicine (Dr. Shivani - Telehealth & In-Person Melbourne)
 - **Initial**: $119 for 20 minutes
 - **Follow-up**: $79 for 15 minutes
-- **Provider**: Dr. Shivani
-- **Location**: Telehealth & Melbourne clinic
+- **Provider**: Dr. Shivani (Doctor 2)
+- **Location**: Offers both telehealth AND Melbourne clinic appointments
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Processed during phone booking or online
 
@@ -73,10 +74,21 @@
 
 - All prices are in AUD
 - Telehealth appointments via secure video platform
-- Dr. Shivani offers both telehealth and in-person appointments in Melbourne
+- Dr. Shivani (Doctor 2) offers both telehealth and in-person appointments in Melbourne
 - Medicare rebates may apply (check with practitioner)
 - Private health insurance may cover some services
 - 24-hour cancellation policy applies
+- *GAPS Coach is temporarily handling free consultations (this may change in future)
+
+## Service Provider Matrix
+
+| Service | Providers |
+|---------|----------|
+| **Alternative Medicine** | Doctor 1, Dr. Shivani (Doctor 2), Nurse Practitioner |
+| **Weight Loss** | Doctor 1, Dr. Shivani (Doctor 2), Nurse Practitioner |
+| **GAPS Coaching** | GAPS Coach only |
+| **Counseling** | Counselor only (when available) |
+| **Equine Therapy** | Equine Therapist only (when available) |
 
 ---
 *This document supersedes any pricing information in other files. Always refer to this document for current pricing and service information.*
