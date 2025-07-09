@@ -63,7 +63,7 @@ flowchart TD
     TriageAssessment --> ServiceRecommend{Service Recommendation}
     
     ServiceRecommend -->|Alternative Medicine| RecDoctor[Recommend Doctor/Nurse]
-    ServiceRecommend -->|GAPS Program| RecGAPS[Recommend Ramona (GAPS Coach)]
+    ServiceRecommend -->|GAPS Program| RecGAPS[Recommend Ramona - GAPS Coach]
     ServiceRecommend -->|Weight Loss| RecWeightLoss[Recommend Weight Loss Specialist]
     ServiceRecommend -->|Multiple Services| RecCombined[Recommend Combined Approach]
     ServiceRecommend -->|Not Suitable| RecAlternative[Alternative Resources]
@@ -150,7 +150,7 @@ flowchart TD
 2. **GAPS Diet Coaching** - Fully operational
    - Initial: 60 minutes, $195 AUD
    - Follow-up: 15 minutes, $79 AUD
-   - Ramona (GAPS Coach) (also currently performs free consultations)
+   - Ramona - GAPS Coach (also currently performs free consultations)
 
 3. **Weight Loss Program** - Newly launched
    - Pricing and duration TBD
