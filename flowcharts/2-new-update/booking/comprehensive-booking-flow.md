@@ -35,7 +35,7 @@ flowchart TB
         C5 --> C6{Determine Best Practitioner}
         
         C6 -->|Medical| C7[Recommend Doctor/Nurse]
-        C6 -->|Lifestyle| C8[Recommend Ramona (GAPS Coach)]
+        C6 -->|Lifestyle| C8[Recommend Ramona - GAPS Coach]
         C6 -->|Not Suitable| C9[Provide Alternatives]
         
         C7 --> C10[Check Practitioner Availability]
@@ -46,7 +46,7 @@ flowchart TB
         C13 --> C14[Prepare Handover]
     end
     
-    subgraph Practitioners["Practitioners (Doctors/Nurse/Ramona)"]
+    subgraph Practitioners["Practitioners - Doctors/Nurse/Ramona"]
         PR1[Receive Booking] --> PR2[Review Triage Handover]
         PR2 --> PR3[Review Full Intake]
         PR3 --> PR4[Conduct Appointment]
