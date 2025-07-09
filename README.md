@@ -135,12 +135,12 @@ All flowcharts are created using Mermaid markdown syntax. To view them:
 ### Active Services (New Update)
 - **Free Initial Consultation**: 20 minutes with consultant (triage assessment)
 - **Alternative Medicine**: 
-  - Initial: $119 (15 minutes) - Telehealth
-  - Follow-up: $79 (10 minutes) - Telehealth
-  - In-Person (Melbourne): $119/$79 (20/15 minutes)
+  - Initial: $119 AUD (15 minutes) - Telehealth
+  - Follow-up: $79 AUD (10 minutes) - Telehealth
+  - In-Person (Melbourne): $119 AUD/$79 AUD (20/15 minutes)
 - **GAPS Diet Coaching**:
-  - Initial: $195 (60 minutes)
-  - Follow-up: $79 (15 minutes)
+  - Initial: $195 AUD (60 minutes)
+  - Follow-up: $79 AUD (15 minutes)
 
 ## Service Expansion Options
 

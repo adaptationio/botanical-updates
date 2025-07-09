@@ -1,6 +1,6 @@
 # Fully Operational Variation - Patient Booking Flow (Original Comprehensive Version - Fixed)
 
-> **Note**: This is the original comprehensive flowchart with syntax fixes applied. The duplicate node IDs have been resolved and special characters that could cause GitHub mermaid parsing errors have been simplified (parentheses removed from multi-line labels, dollar signs replaced with USD, arrows replaced with dashes). For a more accessible version broken into focused sub-flows, see [patient-booking-flow.md](./patient-booking-flow.md).
+> **Note**: This is the original comprehensive flowchart with syntax fixes applied. The duplicate node IDs have been resolved and special characters that could cause GitHub mermaid parsing errors have been simplified (parentheses removed from multi-line labels, dollar signs replaced with AUD, arrows replaced with dashes). For a more accessible version broken into focused sub-flows, see [patient-booking-flow.md](./patient-booking-flow.md).
 
 ## Overview
 This flowchart shows the complete patient experience with all services active: Alternative Medicine, GAPS Coaching, Weight Loss, Counseling, and Equine Therapy.
@@ -54,7 +54,7 @@ flowchart TD
     NoPayment --> InitialConfirmed[Booking Confirmed]
     
     %% Free Consultation Process
-    InitialConfirmed --> ConsultantCall[Consultant/GAPS Coach Calls<br/>GAPS Coach currently<br/>handles free consultations]
+    InitialConfirmed --> ConsultantCall[Consultant/Ramona Calls<br/>Ramona currently<br/>handles free consultations]
     ConsultantCall --> DynamicForm{Dynamic Form Process}
     
     %% Consultant selects appropriate intake form
@@ -126,8 +126,8 @@ flowchart TD
     
     PaymentCalc --> PaymentProcess
     
-    PaymentProcess -->|Alt Med 119 USD| ProcessPay1[Process Initial Payment]
-    PaymentProcess -->|GAPS 195 USD| ProcessPay2[Process Initial Payment]
+    PaymentProcess -->|Alt Med 119 AUD| ProcessPay1[Process Initial Payment]
+    PaymentProcess -->|GAPS 195 AUD| ProcessPay2[Process Initial Payment]
     PaymentProcess -->|Weight TBD| ProcessPay3[Process Payment]
     PaymentProcess -->|Counsel TBD| ProcessPay4[Process Payment]
     PaymentProcess -->|Equine TBD| ProcessPay5[Process Payment]
@@ -147,15 +147,15 @@ flowchart TD
     
     ServiceSelection --> ServiceOptions{Choose Service & Duration}
     
-    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine<br/>79 USD follow-up]
-    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching<br/>79 USD follow-up]
+    ServiceOptions -->|Alt Med 10min| FollowAlt[Alternative Medicine<br/>79 AUD follow-up]
+    ServiceOptions -->|GAPS 15min| FollowGAPS[GAPS Coaching<br/>79 AUD follow-up]
     ServiceOptions -->|Weight TBD| FollowWeight[Weight Loss]
     ServiceOptions -->|Counsel TBD| FollowCounsel[Counseling]
     ServiceOptions -->|Equine TBD| FollowEquine[Equine Therapy]
     
-    FollowAlt --> PractSelectAlt[Combined Calendar View<br/>Doctor 1 - Dr. Shivani - Nurse]
-    FollowGAPS --> PractSelectGAPS[GAPS Coach Calendar]
-    FollowWeight --> PractSelectWeight[Combined Calendar View<br/>Doctor 1 - Dr. Shivani - Nurse]
+    FollowAlt --> PractSelectAlt[Combined Calendar View<br/>Dr Dia - Dr. Shivani - Nurse]
+    FollowGAPS --> PractSelectGAPS[Ramona Calendar]
+    FollowWeight --> PractSelectWeight[Combined Calendar View<br/>Dr Dia - Dr. Shivani - Nurse]
     FollowCounsel --> PractSelectCounsel[Counselor Calendar]
     FollowEquine --> PractSelectEquine[Equine Therapist Calendar]
     
@@ -191,29 +191,29 @@ flowchart TD
 
 ### Complete Service Portfolio
 1. **Alternative Medicine** 
-   - Initial: 15 min, $119 (Telehealth)
-   - Follow-up: 10 min, $79
+   - Initial: 15 min, $119 AUD (Telehealth)
+   - Follow-up: 10 min, $79 AUD
    - Dr. Shivani (Telehealth & In-Person Melbourne): 20 min initial, 15 min follow-up, same price
 2. **GAPS Diet Coaching**
-   - Initial: 60 min, $195
-   - Follow-up: 15 min, $79
+   - Initial: 60 min, $195 AUD
+   - Follow-up: 15 min, $79 AUD
 3. **Weight Loss Program** (TBD)
 4. **Counseling Services** (Online - TBD)
 5. **Equine Therapy** (TBD)
 
 ### Practitioner Team (8 Total)
-- **Consultant**: Initial assessments (NOTE: GAPS Coach currently performs free consultations)
-- **Doctor 1**: Alternative Medicine & Weight Loss (Telehealth)
+- **Consultant**: Initial assessments (NOTE: Ramona currently performs free consultations)
+- **Dr Dia**: Alternative Medicine & Weight Loss (Telehealth)
 - **Doctor 2 (Dr. Shivani)**: Alternative Medicine & Weight Loss (Telehealth & In-Person Melbourne)
 - **Nurse Practitioner**: Alternative Medicine & Weight Loss (Telehealth)
-- **GAPS Coach**: GAPS Diet coaching (currently also doing free consultations)
+- **Ramona (GAPS Coach)**: GAPS Diet coaching (currently also doing free consultations)
 - **Counselor**: Online counseling (when available)
 - **Equine Therapist**: Equine therapy (when available)
 
 **Service Assignments:**
-- Alternative Medicine: Doctor 1, Dr. Shivani, Nurse Practitioner
-- Weight Loss: Doctor 1, Dr. Shivani, Nurse Practitioner  
-- GAPS Coaching: GAPS Coach only
+- Alternative Medicine: Dr Dia, Dr. Shivani, Nurse Practitioner
+- Weight Loss: Dr Dia, Dr. Shivani, Nurse Practitioner  
+- GAPS Coaching: Ramona only
 - Counseling: Counselor only
 - Equine Therapy: Equine Therapist only
 
@@ -232,8 +232,8 @@ flowchart TD
 - Direct follow-up page (no patient portal)
 - Select service type first
 - Combined calendar shows all practitioners who can service that appointment type
-- For Alt Med/Weight Loss: See availability for Doctor 1, Dr. Shivani, and Nurse Practitioner
-- For GAPS: Only GAPS Coach calendar
+- For Alt Med/Weight Loss: See availability for Dr Dia, Dr. Shivani, and Nurse Practitioner
+- For GAPS: Only Ramona calendar
 - Choose practitioner and time from available options
 - Online payment for follow-ups
 - No additional forms needed for follow-ups

@@ -2,7 +2,7 @@
 
 ## Current Services (New-Update)
 - Alternative Medicine (Doctors & Nurse Practitioner)
-- GAPS Diet Coaching (GAPS Coach)
+- GAPS Diet Coaching (Ramona)
 
 ## New Services to Add
 1. **Weight Loss Program** (Ready to launch)
@@ -58,19 +58,19 @@ Each service will have dedicated landing pages:
 | Service | Initial Consult | Follow-up | Initial Duration | Follow-up Duration |
 |---------|----------------|-----------|------------------|-------------------|
 | Free Consult (Consultant) | FREE | N/A | 20 min | N/A |
-| Alternative Medicine | $119 | $79 | 15 min | 10 min |
-| GAPS Coaching | $195 | $79 | 60 min | 15 min |
+| Alternative Medicine | $119 AUD | $79 AUD | 15 min | 10 min |
+| GAPS Coaching | $195 AUD | $79 AUD | 60 min | 15 min |
 | Weight Loss | TBD | TBD | TBD | TBD |
 | Counseling (Online) | TBD | TBD | TBD | TBD |
 | Equine Therapy | TBD | TBD | TBD | TBD |
-| Dr Shivani (Telehealth/Melbourne) | $119 | $79 | 20 min | 15 min |
+| Dr Shivani (Telehealth/Melbourne) | $119 AUD | $79 AUD | 20 min | 15 min |
 
 ### Practitioner Specializations
-- **Doctor 1**: Alternative Medicine (Telehealth)
+- **Dr Dia**: Alternative Medicine (Telehealth)
 - **Doctor 2**: Alternative Medicine (Telehealth)
 - **Dr Shivani**: Telehealth & In-Person consultations (Melbourne clinic)
 - **Nurse Practitioner**: Alternative Medicine (Telehealth)
-- **GAPS Coach**: GAPS Diet coaching
+- **Ramona (GAPS Coach)**: GAPS Diet coaching
 - **Counselor** (new): Online counseling services
 - **Equine Therapist** (new): Equine therapy
 - **Consultant**: Free initial assessments (20 min)
@@ -80,12 +80,12 @@ Each service will have dedicated landing pages:
 ### Calendly Setup
 Each service type needs separate appointment types:
 - `free-consult-20min` (consultant triage)
-- `initial-alternative-15min` ($119)
-- `followup-alternative-10min` ($79)
-- `initial-gaps-60min` ($195)
-- `followup-gaps-15min` ($79)
-- `initial-inperson-20min` ($119)
-- `followup-inperson-15min` ($79)
+- `initial-alternative-15min` ($119 AUD)
+- `followup-alternative-10min` ($79 AUD)
+- `initial-gaps-60min` ($195 AUD)
+- `followup-gaps-15min` ($79 AUD)
+- `initial-inperson-20min` ($119 AUD)
+- `followup-inperson-15min` ($79 AUD)
 - Weight loss types (TBD)
 - Counseling types (TBD)
 - Equine therapy types (TBD)

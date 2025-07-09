@@ -10,7 +10,7 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 | **Services** | 2 (Alt Med, GAPS) | 3 Active + 2 Waitlist | 5 Active |
 | **Practitioners** | 6 | 6 | 8 |
 | **Appointment Types** | 6 | 8+ | 15+ |
-| **Price Points** | 3 ($79, $119, $195) | 3+ ($79, $119, $195, TBD) | 5+ (Various) |
+| **Price Points** | 3 ($79 AUD, $119 AUD, $195 AUD) | 3+ ($79 AUD, $119 AUD, $195 AUD, TBD) | 5+ (Various) |
 | **Marketing Funnels** | 1 | 3 + 2 Waitlist | 5 |
 | **Technical Complexity** | Medium | Medium-High | High |
 | **Admin Overhead** | Medium | Medium-High | High |
@@ -22,12 +22,12 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 #### Coming Soon Variation
 **Active Services:**
 - Alternative Medicine 
-  - Initial: 15 min, $119 (Telehealth)
-  - Follow-up: 10 min, $79
+  - Initial: 15 min, $119 AUD (Telehealth)
+  - Follow-up: 10 min, $79 AUD
   - Telehealth & In-Person (Melbourne) / Telehealth: 20/15 min, same price
 - GAPS Diet Coaching
-  - Initial: 60 min, $195
-  - Follow-up: 15 min, $79
+  - Initial: 60 min, $195 AUD
+  - Follow-up: 15 min, $79 AUD
 - Weight Loss Program (TBD pricing/duration)
 
 **Waitlist Services:**
@@ -48,12 +48,12 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 #### Fully Operational Variation
 **All Services Active:**
 - Alternative Medicine 
-  - Initial: 15 min, $119 (Telehealth)
-  - Follow-up: 10 min, $79
+  - Initial: 15 min, $119 AUD (Telehealth)
+  - Follow-up: 10 min, $79 AUD
   - Telehealth & In-Person (Melbourne) / Telehealth: 20/15 min, same price
 - GAPS Diet Coaching
-  - Initial: 60 min, $195
-  - Follow-up: 15 min, $79
+  - Initial: 60 min, $195 AUD
+  - Follow-up: 15 min, $79 AUD
 - Weight Loss Program (TBD)
 - Counseling Services (Online - TBD)
 - Equine Therapy (TBD)
@@ -161,12 +161,12 @@ Assumptions:
 - Mix of initial and follow-up appointments
 
 Revenue Breakdown:
-- Alt Med Initial: 20 × $119 = $2,380
-- Alt Med Follow-up: 80 × $79 = $6,320
-- GAPS Initial: 10 × $195 = $1,950
-- GAPS Follow-up: 50 × $79 = $3,950
+- Alt Med Initial: 20 × $119 AUD = $2,380 AUD
+- Alt Med Follow-up: 80 × $79 AUD = $6,320 AUD
+- GAPS Initial: 10 × $195 AUD = $1,950 AUD
+- GAPS Follow-up: 50 × $79 AUD = $3,950 AUD
 - Weight Loss: 40 × TBD
-Total: $14,600+ /month (excluding weight loss)
+Total: $14,600+ AUD/month (excluding weight loss)
 ```
 
 #### Fully Operational (Monthly)
@@ -176,14 +176,14 @@ Assumptions:
 - All services active
 
 Revenue Breakdown:
-- Alt Med Initial: 30 × $119 = $3,570
-- Alt Med Follow-up: 100 × $79 = $7,900
-- GAPS Initial: 15 × $195 = $2,925
-- GAPS Follow-up: 60 × $79 = $4,740
+- Alt Med Initial: 30 × $119 AUD = $3,570 AUD
+- Alt Med Follow-up: 100 × $79 AUD = $7,900 AUD
+- GAPS Initial: 15 × $195 AUD = $2,925 AUD
+- GAPS Follow-up: 60 × $79 AUD = $4,740 AUD
 - Weight Loss: 50 × TBD
 - Counseling: 30 × TBD
 - Equine: 15 × TBD
-Total: $19,135+ /month (excluding TBD services)
+Total: $19,135+ AUD/month (excluding TBD services)
 ```
 
 ### Risk Assessment

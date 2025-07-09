@@ -4,7 +4,7 @@ This folder contains flowcharts documenting the **CURRENT** Botaniqal booking sy
 
 ## System Overview
 - **Single Practitioner**: Dr. Dia only
-- **Direct Booking**: Patients book and pay upfront ($89 initial, $69 follow-up)
+- **Direct Booking**: Patients book and pay upfront ($89 AUD initial, $69 AUD follow-up)
 - **Two-Step Process**: Book first, then fill intake form
 
 ## Contents

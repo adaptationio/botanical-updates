@@ -27,7 +27,7 @@
 | **CTA Button** | "Book Appointment" | "Book Free Consultation" | Update button text and link |
 | **Booking Page** | Direct to Calendly | Explain free consultation first | New landing page needed |
 | **Service Selection** | Not available | Choose: Alt Med, GAPS, etc. | Add service selector UI |
-| **Practitioner Choice** | No choice (Dr. Dia only) | After triage assessment | New practitioner cards |
+| **Practitioner Choice** | No choice (Dr Dia only) | After triage assessment | New practitioner cards |
 
 ### 2. Booking Process Changes
 
@@ -35,7 +35,7 @@
 |-------|---------|-----|--------------|
 | **Initial Contact** | Paid booking | Free 20-min consultation | New Calendly event type |
 | **Assessment** | After booking via form | During free consultation | Triage script/questions |
-| **Practitioner Assignment** | Always Dr. Dia | Based on needs/availability | Assignment logic |
+| **Practitioner Assignment** | Always Dr Dia | Based on needs/availability | Assignment logic |
 | **Payment** | Online via Calendly | Over phone with consultant | Phone payment process |
 | **Confirmation** | Immediate | After phone booking | New confirmation flow |
 
@@ -48,10 +48,10 @@
 Single Calendar:
   Events: 
     - "Initial Consultation"
-      Payment: Required ($89)
+      Payment: Required ($89 AUD)
       Duration: 15 minutes
     - "Follow-up Consultation"
-      Payment: Required ($69)  
+      Payment: Required ($69 AUD)  
       Duration: 10 minutes
 ```
 
@@ -117,7 +117,7 @@ graph LR
 <!-- Current -->
 <section class="hero">
 -  <h1>Book Your Alternative Medicine Consultation</h1>
--  <p>Consult with Dr. Dia - $89 initial (15 min), $69 follow-up (10 min)</p>
+-  <p>Consult with Dr Dia - $89 AUD initial (15 min), $69 AUD follow-up (10 min)</p>
 -  <button>Book Now</button>
 </section>
 
@@ -207,7 +207,7 @@ CREATE TABLE triage_sessions (
 
 | Aspect | Current Behavior | New Behavior | Benefit |
 |--------|-----------------|--------------|---------|
-| **First Step** | Pay $89 upfront | Free consultation | Lower barrier to entry |
+| **First Step** | Pay $89 AUD upfront | Free consultation | Lower barrier to entry |
 | **Practitioner Choice** | No choice | Matched to needs | Better fit |
 | **Payment** | Online only | Phone option | Flexibility |
 | **Assessment** | Fill form after booking | During consultation | More personal |

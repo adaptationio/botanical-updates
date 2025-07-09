@@ -1,7 +1,7 @@
 # Service Triage Process - Consultant Assessment
 
 ## Overview
-This diagram details how the consultant (currently GAPS Coach) assesses patients and matches them with appropriate services and practitioners.
+This diagram details how the consultant (currently Ramona) assesses patients and matches them with appropriate services and practitioners.
 
 ```mermaid
 graph TD
@@ -44,7 +44,7 @@ graph TD
     Digestive --> DigestQ[Digestive Health Questions]
     DigestQ --> GAPSFit{GAPS Suitable?}
     
-    GAPSFit -->|Yes| GAPSYes[GAPS Coach Recommended]
+    GAPSFit -->|Yes| GAPSYes[Ramona (GAPS Coach) Recommended]
     GAPSFit -->|Maybe| GAPSMaybe[GAPS + Alt Medicine]
     GAPSFit -->|No| GAPSNo[Alt Medicine Only]
     
@@ -152,11 +152,11 @@ graph TD
 | Complexity | Assigned To | Factors |
 |------------|-------------|---------|
 | **Simple** | Nurse Practitioner | Routine care, stable conditions |
-| **Moderate** | Doctor 1 | Multiple conditions, medication management |
+| **Moderate** | Dr Dia | Multiple conditions, medication management |
 | **Complex** | Dr. Shivani | Chronic complex cases, prefer in-person option |
 
 #### Location Considerations
-- **Telehealth Only**: Doctor 1, Nurse
+- **Telehealth Only**: Dr Dia, Nurse
 - **Telehealth + Melbourne**: Dr. Shivani
 - Patient preference considered
 - Availability factored

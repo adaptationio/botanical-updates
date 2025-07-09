@@ -20,7 +20,7 @@ graph TD
     
     Process --> Support[Comprehensive Support<br/>60-min Initial Assessment<br/>Meal Plans & Recipes<br/>Weekly Check-ins<br/>24/7 Email Support]
     
-    Support --> Investment[Your Investment<br/>Initial: $195 (60 min)<br/>Follow-ups: $79 (15 min)<br/>FREE Discovery Call]
+    Support --> Investment[Your Investment<br/>Initial: $195 AUD (60 min)<br/>Follow-ups: $79 AUD (15 min)<br/>FREE Discovery Call]
     
     Investment --> CTA1{Take Action}
     CTA1 -->|Start Healing| Booking[Book Free Consultation]

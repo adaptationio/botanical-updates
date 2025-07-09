@@ -80,7 +80,7 @@ graph TD
     MatchPractitioner -->|Simple Case| AssignNurse[Assign Nurse Practitioner]
     MatchPractitioner -->|Complex Case| AssignDoctor[Assign Doctor]
     MatchPractitioner -->|Location Pref| AssignDrShivani[Assign Dr. Shivani]
-    MatchPractitioner -->|GAPS Need| AssignGAPS[Assign GAPS Coach]
+    MatchPractitioner -->|GAPS Need| AssignGAPS[Assign Ramona (GAPS Coach)]
     MatchPractitioner -->|Multiple| BuildTeam[Build Care Team]
     
     %% Booking Handoff
@@ -198,9 +198,9 @@ ELSE IF single_service AND waitlisted:
 
 **Complexity Assessment:**
 - **Simple**: Single condition, stable → Nurse Practitioner
-- **Moderate**: Multiple conditions, medications → Doctor 1
+- **Moderate**: Multiple conditions, medications → Dr Dia
 - **Complex**: Chronic conditions, prefer in-person → Dr. Shivani
-- **Specialized**: Gut health focus → GAPS Coach
+- **Specialized**: Gut health focus → Ramona (GAPS Coach)
 
 **Multi-Service Matching:**
 1. Identify primary service need

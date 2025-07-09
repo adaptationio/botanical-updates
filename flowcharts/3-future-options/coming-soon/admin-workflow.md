@@ -47,10 +47,10 @@ flowchart TD
     CalendarMatrix --> SyncConsultant[Consultant Calendar]
     CalendarMatrix --> SyncPractitioners{Practitioner Calendars}
     
-    SyncPractitioners --> SyncDoc1[Doctor 1 Calendar]
+    SyncPractitioners --> SyncDoc1[Dr Dia Calendar]
     SyncPractitioners --> SyncDoc2[Doctor 2 Calendar]
     SyncPractitioners --> SyncNurse[Nurse Calendar]
-    SyncPractitioners --> SyncGAPS[GAPS Coach Calendar]
+    SyncPractitioners --> SyncGAPS[Ramona Calendar]
     
     %% Service-Specific Calendly Setup
     SyncDoc1 --> ServiceSlots1{Configure Service Slots}

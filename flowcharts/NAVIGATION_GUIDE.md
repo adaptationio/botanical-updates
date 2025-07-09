@@ -6,10 +6,10 @@
 flowcharts/
 │
 ├── 📍 1-current-system/     ← "Show me what exists today"
-│   └── Single practitioner, $89/$69 pricing
+│   └── Single practitioner, $89 AUD/$69 AUD pricing
 │
 ├── 🚀 2-new-update/         ← "Show me what we're building"
-│   └── Multi-practitioner, free triage, $119/$79
+│   └── Multi-practitioner, free triage, $119 AUD/$79 AUD
 │
 ├── 💡 3-future-options/     ← "Show me future possibilities"  
 │   └── Service expansions (weight loss, counseling, etc.)

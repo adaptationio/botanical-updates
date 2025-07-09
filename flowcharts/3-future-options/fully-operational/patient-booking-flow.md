@@ -71,9 +71,9 @@ graph LR
 
 | Service | Initial Consult | Follow-up | Practitioners |
 |---------|----------------|-----------|---------------|
-| **Alternative Medicine** | $119 (15-20 min) | $79 (10-15 min) | Doctor 1, Dr. Shivani*, Nurse |
-| **GAPS Diet Coaching** | $195 (60 min) | $79 (15 min) | GAPS Coach |
-| **Weight Loss Program** | TBD | TBD | Doctor 1, Dr. Shivani*, Nurse |
+| **Alternative Medicine** | $119 AUD (15-20 min) | $79 AUD (10-15 min) | Dr Dia, Dr. Shivani*, Nurse |
+| **GAPS Diet Coaching** | $195 AUD (60 min) | $79 AUD (15 min) | Ramona |
+| **Weight Loss Program** | TBD | TBD | Dr Dia, Dr. Shivani*, Nurse |
 | **Counseling Services** | TBD | TBD | Counselor |
 | **Equine Therapy** | TBD | TBD | Equine Therapist |
 
@@ -81,11 +81,11 @@ graph LR
 
 ### Practitioner Team (8 Total)
 
-1. **Consultant Role** - Currently performed by GAPS Coach
-2. **Doctor 1** - Telehealth (Alt Med & Weight Loss)
+1. **Consultant Role** - Currently performed by Ramona
+2. **Dr Dia** - Telehealth (Alt Med & Weight Loss)
 3. **Doctor 2 (Dr. Shivani)** - Telehealth & Melbourne (Alt Med & Weight Loss)
 4. **Nurse Practitioner** - Telehealth (Alt Med & Weight Loss)
-5. **GAPS Coach** - GAPS specialty + free consultations
+5. **Ramona (GAPS Coach)** - GAPS specialty + free consultations
 6. **Counselor** - Online mental health
 7. **Equine Therapist** - In-person therapy
 8. *(One additional practitioner)*
@@ -118,7 +118,7 @@ graph LR
 ### New Patient Experience
 1. Enter through service-specific marketing funnel
 2. Book free consultation (no payment required)
-3. Receive triage call from GAPS Coach/Consultant
+3. Receive triage call from Ramona/Consultant
 4. Complete dynamic intake form during call
 5. Get matched with appropriate practitioner(s)
 6. Book and pay for first appointment over phone

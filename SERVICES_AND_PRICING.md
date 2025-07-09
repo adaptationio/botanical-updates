@@ -7,21 +7,21 @@
 
 | Service | Initial Consult | Follow-up | Provider | Status |
 |---------|----------------|-----------|----------|---------|
-| **Free Consultation** | FREE (20 min) | N/A | GAPS Coach* | ✅ Active |
-| **Alternative Medicine** | $119 (15 min) | $79 (10 min) | Doctor 1, Nurse Practitioner | ✅ Active |
-| **Alternative Medicine** | $119 (20 min) | $79 (15 min) | Dr. Shivani (Doctor 2) - Telehealth & Melbourne | ✅ Active |
-| **GAPS Diet Coaching** | $195 (60 min) | $79 (15 min) | GAPS Coach | ✅ Active |
+| **Free Consultation** | FREE (20 min) | N/A | Ramona (GAPS Coach)* | ✅ Active |
+| **Alternative Medicine** | $119 AUD (15 min) | $79 AUD (10 min) | Dr Dia, Nurse Practitioner | ✅ Active |
+| **Alternative Medicine** | $119 AUD (20 min) | $79 AUD (15 min) | Dr. Shivani - Telehealth & Melbourne | ✅ Active |
+| **GAPS Diet Coaching** | $195 AUD (60 min) | $79 AUD (15 min) | Ramona (GAPS Coach) | ✅ Active |
 | **Weight Loss Program** | TBD | TBD | Multiple | 🔜 Coming Soon |
 | **Online Counseling** | TBD | TBD | Counselor | 🔜 Coming Soon |
 | **Equine Therapy** | TBD | TBD | Equine Therapist | 🔜 Coming Soon |
 
 ## Current Practitioners (6 Total)
 
-1. **Consultant** - Free initial assessments and triage (role currently performed by GAPS Coach)
-2. **Doctor 1** - Telehealth alternative medicine & weight loss
-3. **Doctor 2 (Dr. Shivani)** - Telehealth & In-person Melbourne clinic (alternative medicine & weight loss)
+1. **Consultant** - Free initial assessments and triage (role currently performed by Ramona)
+2. **Dr Dia** - Telehealth alternative medicine & weight loss
+3. **Dr. Shivani** - Telehealth & In-person Melbourne clinic (alternative medicine & weight loss)
 4. **Nurse Practitioner** - Telehealth alternative medicine & weight loss
-5. **GAPS Coach** - Nutrition and GAPS diet specialist (currently also performing free consultations)
+5. **Ramona (GAPS Coach)** - Nutrition and GAPS diet specialist (currently also performing free consultations)
 6. *(One practitioner position)*
 
 ## Future Practitioners (When Fully Operational: 8 Total)
@@ -33,7 +33,7 @@
 
 ### Free Initial Consultation
 - **Duration**: 20 minutes
-- **Provider**: GAPS Coach (currently performing this role)
+- **Provider**: Ramona (GAPS Coach, currently performing this role)
 - **Purpose**: Triage assessment to determine best practitioner match
 - **Includes**: Dynamic intake forms completed by coach during call
 - **Booking**: Direct through consultation calendar
@@ -41,24 +41,24 @@
 - **Note**: This role may transition to a dedicated consultant in future
 
 ### Alternative Medicine (Telehealth)
-- **Initial**: $119 for 15 minutes
-- **Follow-up**: $79 for 10 minutes
-- **Providers**: Doctor 1, Dr. Shivani (Doctor 2 - also offers in-person), Nurse Practitioner
+- **Initial**: $119 AUD for 15 minutes
+- **Follow-up**: $79 AUD for 10 minutes
+- **Providers**: Dr Dia, Dr. Shivani (Doctor 2 - also offers in-person), Nurse Practitioner
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Processed during phone booking or online
 
 ### Alternative Medicine (Dr. Shivani - Telehealth & In-Person Melbourne)
-- **Initial**: $119 for 20 minutes
-- **Follow-up**: $79 for 15 minutes
+- **Initial**: $119 AUD for 20 minutes
+- **Follow-up**: $79 AUD for 15 minutes
 - **Provider**: Dr. Shivani (Doctor 2)
 - **Location**: Offers both telehealth AND Melbourne clinic appointments
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Processed during phone booking or online
 
 ### GAPS Diet Coaching
-- **Initial**: $195 for 60 minutes
-- **Follow-up**: $79 for 15 minutes
-- **Provider**: GAPS Coach
+- **Initial**: $195 AUD for 60 minutes
+- **Follow-up**: $79 AUD for 15 minutes
+- **Provider**: Ramona (GAPS Coach)
 - **Focus**: Gut and Psychology/Physiology Syndrome dietary protocol
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Processed during phone booking or online
@@ -78,15 +78,15 @@
 - Medicare rebates may apply (check with practitioner)
 - Private health insurance may cover some services
 - 24-hour cancellation policy applies
-- *GAPS Coach is temporarily handling free consultations (this may change in future)
+- *Ramona (GAPS Coach) is temporarily handling free consultations (this may change in future)
 
 ## Service Provider Matrix
 
 | Service | Providers |
 |---------|----------|
-| **Alternative Medicine** | Doctor 1, Dr. Shivani (Doctor 2), Nurse Practitioner |
-| **Weight Loss** | Doctor 1, Dr. Shivani (Doctor 2), Nurse Practitioner |
-| **GAPS Coaching** | GAPS Coach only |
+| **Alternative Medicine** | Dr Dia, Dr. Shivani (Doctor 2), Nurse Practitioner |
+| **Weight Loss** | Dr Dia, Dr. Shivani (Doctor 2), Nurse Practitioner |
+| **GAPS Coaching** | Ramona only |
 | **Counseling** | Counselor only (when available) |
 | **Equine Therapy** | Equine Therapist only (when available) |
 

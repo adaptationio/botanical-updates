@@ -51,7 +51,7 @@ graph TD
 ### New Patients (First Visit)
 1. Enter through service-specific landing pages
 2. Book FREE 20-minute consultation
-3. Consultant/GAPS Coach performs triage
+3. Consultant/Ramona performs triage
 4. Phone booking with appropriate practitioner
 5. Payment taken over phone
 6. First appointment scheduled
@@ -67,9 +67,9 @@ graph TD
 
 | Service | Initial | Follow-up | Practitioners |
 |---------|---------|-----------|---------------|
-| **Alternative Medicine** | $119 (15-20min) | $79 (10-15min) | Doctor 1, Dr. Shivani, Nurse |
-| **GAPS Coaching** | $195 (60min) | $79 (15min) | GAPS Coach |
-| **Weight Loss** | TBD | TBD | Doctor 1, Dr. Shivani, Nurse |
+| **Alternative Medicine** | $119 AUD (15-20min) | $79 AUD (10-15min) | Dr Dia, Dr. Shivani, Nurse |
+| **GAPS Coaching** | $195 AUD (60min) | $79 AUD (15min) | Ramona |
+| **Weight Loss** | TBD | TBD | Dr Dia, Dr. Shivani, Nurse |
 | **Counseling** | TBD | TBD | Counselor |
 | **Equine Therapy** | TBD | TBD | Equine Therapist |
 

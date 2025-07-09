@@ -47,11 +47,11 @@ flowchart TD
     
     %% Practitioner Recommendation
     DoctorNeeded --> DoctorChoice{Doctor Selection}
-    DoctorChoice -->|Based on Specialty| RecDoc1[Recommend Doctor 1]
+    DoctorChoice -->|Based on Specialty| RecDoc1[Recommend Dr Dia]
     DoctorChoice -->|Based on Availability| RecDoc2[Recommend Doctor 2]
     
     NurseAppropriate --> RecNurse[Recommend Nurse Practitioner]
-    CoachingAssess --> RecGAPS[Recommend GAPS Coach]
+    CoachingAssess --> RecGAPS[Recommend Ramona (GAPS Coach)]
     
     %% Information Gathering
     RecDoc1 --> GatherInfo[Gather Additional Info Needed]
@@ -150,9 +150,9 @@ flowchart TD
 ### Practitioner Matching
 1. **Assess needs**: Determine appropriate care level
 2. **Match practitioner**:
-   - Doctor 1 or 2: Complex medical needs
+   - Dr Dia or Dr. Shivani: Complex medical needs
    - Nurse Practitioner: Routine care
-   - GAPS Coach: Lifestyle/nutrition focus
+   - Ramona (GAPS Coach): Lifestyle/nutrition focus
 3. **Consider availability**: Factor in scheduling
 
 ### Information Gathering

@@ -18,7 +18,7 @@ graph TD
     
     Practitioners --> Conditions[Conditions We Treat<br/>Chronic Pain • Digestive Issues<br/>Hormonal Balance • Stress<br/>Immune Support • More]
     
-    Conditions --> Pricing[Transparent Pricing<br/>Initial: $119 (15-20 min)<br/>Follow-up: $79 (10-15 min)<br/>FREE 20-min Consultation]
+    Conditions --> Pricing[Transparent Pricing<br/>Initial: $119 AUD (15-20 min)<br/>Follow-up: $79 AUD (10-15 min)<br/>FREE 20-min Consultation]
     
     Pricing --> CTA1{Primary Action}
     CTA1 -->|Book Free Consult| Booking[Enter Booking System]

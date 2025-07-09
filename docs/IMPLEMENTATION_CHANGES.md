@@ -9,10 +9,10 @@ This document outlines the specific changes required to upgrade from the current
 ### 1. Booking Flow Transformation
 
 #### Current System
-- **Single practitioner**: Dr. Dia only
+- **Single practitioner**: Dr Dia only
 - **Direct booking**: Patients book directly via Calendly
 - **Two-step process**: Book first, then fill intake form
-- **Fixed pricing**: $89 initial, $69 follow-up
+- **Fixed pricing**: $89 AUD initial, $69 AUD follow-up
 
 #### New System Changes Required
 - **Multi-practitioner support**: 6+ practitioners
@@ -38,7 +38,7 @@ graph LR
 
 #### 1. Landing Page Updates
 ```diff
-- "Book with Dr. Dia" button
+- "Book with Dr Dia" button
 + "Book Free Consultation" button
 
 - Single service description
@@ -175,8 +175,8 @@ POST /api/bookings
 Single Calendar:
   - URL: calendly.com/dr-dia
   - Event Types:
-    - Initial Consultation ($89)
-    - Follow-up ($69)
+    - Initial Consultation ($89 AUD)
+    - Follow-up ($69 AUD)
 ```
 
 ##### New Setup Required
@@ -188,7 +188,7 @@ Triage Calendar:
   - Event Type: Free Consultation (20 min)
   - No payment collection
   
-Dr. Dia Calendar:
+Dr Dia Calendar:
   - URL: calendly.com/dr-dia-botaniqal
   - Location: Telehealth
   - Event Types: Alt Medicine Initial/Follow-up
@@ -203,7 +203,7 @@ Nurse Practitioner Calendar:
   - Location: Telehealth
   - Event Types: Alt Medicine Initial/Follow-up
   
-GAPS Coach Calendar:
+Ramona (GAPS Coach) Calendar:
   - URL: calendly.com/gaps-botaniqal
   - Event Types: GAPS Initial/Follow-up
 ```
@@ -355,8 +355,8 @@ const PhoneBookingInterface = ({ triageSession }) => {
 const SERVICES = {
   ALTERNATIVE_MEDICINE: {
     name: 'Alternative Medicine',
-    initial: { price: 119, duration: 15 }, // NEW pricing (was $89)
-    followup: { price: 79, duration: 10 }  // NEW pricing (was $69)
+    initial: { price: 119, duration: 15 }, // NEW pricing (was $89 AUD)
+    followup: { price: 79, duration: 10 }  // NEW pricing (was $69 AUD)
   },
   ALTERNATIVE_MEDICINE_INPERSON: {
     name: 'Alternative Medicine (In-Person)',
@@ -426,7 +426,7 @@ const SERVICES = {
 
 If issues arise, system can revert to current state:
 1. Disable triage calendar
-2. Route all bookings to Dr. Dia
+2. Route all bookings to Dr Dia
 3. Disable practitioner selection
 4. Revert to simple booking flow
 

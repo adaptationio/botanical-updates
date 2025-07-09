@@ -29,7 +29,7 @@ flowchart TD
     Notifications1 --> WaitAppt[Wait for Appointment]
     
     %% Consultant Appointment
-    WaitAppt --> ConsultantCall[Consultant/GAPS Coach Calls Patient<br/>(GAPS Coach currently<br/>handles free consults)]
+    WaitAppt --> ConsultantCall[Consultant/Ramona Calls Patient<br/>(Ramona (GAPS Coach) currently<br/>handles free consults)]
     ConsultantCall --> Triage[Triage Assessment]
     
     Triage --> DynamicForm[Dynamic Question Form]
@@ -37,7 +37,7 @@ flowchart TD
     
     DetermineNext -->|Doctor Needed| RecDoctor[Recommend Doctor]
     DetermineNext -->|Nurse Practitioner| RecNurse[Recommend Nurse Practitioner]
-    DetermineNext -->|GAPS Coach| RecGAPS[Recommend GAPS Coach]
+    DetermineNext -->|GAPS Coach| RecGAPS[Recommend Ramona (GAPS Coach)]
     DetermineNext -->|Not Eligible| RecAlternative[Alternative Options]
     
     RecDoctor --> PhoneBooking[Book & Pay Over Phone]
@@ -46,10 +46,10 @@ flowchart TD
     RecAlternative --> ProvideResources[Provide Resources]
     
     PhoneBooking --> SelectPractitioner{Select Specific Practitioner}
-    SelectPractitioner -->|Doctor 1| BookDoc1[Select Time with Doctor 1]
+    SelectPractitioner -->|Dr Dia| BookDoc1[Select Time with Dr Dia]
     SelectPractitioner -->|Dr. Shivani| BookDoc2[Select Time with Dr. Shivani]
     SelectPractitioner -->|Nurse Practitioner| BookNurse[Select Time with Nurse]
-    SelectPractitioner -->|GAPS Coach| BookGAPS[Select Time with GAPS Coach]
+    SelectPractitioner -->|Ramona| BookGAPS[Select Time with Ramona]
     
     BookDoc1 --> ConfirmTimePhone[Confirm Time Over Phone]
     BookDoc2 --> ConfirmTimePhone
@@ -71,10 +71,10 @@ flowchart TD
     ViewOptions -->|Filter| FilterTabs[Select Practitioner Tab]
     
     FilterTabs --> TabChoice{Select Tab}
-    TabChoice -->|Doctor 1| ShowDoc1[Doctor 1 Calendar]
+    TabChoice -->|Dr Dia| ShowDoc1[Dr Dia Calendar]
     TabChoice -->|Dr. Shivani| ShowDoc2[Dr. Shivani Calendar]
     TabChoice -->|Nurse| ShowNurse[Nurse Calendar]
-    TabChoice -->|GAPS Coach| ShowGAPS[GAPS Calendar]
+    TabChoice -->|Ramona| ShowGAPS[Ramona Calendar]
     TabChoice -->|All| ShowAll
     
     ShowAll --> SelectFollowTime[Select Time & Practitioner]
@@ -119,16 +119,16 @@ flowchart TD
 - **Phone Booking & Payment**: Consultant books next appointment and takes payment over phone
 
 ### 2. Multiple Practitioners
-- **Doctor 1**: Telehealth alternative medicine
+- **Dr Dia**: Telehealth alternative medicine
 - **Doctor 2 (Dr. Shivani)**: Telehealth & In-person consultations (Melbourne clinic)
 - **1 Nurse Practitioner**: Telehealth alternative medicine
-- **1 GAPS Coach**: Specialized nutrition coaching (currently also performs free consultations)
+- **Ramona (GAPS Coach)**: Specialized nutrition coaching (currently also performs free consultations)
 - **Individual Calendars**: Each practitioner has dedicated Calendly
 
 **Service Assignments:**
-- Alternative Medicine: Doctor 1, Dr. Shivani, Nurse Practitioner
-- Weight Loss: Doctor 1, Dr. Shivani, Nurse Practitioner
-- GAPS Coaching: GAPS Coach only
+- Alternative Medicine: Dr Dia, Dr. Shivani, Nurse Practitioner
+- Weight Loss: Dr Dia, Dr. Shivani, Nurse Practitioner
+- GAPS Coaching: Ramona only
 
 ### 3. Smart Triage Process
 - **Dynamic Forms**: Consultant uses dynamic question forms

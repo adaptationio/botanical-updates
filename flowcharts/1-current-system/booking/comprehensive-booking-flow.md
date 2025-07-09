@@ -13,8 +13,8 @@ flowchart TB
     %% Patient Flow
     subgraph PatientFlow["👤 PATIENT FLOW"]
         P1[Visit Website] --> P2{Choose Booking Type}
-        P2 -->|Initial $89| P3[Health Assessment]
-        P2 -->|Follow-up $69| P7[Calendly Booking]
+        P2 -->|Initial $89 AUD| P3[Health Assessment]
+        P2 -->|Follow-up $69 AUD| P7[Calendly Booking]
         
         P3 --> P4{Assessment Result}
         P4 -->|Standard Care| P5[Calendly Booking]

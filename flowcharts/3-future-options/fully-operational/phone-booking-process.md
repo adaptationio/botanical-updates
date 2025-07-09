@@ -136,15 +136,15 @@ For patients booking multiple services:
 
 #### Payment Calculation
 ```
-Service 1: Alternative Medicine - $119
-Service 2: GAPS Coaching - $195
-Total: $314
+Service 1: Alternative Medicine - $119 AUD
+Service 2: GAPS Coaching - $195 AUD
+Total: $314 AUD
 ```
 
 #### Payment Options
 - **Credit/Debit Cards** - Processed immediately
 - **HSA/FSA Cards** - Health savings accounts
-- **Payment Plans** - For amounts over $200
+- **Payment Plans** - For amounts over $200 AUD
 - **Insurance** - If applicable (rare)
 
 #### Security Measures

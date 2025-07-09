@@ -16,7 +16,7 @@ graph TD
     
     Program --> Social[Social Proof<br/>Before/After Photos<br/>Video Testimonials]
     
-    Social --> Pricing[Special Offer<br/>~~$129~~ $89/session<br/>FREE Consultation]
+    Social --> Pricing[Special Offer<br/>~~$129 AUD~~ $89 AUD/session<br/>FREE Consultation]
     
     Pricing --> CTA1{Primary CTA}
     CTA1 -->|Book Now| Booking[Enter Booking Flow]

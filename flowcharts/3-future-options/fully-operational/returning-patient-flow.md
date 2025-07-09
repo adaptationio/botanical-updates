@@ -92,9 +92,9 @@ Patients first select their service type, which determines available practitione
 
 | Service | Available Practitioners | Duration | Price |
 |---------|------------------------|----------|--------|
-| Alternative Medicine | Doctor 1, Dr. Shivani, Nurse | 10-15 min | $79 |
-| GAPS Coaching | GAPS Coach only | 15 min | $79 |
-| Weight Loss | Doctor 1, Dr. Shivani, Nurse | TBD | TBD |
+| Alternative Medicine | Dr Dia, Dr. Shivani, Nurse | 10-15 min | $79 AUD |
+| GAPS Coaching | Ramona only | 15 min | $79 AUD |
+| Weight Loss | Dr Dia, Dr. Shivani, Nurse | TBD | TBD |
 | Counseling | Counselor only | TBD | TBD |
 | Equine Therapy | Equine Therapist only | TBD | TBD |
 

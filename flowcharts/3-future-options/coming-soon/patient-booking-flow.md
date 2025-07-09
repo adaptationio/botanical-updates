@@ -63,7 +63,7 @@ flowchart TD
     TriageAssessment --> ServiceRecommend{Service Recommendation}
     
     ServiceRecommend -->|Alternative Medicine| RecDoctor[Recommend Doctor/Nurse]
-    ServiceRecommend -->|GAPS Program| RecGAPS[Recommend GAPS Coach]
+    ServiceRecommend -->|GAPS Program| RecGAPS[Recommend Ramona (GAPS Coach)]
     ServiceRecommend -->|Weight Loss| RecWeightLoss[Recommend Weight Loss Specialist]
     ServiceRecommend -->|Multiple Services| RecCombined[Recommend Combined Approach]
     ServiceRecommend -->|Not Suitable| RecAlternative[Alternative Resources]
@@ -142,19 +142,19 @@ flowchart TD
 
 ### Active Services
 1. **Alternative Medicine** - Fully operational
-   - Initial: 15 minutes, $119
-   - Follow-up: 10 minutes, $79
-   - Doctor 1 & Nurse Practitioner (Telehealth)
+   - Initial: 15 minutes, $119 AUD
+   - Follow-up: 10 minutes, $79 AUD
+   - Dr Dia & Nurse Practitioner (Telehealth)
    - Dr. Shivani/Doctor 2 (Telehealth & Melbourne - 20 min initial, 15 min follow-up)
 
 2. **GAPS Diet Coaching** - Fully operational
-   - Initial: 60 minutes, $195
-   - Follow-up: 15 minutes, $79
-   - GAPS Coach (also currently performs free consultations)
+   - Initial: 60 minutes, $195 AUD
+   - Follow-up: 15 minutes, $79 AUD
+   - Ramona (GAPS Coach) (also currently performs free consultations)
 
 3. **Weight Loss Program** - Newly launched
    - Pricing and duration TBD
-   - Serviced by: Doctor 1, Dr. Shivani (Doctor 2), Nurse Practitioner
+   - Serviced by: Dr Dia, Dr. Shivani, Nurse Practitioner
 
 ### Coming Soon Services
 1. **Counseling** - Waitlist active

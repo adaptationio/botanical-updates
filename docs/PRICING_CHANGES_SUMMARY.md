@@ -1,33 +1,33 @@
 # Pricing Changes Summary
 
 ## Current System Pricing (What exists now)
-- **Initial Consultation**: $89 (15 minutes)
-- **Follow-up Consultation**: $69 (10 minutes)
-- **Single Provider**: Dr. Dia only
+- **Initial Consultation**: $89 AUD (15 minutes)
+- **Follow-up Consultation**: $69 AUD (10 minutes)
+- **Single Provider**: Dr Dia only
 - **Payment Method**: Online via Calendly/Stripe
 
 ## New System Pricing (What needs to be implemented)
 
 ### Free Triage Layer (NEW)
-- **Free Initial Consultation**: $0 (20 minutes)
+- **Free Initial Consultation**: $0 AUD (20 minutes)
 - **Purpose**: Assessment and practitioner matching
 - **No payment collection**
 
 ### Alternative Medicine Services
 | Service Type | Initial | Follow-up | Notes |
 |--------------|---------|-----------|-------|
-| **Telehealth** | $119 (15 min) | $79 (10 min) | +$30/$10 increase |
-| **In-Person (Melbourne)** | $119 (20 min) | $79 (15 min) | New service option |
+| **Telehealth** | $119 AUD (15 min) | $79 AUD (10 min) | +$30 AUD/$10 AUD increase |
+| **In-Person (Melbourne)** | $119 AUD (20 min) | $79 AUD (15 min) | New service option |
 
 ### GAPS Diet Coaching (NEW SERVICE)
-- **Initial**: $195 (60 minutes)
-- **Follow-up**: $79 (15 minutes)
+- **Initial**: $195 AUD (60 minutes)
+- **Follow-up**: $79 AUD (15 minutes)
 
 ## Key Pricing Changes
 
 1. **Price Increase**: 
-   - Initial: $89 → $119 (+33.7%)
-   - Follow-up: $69 → $79 (+14.5%)
+   - Initial: $89 AUD → $119 AUD (+33.7%)
+   - Follow-up: $69 AUD → $79 AUD (+14.5%)
 
 2. **Free Entry Point**:
    - NEW: Free 20-minute consultation
@@ -43,15 +43,15 @@
 ### Calendly Configuration
 ```yaml
 Current:
-  - Initial Consultation: $89
-  - Follow-up: $69
+  - Initial Consultation: $89 AUD
+  - Follow-up: $69 AUD
   
 New Setup:
   - Triage Calendar: FREE (no Stripe integration)
-  - Alt Medicine Initial: $119 (collected via phone)
-  - Alt Medicine Follow-up: $79 (collected via phone)
-  - GAPS Initial: $195 (collected via phone)
-  - GAPS Follow-up: $79 (collected via phone)
+  - Alt Medicine Initial: $119 AUD (collected via phone)
+  - Alt Medicine Follow-up: $79 AUD (collected via phone)
+  - GAPS Initial: $195 AUD (collected via phone)
+  - GAPS Follow-up: $79 AUD (collected via phone)
 ```
 
 ### Payment Collection Change
@@ -83,4 +83,4 @@ INSERT INTO service_pricing VALUES
 
 ---
 
-**Summary**: The system is moving from a simple $89/$69 pricing model to a more complex structure with free triage, multiple service types, and higher pricing tiers ($119/$79 for standard services, $195/$79 for GAPS).
+**Summary**: The system is moving from a simple $89 AUD/$69 AUD pricing model to a more complex structure with free triage, multiple service types, and higher pricing tiers ($119 AUD/$79 AUD for standard services, $195 AUD/$79 AUD for GAPS).

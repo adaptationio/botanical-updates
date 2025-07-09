@@ -9,8 +9,8 @@ flowchart TD
     User[User Browser] --> Webflow[Webflow Website]
     Webflow --> BookingChoice{Booking Type}
     
-    BookingChoice -->|Initial $89| CalendlyEmbed1[Embedded Calendly Initial]
-    BookingChoice -->|Follow-up $69| CalendlyEmbed2[Embedded Calendly Follow-up]
+    BookingChoice -->|Initial $89 AUD| CalendlyEmbed1[Embedded Calendly Initial]
+    BookingChoice -->|Follow-up $69 AUD| CalendlyEmbed2[Embedded Calendly Follow-up]
     
     %% Calendly Layer
     CalendlyEmbed1 --> StripePayment1[Stripe Payment Gateway]
@@ -120,7 +120,7 @@ flowchart TD
 
 ### Frontend Layer
 - **Website Platform**: Webflow CMS (www.botaniqal.com.au)
-- **Calendly Integration**: Embedded widgets for Initial ($89) and Follow-up ($69) bookings
+- **Calendly Integration**: Embedded widgets for Initial ($89 AUD) and Follow-up ($69 AUD) bookings
 - **Form System**: JotForm embedded for intake and consent collection
 - **Responsive Design**: Mobile-optimized Webflow templates
 
@@ -157,7 +157,7 @@ flowchart TD
 ### Data Flow Specifics
 
 #### Initial Consultation Flow
-1. User selects Initial Consult ($89) on Webflow site
+1. User selects Initial Consult ($89 AUD) on Webflow site
 2. Embedded Calendly booking with Stripe payment
 3. Office 365 calendar event created
 4. MS Graph webhook triggers AWS Lambda

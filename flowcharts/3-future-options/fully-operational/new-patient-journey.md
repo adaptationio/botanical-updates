@@ -102,7 +102,7 @@ graph TD
 ### 3. Consultation Process
 
 #### Who Performs Consultations?
-- **Currently**: GAPS Coach handles all free consultations
+- **Currently**: Ramona (GAPS Coach) handles all free consultations
 - **Future**: May transition to dedicated consultant role
 
 #### Dynamic Form Selection
@@ -129,9 +129,9 @@ Based on assessment, consultant recommends:
 - Alternative resources if not suitable
 
 #### Practitioner Matching
-- **Alternative Medicine**: Doctor 1, Dr. Shivani, or Nurse
-- **GAPS**: GAPS Coach only
-- **Weight Loss**: Doctor 1, Dr. Shivani, or Nurse
+- **Alternative Medicine**: Dr Dia, Dr. Shivani, or Nurse
+- **GAPS**: Ramona only
+- **Weight Loss**: Dr Dia, Dr. Shivani, or Nurse
 - **Counseling**: Counselor only
 - **Equine Therapy**: Equine Therapist only
 

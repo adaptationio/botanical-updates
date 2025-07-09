@@ -11,7 +11,7 @@
 
 | Before | After |
 |--------|-------|
-| Pay $89 upfront (initial) | Free 20-min consultation first |
+| Pay $89 AUD upfront (initial) | Free 20-min consultation first |
 | Book with Dr. Dia only | 6 practitioners to choose from |
 | Fill intake form after booking | Assessment during consultation |
 | Online payment only | Phone payment option available |
@@ -40,7 +40,7 @@
 ✅ Dr. Dia - Telehealth
 ✅ Dr. Shivani - Telehealth & Melbourne 
 ✅ Nurse Practitioner - Telehealth
-✅ GAPS Coach
+✅ Ramona (GAPS Coach)
 ✅ Consultant (for internal use)
 ```
 
@@ -84,17 +84,17 @@ NEW: Manual phone payment recording
 ### Current vs New Pricing
 | Service | Current | New | Change |
 |---------|---------|-----|--------|
-| **Initial Consultation** | $89 (15 min) | $119 (15 min) | +$30 |
-| **Follow-up** | $69 (10 min) | $79 (10 min) | +$10 |
+| **Initial Consultation** | $89 AUD (15 min) | $119 AUD (15 min) | +$30 AUD |
+| **Follow-up** | $69 AUD (10 min) | $79 AUD (10 min) | +$10 AUD |
 | **Triage Assessment** | N/A | FREE (20 min) | NEW |
 
 ### New Services & Pricing
 | Service | Initial | Follow-up | Location |
 |---------|---------|-----------|----------|
 | **Free Consultation** | FREE (20 min) | N/A | Telehealth |
-| **Alternative Medicine** | $119 (15 min) | $79 (10 min) | Telehealth |
-| **Alt Med In-Person** | $119 (20 min) | $79 (15 min) | Melbourne |
-| **GAPS Coaching** | $195 (60 min) | $79 (15 min) | Telehealth |
+| **Alternative Medicine** | $119 AUD (15 min) | $79 AUD (10 min) | Telehealth |
+| **Alt Med In-Person** | $119 AUD (20 min) | $79 AUD (15 min) | Melbourne |
+| **GAPS Coaching** | $195 AUD (60 min) | $79 AUD (15 min) | Telehealth |
 
 ## 🚀 Migration Path
 
@@ -140,7 +140,7 @@ NEW: Manual phone payment recording
 // OLD
 createBooking({
   doctorId: 'dr-dia', // hardcoded
-  payment: 'calendly-stripe', // $89 initial, $69 follow-up
+  payment: 'calendly-stripe', // $89 AUD initial, $69 AUD follow-up
 })
 
 // NEW  

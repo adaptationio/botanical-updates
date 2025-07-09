@@ -8,13 +8,13 @@ flowchart TD
     %% Availability Setup - Multiple Practitioners
     Start([Admin Dashboard]) --> MultiPractitioner{Practitioner Availability Setup}
     
-    MultiPractitioner --> SetupDoc1[Setup Doctor 1 - MediRecords]
+    MultiPractitioner --> SetupDoc1[Setup Dr Dia - MediRecords]
     MultiPractitioner --> SetupDoc2[Setup Doctor 2 - MediRecords]
     MultiPractitioner --> SetupNurse[Setup Nurse Practitioner - MediRecords]
-    MultiPractitioner --> SetupGAPS[Setup GAPS Coach - MediRecords]
+    MultiPractitioner --> SetupGAPS[Setup Ramona (GAPS Coach) - MediRecords]
     MultiPractitioner --> SetupConsultant[Setup Consultant - MediRecords]
     
-    SetupDoc1 --> SyncDoc1[Sync to Doctor 1 Calendly]
+    SetupDoc1 --> SyncDoc1[Sync to Dr Dia Calendly]
     SetupDoc2 --> SyncDoc2[Sync to Doctor 2 Calendly]
     SetupNurse --> SyncNurse[Sync to Nurse Calendly]
     SetupGAPS --> SyncGAPS[Sync to GAPS Calendly]
@@ -51,7 +51,7 @@ flowchart TD
     PhoneBookingEmail --> RecordPhoneBooking[Record Manual Booking]
     RecordPhoneBooking --> AssignPractitioner{Assign to Practitioner}
     
-    AssignPractitioner -->|Doctor 1| AssignDoc1[Update Doctor 1 Calendar]
+    AssignPractitioner -->|Dr Dia| AssignDoc1[Update Dr Dia Calendar]
     AssignPractitioner -->|Doctor 2| AssignDoc2[Update Doctor 2 Calendar]
     AssignPractitioner -->|Nurse| AssignNurse[Update Nurse Calendar]
     AssignPractitioner -->|GAPS| AssignGAPS[Update GAPS Calendar]
@@ -130,7 +130,7 @@ flowchart TD
 - **5 Calendars to Manage**:
   - 2 Doctors
   - 1 Nurse Practitioner
-  - 1 GAPS Coach
+  - Ramona (GAPS Coach)
   - 1 Consultant (for initial free consults)
 - **Individual Availability**: Each practitioner has separate MediRecords and Calendly setup
 - **Sync Verification**: Must ensure all 5 calendars are properly synced

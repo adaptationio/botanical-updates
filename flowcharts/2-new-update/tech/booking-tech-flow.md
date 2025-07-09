@@ -22,10 +22,10 @@ flowchart TD
     CombinedView --> TabFilter{Tab Selection}
     
     TabFilter -->|All| ShowAllCalendars[Display All Practitioners]
-    TabFilter -->|Doctor 1| ShowDoc1Cal[Doctor 1 Calendly]
+    TabFilter -->|Dr Dia| ShowDoc1Cal[Dr Dia Calendly]
     TabFilter -->|Doctor 2| ShowDoc2Cal[Doctor 2 Calendly]
     TabFilter -->|Nurse| ShowNurseCal[Nurse Calendly]
-    TabFilter -->|GAPS| ShowGAPSCal[GAPS Coach Calendly]
+    TabFilter -->|Ramona| ShowGAPSCal[Ramona Calendly]
     
     ShowAllCalendars --> SelectPractitioner[Select Time & Practitioner]
     ShowDoc1Cal --> SelectPractitioner
@@ -38,7 +38,7 @@ flowchart TD
     
     %% Calendar Integration - Multiple Practitioners
     CalendarEvent2 --> PractitionerO365{Route to Practitioner}
-    PractitionerO365 -->|Doctor 1| Doc1O365[Doctor 1 Office 365]
+    PractitionerO365 -->|Dr Dia| Doc1O365[Dr Dia Office 365]
     PractitionerO365 -->|Doctor 2| Doc2O365[Doctor 2 Office 365]
     PractitionerO365 -->|Nurse| NurseO365[Nurse Office 365]
     PractitionerO365 -->|GAPS| GAPSO365[GAPS Office 365]
@@ -76,7 +76,7 @@ flowchart TD
     
     CreateBooking --> AssignCalendar{Assign to Calendar}
     AssignCalendar -->|Consultant| ConsultantMediCal[Consultant MediRecords Calendar]
-    AssignCalendar -->|Doctor 1| Doc1MediCal[Doctor 1 MediRecords Calendar]
+    AssignCalendar -->|Dr Dia| Doc1MediCal[Dr Dia MediRecords Calendar]
     AssignCalendar -->|Doctor 2| Doc2MediCal[Doctor 2 MediRecords Calendar]
     AssignCalendar -->|Nurse| NurseMediCal[Nurse MediRecords Calendar]
     AssignCalendar -->|GAPS| GAPSMediCal[GAPS MediRecords Calendar]
@@ -169,7 +169,7 @@ flowchart TD
 
 ### Calendar Integration (5 Separate Flows)
 1. **Consultant Calendar**: Free initial consultations
-2. **Doctor 1 Calendar**: Medical appointments
+2. **Dr Dia Calendar**: Medical appointments
 3. **Doctor 2 Calendar**: Medical appointments
 4. **Nurse Practitioner Calendar**: Nursing appointments
 5. **GAPS Coach Calendar**: Coaching sessions
