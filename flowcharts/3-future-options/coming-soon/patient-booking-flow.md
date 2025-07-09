@@ -145,7 +145,7 @@ flowchart TD
    - Initial: 15 minutes, $119
    - Follow-up: 10 minutes, $79
    - Doctors & Nurse Practitioner (Telehealth)
-   - Dr Shivani (In-person Melbourne - 20 min initial, 15 min follow-up)
+   - Dr Shivani (Telehealth & Melbourne - 20 min initial, 15 min follow-up)
 
 2. **GAPS Diet Coaching** - Fully operational
    - Initial: 60 minutes, $195

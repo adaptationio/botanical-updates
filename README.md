@@ -157,12 +157,12 @@ Explore potential expansions beyond the current Alternative Medicine and GAPS Co
 #### Option 1: [Coming Soon](./flowcharts/3-future-options/coming-soon/)
 - Weight loss launches first, others on waitlist
 - Lower risk, gradual expansion
-- 4-6 weeks implementation
+- Medium timeline implementation
 
 #### Option 2: [Fully Operational](./flowcharts/3-future-options/fully-operational/)
 - All 5 services active simultaneously
 - 7+ practitioners total
-- 8-12 weeks implementation
+- Extended timeline implementation
 
 #### [Service Funnels](./flowcharts/3-future-options/service-funnels/)
 - Marketing strategies for each service

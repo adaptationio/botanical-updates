@@ -8,7 +8,7 @@
 ```
 [Website] → [Book with Dr. Dia] → [Calendly] → [Pay] → [Confirmation] → [JotForm Intake] → [Appointment]
     ↓                                                          ↓
-1 click                                                   2 weeks later
+1 click                                                   After initial booking
 ```
 
 #### New Flow
@@ -222,31 +222,31 @@ CREATE TABLE triage_sessions (
 
 ## Migration Checklist
 
-### Week 1: Backend Prep
+### Phase 1: Backend Prep
 - [ ] Create practitioner records in database
 - [ ] Set up triage session tracking
 - [ ] Implement phone booking API
 - [ ] Update webhook handlers
 
-### Week 2: Calendly Setup
+### Phase 2: Calendly Setup
 - [ ] Create triage calendar (no payment)
 - [ ] Create 6 practitioner calendars
 - [ ] Configure webhook URLs
 - [ ] Test calendar sync
 
-### Week 3: Frontend Updates
+### Phase 3: Frontend Updates
 - [ ] Update homepage messaging
 - [ ] Build free consultation flow
 - [ ] Create phone booking interface
 - [ ] Implement practitioner cards
 
-### Week 4: Testing
+### Phase 4: Testing
 - [ ] End-to-end booking tests
 - [ ] Phone booking training
 - [ ] Load test multiple calendars
 - [ ] Staff training sessions
 
-### Week 5: Launch
+### Phase 5: Launch
 - [ ] Soft launch with 2 practitioners
 - [ ] Monitor and adjust
 - [ ] Full launch all practitioners

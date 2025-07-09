@@ -9,7 +9,7 @@
 |---------|----------------|-----------|----------|---------|
 | **Free Consultation** | FREE (20 min) | N/A | Consultant | ✅ Active |
 | **Alternative Medicine** | $119 (15 min) | $79 (10 min) | Telehealth Doctors/Nurse | ✅ Active |
-| **Alternative Medicine** | $119 (20 min) | $79 (15 min) | Dr. Shivani (Melbourne) | ✅ Active |
+| **Alternative Medicine** | $119 (20 min) | $79 (15 min) | Dr. Shivani (Telehealth & Melbourne) | ✅ Active |
 | **GAPS Diet Coaching** | $195 (60 min) | $79 (15 min) | GAPS Coach | ✅ Active |
 | **Weight Loss Program** | TBD | TBD | Multiple | 🔜 Coming Soon |
 | **Online Counseling** | TBD | TBD | Counselor | 🔜 Coming Soon |
@@ -20,7 +20,7 @@
 1. **Consultant** - Free initial assessments and triage
 2. **Doctor 1** - Telehealth alternative medicine
 3. **Doctor 2** - Telehealth alternative medicine
-4. **Dr. Shivani** - In-person Melbourne clinic
+4. **Dr. Shivani** - Telehealth & In-person Melbourne clinic
 5. **Nurse Practitioner** - Telehealth alternative medicine
 6. **GAPS Coach** - Nutrition and GAPS diet specialist
 
@@ -50,7 +50,7 @@
 - **Initial**: $119 for 20 minutes
 - **Follow-up**: $79 for 15 minutes
 - **Provider**: Dr. Shivani
-- **Location**: Melbourne clinic
+- **Location**: Telehealth & Melbourne clinic
 - **Booking**: After consultant triage or direct for follow-ups
 - **Payment**: Processed during phone booking or online
 
@@ -73,7 +73,7 @@
 
 - All prices are in AUD
 - Telehealth appointments via secure video platform
-- In-person appointments available only with Dr. Shivani in Melbourne
+- Dr. Shivani offers both telehealth and in-person appointments in Melbourne
 - Medicare rebates may apply (check with practitioner)
 - Private health insurance may cover some services
 - 24-hour cancellation policy applies

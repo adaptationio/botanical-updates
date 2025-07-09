@@ -69,20 +69,20 @@
 
 ## Implementation Priority
 
-### Phase 1 - Quick Wins (1-2 months)
+### Phase 1 - Quick Wins (Short to medium timeline)
 1. Add save and resume functionality
 2. Implement smart reminders
 3. Add calendar integration
 4. Replace restrictive screening with supportive assessment
 5. Add multiple contact options for complex cases
 
-### Phase 2 - Core Improvements (3-4 months)
+### Phase 2 - Core Improvements (Extended timeline)
 1. Unify booking and intake forms
 2. Add multiple payment options
 3. Implement patient dashboard
 4. Add provider profiles
 
-### Phase 3 - Advanced Features (5-6 months)
+### Phase 3 - Advanced Features (Long timeline)
 1. Full care pathway implementation
 2. Care coordinator system
 3. Integrated multi-practitioner teams

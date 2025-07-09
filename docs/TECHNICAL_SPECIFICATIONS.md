@@ -363,7 +363,7 @@ Response:
       "id": "uuid",
       "name": "Dr. Shivani",
       "type": "doctor", 
-      "location": "melbourne",
+      "location": "both",
       "nextAvailable": "2024-02-02T10:00:00Z",
       "availableSlots": [...]
     }

@@ -120,7 +120,7 @@ flowchart TD
 
 ### 2. Multiple Practitioners
 - **2 Doctors**: Telehealth alternative medicine
-- **Dr Shivani**: In-person consultations (Melbourne clinic)
+- **Dr Shivani**: Telehealth & In-person consultations (Melbourne clinic)
 - **1 Nurse Practitioner**: Telehealth alternative medicine
 - **1 GAPS Coach**: Specialized nutrition coaching
 - **Individual Calendars**: Each practitioner has dedicated Calendly

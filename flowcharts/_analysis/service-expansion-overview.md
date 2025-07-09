@@ -63,12 +63,12 @@ Each service will have dedicated landing pages:
 | Weight Loss | TBD | TBD | TBD | TBD |
 | Counseling (Online) | TBD | TBD | TBD | TBD |
 | Equine Therapy | TBD | TBD | TBD | TBD |
-| In-Person (Dr Shivani - Melbourne) | $119 | $79 | 20 min | 15 min |
+| Dr Shivani (Telehealth/Melbourne) | $119 | $79 | 20 min | 15 min |
 
 ### Practitioner Specializations
 - **Doctor 1**: Alternative Medicine (Telehealth)
 - **Doctor 2**: Alternative Medicine (Telehealth)
-- **Dr Shivani**: In-Person consultations (Melbourne clinic)
+- **Dr Shivani**: Telehealth & In-Person consultations (Melbourne clinic)
 - **Nurse Practitioner**: Alternative Medicine (Telehealth)
 - **GAPS Coach**: GAPS Diet coaching
 - **Counselor** (new): Online counseling services

@@ -38,7 +38,7 @@
 ```
 ✅ Triage Calendar (FREE, 20 min)
 ✅ Dr. Dia - Telehealth
-✅ Dr. Shivani - Melbourne 
+✅ Dr. Shivani - Telehealth & Melbourne 
 ✅ Nurse Practitioner - Telehealth
 ✅ GAPS Coach
 ✅ Consultant (for internal use)

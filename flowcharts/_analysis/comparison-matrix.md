@@ -24,7 +24,7 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 - Alternative Medicine 
   - Initial: 15 min, $119 (Telehealth)
   - Follow-up: 10 min, $79
-  - In-Person (Melbourne): 20/15 min, same price
+  - Telehealth & In-Person (Melbourne) / Telehealth: 20/15 min, same price
 - GAPS Diet Coaching
   - Initial: 60 min, $195
   - Follow-up: 15 min, $79
@@ -50,7 +50,7 @@ This document compares the "Coming Soon" and "Fully Operational" variations to h
 - Alternative Medicine 
   - Initial: 15 min, $119 (Telehealth)
   - Follow-up: 10 min, $79
-  - In-Person (Melbourne): 20/15 min, same price
+  - Telehealth & In-Person (Melbourne) / Telehealth: 20/15 min, same price
 - GAPS Diet Coaching
   - Initial: 60 min, $195
   - Follow-up: 15 min, $79
@@ -83,7 +83,7 @@ Technical Stack:
 └── Standard Reporting
 ```
 
-**Implementation Time:** 4-6 weeks
+**Implementation Time:** Medium timeline
 **Complexity:** Medium-High
 
 #### Fully Operational
@@ -98,7 +98,7 @@ Technical Stack:
 └── Integrated Care Planning
 ```
 
-**Implementation Time:** 8-12 weeks
+**Implementation Time:** Extended timeline
 **Complexity:** High
 
 ### Practitioner Requirements
@@ -232,33 +232,33 @@ Total: $19,135+ /month (excluding TBD services)
 ## Implementation Phases
 
 ### If Choosing Coming Soon:
-**Phase 1 (Weeks 1-4):**
+**Phase 1 (Initial Phase):**
 - Launch weight loss program
 - Set up waitlist systems
 - Begin marketing campaigns
 
-**Phase 2 (Weeks 5-8):**
+**Phase 2 (Development Phase):**
 - Optimize active services
 - Build waitlist database
 - Prepare for future launch
 
-**Phase 3 (Months 3-6):**
+**Phase 3 (Expansion Phase):**
 - Evaluate weight loss success
 - Plan counseling launch
 - Recruit specialists
 
 ### If Choosing Fully Operational:
-**Phase 1 (Weeks 1-4):**
+**Phase 1 (Initial Phase):**
 - Recruit all practitioners
 - Set up all systems
 - Develop training materials
 
-**Phase 2 (Weeks 5-8):**
+**Phase 2 (Development Phase):**
 - Launch all services
 - Train entire team
 - Full marketing launch
 
-**Phase 3 (Weeks 9-12):**
+**Phase 3 (Final Phase):**
 - Optimize operations
 - Refine service delivery
 - Scale successful services

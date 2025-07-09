@@ -186,7 +186,7 @@ flowchart TD
 1. **Alternative Medicine** 
    - Initial: 15 min, $119 (Telehealth)
    - Follow-up: 10 min, $79
-   - In-Person (Melbourne): 20 min initial, 15 min follow-up
+   - Telehealth & In-Person (Melbourne): 20 min initial, 15 min follow-up
 2. **GAPS Diet Coaching**
    - Initial: 60 min, $195
    - Follow-up: 15 min, $79
@@ -198,7 +198,7 @@ flowchart TD
 - **Consultant**: All initial assessments (20 min free)
 - **Doctor 1**: Alternative Medicine (Telehealth)
 - **Doctor 2**: Alternative Medicine (Telehealth)
-- **Dr Shivani**: In-Person (Melbourne clinic)
+- **Dr Shivani**: Telehealth & In-Person (Melbourne clinic)
 - **Nurse Practitioner**: Alternative Medicine (Telehealth)
 - **GAPS Coach**: GAPS Diet coaching
 - **Counselor**: Online counseling (when available)
