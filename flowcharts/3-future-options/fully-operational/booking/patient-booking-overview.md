@@ -43,7 +43,7 @@ graph TD
 ### 📘 Detailed Flow Documents
 1. **[New Patient Journey](./new-patient-journey.md)** - Complete first-time patient experience
 2. **[Returning Patient Flow](./returning-patient-flow.md)** - Follow-up booking process
-3. **[Service Triage Process](./service-triage-process.md)** - How patients are matched to services
+3. **[Service Triage Process](../consultant/service-triage-process.md)** - How patients are matched to services
 4. **[Practitioner Assignment](./practitioner-assignment.md)** - Service-to-practitioner mapping
 
 ## Key Process Points

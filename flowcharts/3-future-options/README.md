@@ -20,6 +20,13 @@ All variations maintain the same core process:
 - Other services (Counseling, Equine Therapy) on waitlist
 - Lower risk, gradual market entry
 
+Organized by role:
+- `admin/` - Admin workflows and dashboard
+- `booking/` - Patient booking flows
+- `consultant/` - Consultant triage processes
+- `doctor/` - Doctor appointment flows
+- `tech/` - Technical architecture
+
 ### 🌟 Fully Operational Variation  
 `fully-operational/` - Complete service offering
 - All 5 services active simultaneously
@@ -27,11 +34,23 @@ All variations maintain the same core process:
 - Maximum revenue potential
 - Higher complexity
 
+Organized by role:
+- `admin/` - Admin workflows and dashboard
+- `booking/` - Patient booking flows
+- `consultant/` - Consultant triage processes
+- `doctor/` - Doctor appointment flows
+- `tech/` - Technical architecture
+
 ### 📈 Service Funnels
 `service-funnels/` - Marketing and conversion flows
 - Service-specific landing pages
 - Conversion optimization strategies
 - Email nurture sequences
+
+### 🎭 Role Flows (Archive)
+`roles/` - Original role-based documentation
+- Now distributed into coming-soon and fully-operational folders
+- Kept for reference
 
 ## Decision Framework
 These variations help leadership decide:

@@ -164,4 +164,4 @@ After assessment, consultant:
 - Priority-based scheduling
 - Alternative recommendations
 
-[← Back to Overview](./patient-booking-overview.md) | [Next: Phone Booking Process →](./phone-booking-process.md)
+[← Back to Overview](./patient-booking-overview.md) | [Next: Phone Booking Process →](../consultant/phone-booking-process.md)

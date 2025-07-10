@@ -7,43 +7,43 @@ The fully operational variation represents the complete vision with all 5 servic
 
 ### Core Documents
 
-1. **[patient-booking-flow.md](./patient-booking-flow.md)** ⭐
+1. **[patient-booking-flow.md](./booking/patient-booking-flow.md)** ⭐
    - Main entry point with links to all sub-flows
    - System overview and key features
    - Complete service and practitioner listings
 
-1a. **[patient-booking-flow-original.md](./patient-booking-flow-original.md)** 📜
+1a. **[patient-booking-flow-original.md](./booking/patient-booking-flow-original.md)** 📜
    - Original comprehensive flowchart (245 lines)
    - Single diagram with all 100+ nodes
    - Complete flow in one view
    - *Note: May have display issues due to complexity*
 
-2. **[patient-booking-overview.md](./patient-booking-overview.md)** 
+2. **[patient-booking-overview.md](./booking/patient-booking-overview.md)** 
    - Simplified 20-node master flowchart
    - High-level system view
    - Quick reference tables
 
 ### Detailed Flow Documents
 
-3. **[new-patient-journey.md](./new-patient-journey.md)**
+3. **[new-patient-journey.md](./booking/new-patient-journey.md)**
    - First-time patient experience
    - Free consultation process
    - Dynamic intake forms
    - Service matching logic
 
-4. **[returning-patient-flow.md](./returning-patient-flow.md)**
+4. **[returning-patient-flow.md](./booking/returning-patient-flow.md)**
    - Follow-up booking process
    - Combined calendar views
    - Self-service booking
    - Online payment flow
 
-5. **[service-triage-process.md](./service-triage-process.md)**
+5. **[service-triage-process.md](./consultant/service-triage-process.md)**
    - Consultant assessment logic
    - Service matching criteria
    - Practitioner assignment
    - Multi-service planning
 
-6. **[phone-booking-process.md](./phone-booking-process.md)**
+6. **[phone-booking-process.md](./consultant/phone-booking-process.md)**
    - Post-triage booking steps
    - Payment processing
    - Multi-service coordination
@@ -51,12 +51,12 @@ The fully operational variation represents the complete vision with all 5 servic
 
 ### Legacy Documents
 
-7. **[admin-dashboard-flow.md](./admin-dashboard-flow.md)**
+7. **[admin-dashboard-flow.md](./admin/admin-dashboard-flow.md)**
    - Administrative functions
    - Reporting capabilities
    - System management
 
-8. **[technical-architecture.md](./technical-architecture.md)**
+8. **[technical-architecture.md](./tech/tech-architecture-flow.md)**
    - System integration points
    - Technical requirements
    - Architecture overview
@@ -64,18 +64,18 @@ The fully operational variation represents the complete vision with all 5 servic
 ## 🎯 Where to Start
 
 ### For Business Stakeholders
-1. Start with **[patient-booking-overview.md](./patient-booking-overview.md)**
-2. Review service portfolio in **[patient-booking-flow.md](./patient-booking-flow.md)**
+1. Start with **[patient-booking-overview.md](./booking/patient-booking-overview.md)**
+2. Review service portfolio in **[patient-booking-flow.md](./booking/patient-booking-flow.md)**
 3. Understand patient experience via journey documents
 
 ### For Technical Teams
-1. Review **[technical-architecture.md](./technical-architecture.md)**
+1. Review **[technical-architecture.md](./tech/tech-architecture-flow.md)**
 2. Study detailed flows for integration points
-3. Check **[phone-booking-process.md](./phone-booking-process.md)** for payment integration
+3. Check **[phone-booking-process.md](./consultant/phone-booking-process.md)** for payment integration
 
 ### For Operations Staff
-1. Focus on **[service-triage-process.md](./service-triage-process.md)**
-2. Understand **[phone-booking-process.md](./phone-booking-process.md)**
+1. Focus on **[service-triage-process.md](./consultant/service-triage-process.md)**
+2. Understand **[phone-booking-process.md](./consultant/phone-booking-process.md)**
 3. Review admin functions in dashboard flow
 
 ## 📊 Quick Stats
@@ -89,7 +89,7 @@ The fully operational variation represents the complete vision with all 5 servic
 ## 🔄 System Complexity
 
 The fully operational system is broken into multiple documents because:
-- Single diagram had 180+ lines with 100+ nodes (see [original version](./patient-booking-flow-original.md))
+- Single diagram had 180+ lines with 100+ nodes (see [original version](./booking/patient-booking-flow-original.md))
 - Multiple overlapping pathways created visual confusion
 - Different audiences need different levels of detail
 - Maintenance is easier with modular documentation

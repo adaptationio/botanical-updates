@@ -209,4 +209,4 @@ After booking, patients receive:
 - Special instructions
 - Communication preferences
 
-[← Back to Overview](./patient-booking-overview.md) | [Back to Triage →](./service-triage-process.md)
+[← Back to Overview](../booking/patient-booking-overview.md) | [Back to Triage →](./service-triage-process.md)

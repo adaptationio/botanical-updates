@@ -162,4 +162,4 @@ For services with multiple practitioners:
 - Quick booking flow
 - Mobile calendar sync
 
-[← Back to Overview](./patient-booking-overview.md) | [Next: Service Triage Process →](./service-triage-process.md)
+[← Back to Overview](./patient-booking-overview.md) | [Next: Service Triage Process →](../consultant/service-triage-process.md)

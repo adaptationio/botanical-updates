@@ -9,8 +9,8 @@ The fully operational booking system supports 5 distinct services with 8 practit
 - **[Master Overview](./patient-booking-overview.md)** - High-level system view
 - **[New Patient Journey](./new-patient-journey.md)** - First-time patient experience  
 - **[Returning Patient Flow](./returning-patient-flow.md)** - Follow-up booking process
-- **[Service Triage Process](./service-triage-process.md)** - Assessment and matching
-- **[Phone Booking Process](./phone-booking-process.md)** - Consultant-assisted booking
+- **[Service Triage Process](../consultant/service-triage-process.md)** - Assessment and matching
+- **[Phone Booking Process](../consultant/phone-booking-process.md)** - Consultant-assisted booking
 
 ## Simplified System Flow
 

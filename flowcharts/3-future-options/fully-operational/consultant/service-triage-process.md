@@ -216,4 +216,4 @@ Example Care Plans:
 - Reason for selection
 - Alternative options discussed
 
-[← Back to Overview](./patient-booking-overview.md) | [Next: Phone Booking Process →](./phone-booking-process.md)
+[← Back to Overview](../booking/patient-booking-overview.md) | [Next: Phone Booking Process →](./phone-booking-process.md)
