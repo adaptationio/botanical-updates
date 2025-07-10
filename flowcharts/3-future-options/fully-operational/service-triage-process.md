@@ -44,7 +44,7 @@ graph TD
     Digestive --> DigestQ[Digestive Health Questions]
     DigestQ --> GAPSFit{GAPS Suitable?}
     
-    GAPSFit -->|Yes| GAPSYes[Ramona (GAPS Coach) Recommended]
+    GAPSFit -->|Yes| GAPSYes[Ramona - GAPS Coach Recommended]
     GAPSFit -->|Maybe| GAPSMaybe[GAPS + Alt Medicine]
     GAPSFit -->|No| GAPSNo[Alt Medicine Only]
     
