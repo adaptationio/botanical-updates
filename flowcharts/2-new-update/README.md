@@ -40,4 +40,4 @@ This folder contains flowcharts for the **NEW** multi-practitioner booking syste
 ---
 
 🔄 **Compare with current:** [1-current-system](../1-current-system/)
-🚀 **Future possibilities:** [3-future-options](../3-future-options/)
+🎯 **Target implementation:** [3-target-implementation](../3-target-implementation/)

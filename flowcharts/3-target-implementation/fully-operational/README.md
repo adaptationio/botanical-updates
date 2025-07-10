@@ -104,4 +104,4 @@ The fully operational system is broken into multiple documents because:
 
 ---
 
-*These flowcharts represent the complete vision for the booking system. For current implementation status, see the [2-new-update](../../2-new-update/) variation.*
+*These flowcharts represent the full launch approach for our target implementation. For the ready-to-deploy version, see [2-new-update](../../2-new-update/). For a phased rollout approach, see [coming-soon](../coming-soon/).*

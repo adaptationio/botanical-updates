@@ -26,7 +26,7 @@ botanical_updates/
 │   │   ├── booking/            # New booking with triage
 │   │   └── README.md           # Guide to new system
 │   │
-│   ├── 3-future-options/       # 💡 FUTURE POSSIBILITIES
+│   ├── 3-target-implementation/ # 🎯 TARGET IMPLEMENTATION
 │   │   ├── coming-soon/        # Phased service expansion
 │   │   ├── fully-operational/  # All services active
 │   │   ├── service-funnels/    # Marketing strategies
@@ -51,7 +51,7 @@ botanical_updates/
 
 1. **[Current System](./flowcharts/1-current-system/)** - What exists today (single practitioner, direct booking)
 2. **[New Update](./flowcharts/2-new-update/)** - What we're building (multi-practitioner, free triage)
-3. **[Future Options](./flowcharts/3-future-options/)** - Potential expansions (new services)
+3. **[Target Implementation](./flowcharts/3-target-implementation/)** - Main implementation we're designing (5 services, 8+ practitioners)
 4. **[Analysis](./flowcharts/_analysis/)** - Comparisons and improvements
 
 ### 🔧 Admin Flows
@@ -161,17 +161,17 @@ Explore potential expansions beyond the current Alternative Medicine and GAPS Co
 
 ### Implementation Variations
 
-#### Option 1: [Coming Soon](./flowcharts/3-future-options/coming-soon/)
+#### Option 1: [Coming Soon](./flowcharts/3-target-implementation/coming-soon/)
 - Weight loss launches first, others on waitlist
 - Lower risk, gradual expansion
 - Medium timeline implementation
 
-#### Option 2: [Fully Operational](./flowcharts/3-future-options/fully-operational/)
+#### Option 2: [Fully Operational](./flowcharts/3-target-implementation/fully-operational/)
 - All 5 services active simultaneously
 - 7+ practitioners total
 - Extended timeline implementation
 
-#### [Service Funnels](./flowcharts/3-future-options/service-funnels/)
+#### [Service Funnels](./flowcharts/3-target-implementation/service-funnels/)
 - Marketing strategies for each service
 - Conversion optimization approaches
 

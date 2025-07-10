@@ -25,5 +25,5 @@ These documents help:
 
 🔍 **View systems:**
 - [1-current-system](../1-current-system/) - What exists today
-- [2-new-update](../2-new-update/) - What we're building
-- [3-future-options](../3-future-options/) - What's possible
+- [2-new-update](../2-new-update/) - What's ready to deploy
+- [3-target-implementation](../3-target-implementation/) - What we're building toward

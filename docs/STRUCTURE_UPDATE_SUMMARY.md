@@ -17,14 +17,14 @@ The flowchart folder structure has been completely reorganized for better naviga
 flowcharts/
 ├── 1-current-system/     ← Everything that exists today
 ├── 2-new-update/         ← Everything being built
-├── 3-future-options/     ← Future possibilities
+├── 3-target-implementation/ ← Main implementation being designed
 └── _analysis/            ← Comparisons & reports
 ```
 
 ### 🎯 Easy Navigation
 - **Question**: "What exists today?" → **Answer**: `1-current-system/`
 - **Question**: "What are we building?" → **Answer**: `2-new-update/`
-- **Question**: "What could we build?" → **Answer**: `3-future-options/`
+- **Question**: "What are we building toward?" → **Answer**: `3-target-implementation/`
 
 ### 📚 Added Documentation
 

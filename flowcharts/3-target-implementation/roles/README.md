@@ -1,7 +1,7 @@
-# Role-Based Flows - Future Options
+# Role-Based Flows - Target Implementation (Archive)
 
 ## Overview
-This directory contains role-specific flowcharts for the future options scenarios (Coming Soon and Fully Operational variations). Each flow is tailored to show how different roles interact with the expanded multi-service system.
+This directory contains the original role-specific flowcharts for the target implementation. These have now been distributed into the specific implementation variations (Coming Soon and Fully Operational) for better organization. Each flow is tailored to show how different roles interact with the expanded multi-service system in our target implementation.
 
 ## 🎭 Role-Based Documentation
 
@@ -63,7 +63,7 @@ Key Features:
 ## 📊 Key Differences from Current System
 
 ### System Complexity
-| Aspect | Current (2-new-update) | Future Options |
+| Aspect | Ready-to-Deploy (2-new-update) | Target Implementation |
 |--------|----------------------|----------------|
 | Services | 2 (Alt Med, GAPS) | 5 (+ Weight, Counseling, Equine) |
 | Practitioners | 6 | 8+ |
@@ -140,4 +140,4 @@ Key Features:
 
 ---
 
-*These role-based flows represent the future vision for the booking system. They build upon the foundation established in [2-new-update](../../2-new-update/) and prepare for full multi-service operations.*
+*These role-based flows represent the target implementation we are actively designing. They build upon the ready-to-deploy system in [2-new-update](../../2-new-update/) and detail the full multi-service platform we're building toward. The flows have been copied into both [coming-soon](../coming-soon/) and [fully-operational](../fully-operational/) variations for implementation planning.*
