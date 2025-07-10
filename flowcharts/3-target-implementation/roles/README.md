@@ -42,12 +42,12 @@ Key Features:
 **For: Developers, System Architects, DevOps**
 
 Key Features:
-- Microservices architecture
-- Multi-calendar integration
-- Waitlist infrastructure
-- Service configuration management
-- Event-driven system design
-- Scalability considerations
+- Scaled AWS Lambda architecture (8+ practitioners)
+- Multi-calendar integration (8+ Calendly calendars)
+- Simple waitlist capture via JotForm
+- Service-based calendar filtering
+- Same proven tech stack, just more instances
+- Horizontal scaling through configuration
 
 ## 🔄 Service Status Overview
 
@@ -86,8 +86,8 @@ Key Features:
 - To: Multi-service delivery with cross-referral capabilities
 
 **Tech Role:**
-- From: Basic integration
-- To: Scalable microservices with dynamic service configuration
+- From: Basic integration (2 calendars, 1 practitioner)
+- To: Scaled integration (8+ calendars, 8+ practitioners, 5 services)
 
 ## 🚀 Implementation Approach
 
@@ -121,7 +121,7 @@ Key Features:
 
 ### For Technical Implementation
 1. Study [Technical Architecture Flow](./tech-architecture-flow.md)
-2. Plan microservices deployment
+2. Plan calendar integration scaling
 3. Design waitlist infrastructure
 
 ## 📈 Success Metrics

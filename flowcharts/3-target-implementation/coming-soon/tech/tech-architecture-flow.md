@@ -1,345 +1,343 @@
-# Technical Architecture Flow - Future Options
+# Target Implementation - Technical Architecture Flow
 
 ## Overview
-This flowchart shows the enhanced technical architecture supporting 5 services, waitlist management, and scalable infrastructure.
+This flowchart shows the scaled technical architecture supporting 5 services with 8+ practitioners, building on the same proven tech stack: Calendly, Office 365, AWS Lambda, and MediRecords.
 
 ```mermaid
-graph TD
-    Start([User Request]) --> Gateway[API Gateway]
+flowchart TD
+    %% User Interface Layer
+    User[User Browser] --> Webflow[Webflow CMS]
+    Webflow --> ServiceLanding{Service Landing Page}
     
-    Gateway --> RateLimit{Rate Limiting}
-    RateLimit -->|Exceeded| Throttle[429 Too Many Requests]
-    RateLimit -->|Allowed| Router[Service Router]
+    ServiceLanding -->|Alt Medicine| AltMedFlow[Alternative Medicine Flow]
+    ServiceLanding -->|GAPS| GAPSFlow[GAPS Coaching Flow]
+    ServiceLanding -->|Weight Loss| WeightFlow[Weight Loss Flow]
+    ServiceLanding -->|Counseling| CounselFlow[Counseling Flow]
+    ServiceLanding -->|Equine| EquineFlow[Equine Therapy Flow]
     
-    %% Service Routing
-    Router --> ServiceType{Service Type}
+    %% Initial Consultation Path - All Services
+    AltMedFlow --> InitialFree[Free Initial Consultation]
+    GAPSFlow --> InitialFree
+    WeightFlow --> InitialFree
+    CounselFlow --> InitialFree
+    EquineFlow --> InitialFree
     
-    ServiceType -->|Booking| BookingService[Booking Microservice]
-    ServiceType -->|Patient| PatientService[Patient Microservice]
-    ServiceType -->|Payment| PaymentService[Payment Microservice]
-    ServiceType -->|Waitlist| WaitlistService[Waitlist Microservice]
-    ServiceType -->|Analytics| AnalyticsService[Analytics Microservice]
+    InitialFree --> ConsultantCalendly[Embedded Consultant Calendly<br/>No Payment Required]
+    ConsultantCalendly --> CalendarEvent1[Create Calendar Event]
     
-    %% Booking Service Details
-    BookingService --> BookingLogic{Booking Logic}
+    CalendarEvent1 --> ConsultantO365[Consultant Office 365]
+    ConsultantO365 --> MSGraphWebhook1[MS Graph Webhook]
     
-    BookingLogic --> ServiceConfig[Service Configuration:<br/>• Alt Medicine: 15-20min<br/>• GAPS: 60/15min<br/>• Weight Loss: TBD<br/>• Counseling: TBD<br/>• Equine: TBD]
+    %% Follow-up Path - Service-Specific Calendars
+    AltMedFlow --> FollowUp[Follow-up Booking]
+    GAPSFlow --> FollowUp
+    WeightFlow --> FollowUp
+    CounselFlow --> FollowUp
+    EquineFlow --> FollowUp
     
-    ServiceConfig --> CalendarIntegration[Multi-Calendar Integration]
-    CalendarIntegration --> CalendarTypes{Calendar Systems}
+    FollowUp --> ServiceCalendars{Service-Specific Calendar View}
     
-    CalendarTypes --> CalendlyAPI[Calendly API:<br/>• 8+ Calendars<br/>• Service-specific<br/>• Duration rules<br/>• Availability sync]
-    CalendarTypes --> O365Backup[Office 365 Backup:<br/>• Failover support<br/>• Cross-sync<br/>• Availability check]
+    ServiceCalendars -->|Alt Med| AltMedCalendars[Show: Dr Dia, Dr Shivani, Nurse]
+    ServiceCalendars -->|GAPS| GAPSCalendar[Show: Ramona Only]
+    ServiceCalendars -->|Weight Loss| WeightCalendars[Show: Dr Dia, Dr Shivani, Nurse]
+    ServiceCalendars -->|Counseling| CounselCalendars[Show: Counselor 1, Counselor 2]
+    ServiceCalendars -->|Equine| EquineCalendar[Show: Equine Therapist]
     
-    %% Waitlist Service
-    WaitlistService --> WaitlistOps{Waitlist Operations}
+    %% Practitioner Selection
+    AltMedCalendars --> SelectPractitioner[Select Practitioner & Time]
+    GAPSCalendar --> SelectPractitioner
+    WeightCalendars --> SelectPractitioner
+    CounselCalendars --> SelectPractitioner
+    EquineCalendar --> SelectPractitioner
     
-    WaitlistOps --> AddWaitlist[Add to Waitlist]
-    WaitlistOps --> CheckPosition[Check Position]
-    WaitlistOps --> NotifyLaunch[Notify on Launch]
-    WaitlistOps --> ConvertActive[Convert to Active]
+    SelectPractitioner --> PractitionerCalendly{Practitioner Calendly<br/>8+ Separate Calendars}
     
-    AddWaitlist --> WaitlistDB[(Waitlist Database:<br/>• Service interest<br/>• Contact prefs<br/>• Priority score<br/>• Timestamp)]
+    PractitionerCalendly -->|Dr Dia| DrDiaCalendly[Dr Dia Calendly]
+    PractitionerCalendly -->|Dr Shivani| DrShivaniCalendly[Dr Shivani Calendly]
+    PractitionerCalendly -->|Nurse| NurseCalendly[Nurse Calendly]
+    PractitionerCalendly -->|Ramona| RamonaCalendly[Ramona GAPS Calendly]
+    PractitionerCalendly -->|Counselor 1| Counsel1Calendly[Counselor 1 Calendly]
+    PractitionerCalendly -->|Counselor 2| Counsel2Calendly[Counselor 2 Calendly]
+    PractitionerCalendly -->|Equine| EquineCalendly[Equine Therapist Calendly]
     
-    %% Patient Service
-    PatientService --> PatientOps{Patient Operations}
+    %% Payment Processing
+    DrDiaCalendly --> StripePayment[Stripe Payment Gateway]
+    DrShivaniCalendly --> StripePayment
+    NurseCalendly --> StripePayment
+    RamonaCalendly --> StripePayment
+    Counsel1Calendly --> StripePayment
+    Counsel2Calendly --> StripePayment
+    EquineCalendly --> StripePayment
     
-    PatientOps --> CreatePatient[Create Profile]
-    PatientOps --> UpdatePatient[Update Info]
-    PatientOps --> ServiceHistory[Service History]
-    PatientOps --> MultiService[Multi-Service Records]
+    StripePayment --> CalendarEvent2[Create Calendar Event]
     
-    ServiceHistory --> PatientDB[(Patient Database:<br/>• Demographics<br/>• Service enrollments<br/>• Visit history<br/>• Referrals)]
+    %% Office 365 Integration - 8+ Calendars
+    CalendarEvent2 --> PractitionerO365{Route to Practitioner O365}
     
-    %% Payment Service
-    PaymentService --> PaymentOps{Payment Operations}
+    PractitionerO365 -->|Dr Dia| DrDiaO365[Dr Dia Office 365]
+    PractitionerO365 -->|Dr Shivani| DrShivaniO365[Dr Shivani Office 365]
+    PractitionerO365 -->|Nurse| NurseO365[Nurse Office 365]
+    PractitionerO365 -->|Ramona| RamonaO365[Ramona Office 365]
+    PractitionerO365 -->|Counselor 1| Counsel1O365[Counselor 1 Office 365]
+    PractitionerO365 -->|Counselor 2| Counsel2O365[Counselor 2 Office 365]
+    PractitionerO365 -->|Equine| EquineO365[Equine Therapist Office 365]
     
-    PaymentOps --> ServicePricing[Dynamic Pricing:<br/>• Service-based<br/>• Package deals<br/>• Promotions]
-    PaymentOps --> ProcessPayment[Process Payment]
-    PaymentOps --> Refunds[Handle Refunds]
+    %% All O365 calendars connect to webhook
+    DrDiaO365 --> MSGraphWebhook2[MS Graph Webhook]
+    DrShivaniO365 --> MSGraphWebhook2
+    NurseO365 --> MSGraphWebhook2
+    RamonaO365 --> MSGraphWebhook2
+    Counsel1O365 --> MSGraphWebhook2
+    Counsel2O365 --> MSGraphWebhook2
+    EquineO365 --> MSGraphWebhook2
     
-    ProcessPayment --> PaymentGateway[Payment Gateway:<br/>• Stripe primary<br/>• PayPal backup<br/>• HSA/FSA support]
+    %% AWS Processing Layer - Same as before, just handling more
+    MSGraphWebhook1 --> WebhookRenewal[Webhook Auto-Renewal]
+    MSGraphWebhook2 --> WebhookRenewal
+    WebhookRenewal --> AWSGateway[AWS API Gateway]
     
-    %% Analytics Service
-    AnalyticsService --> AnalyticsOps{Analytics Operations}
+    AWSGateway --> Lambda1[Lambda - Booking Processor<br/>Enhanced for 8+ practitioners]
+    Lambda1 --> ExtractData[Extract Calendar Data]
+    ExtractData --> IdentifyService{Identify Service Type}
     
-    AnalyticsOps --> ServiceMetrics[Service Metrics:<br/>• Utilization<br/>• Revenue<br/>• Growth]
-    AnalyticsOps --> WaitlistMetrics[Waitlist Analytics:<br/>• Growth rate<br/>• Conversion potential<br/>• Geographic data]
-    AnalyticsOps --> FunnelMetrics[Funnel Performance:<br/>• By service<br/>• By source<br/>• Conversion rates]
+    IdentifyService -->|Alt Med| ProcessAltMed[Process Alt Med Booking]
+    IdentifyService -->|GAPS| ProcessGAPS[Process GAPS Booking]
+    IdentifyService -->|Weight Loss| ProcessWeight[Process Weight Booking]
+    IdentifyService -->|Counseling| ProcessCounsel[Process Counseling Booking]
+    IdentifyService -->|Equine| ProcessEquine[Process Equine Booking]
+    IdentifyService -->|Initial Free| ProcessFreeConsult[Process Free Consultation]
     
-    ServiceMetrics --> AnalyticsDB[(Analytics Database:<br/>• Time series data<br/>• Aggregations<br/>• Real-time metrics)]
+    %% MediRecords Integration - Same system, more calendars
+    ProcessAltMed --> PythonLib[Custom Python Library]
+    ProcessGAPS --> PythonLib
+    ProcessWeight --> PythonLib
+    ProcessCounsel --> PythonLib
+    ProcessEquine --> PythonLib
+    ProcessFreeConsult --> PythonLib
     
-    %% Event System
-    CalendlyAPI --> EventBus[Event Bus:<br/>• Booking created<br/>• Appointment updated<br/>• Cancellation<br/>• Waitlist activity]
-    PaymentGateway --> EventBus
-    WaitlistDB --> EventBus
+    PythonLib --> MediRecordsAPI[MediRecords API]
+    MediRecordsAPI --> CheckPatient{Patient Exists?}
     
-    EventBus --> EventHandlers{Event Handlers}
+    CheckPatient -->|No| CreatePatient[Create New Patient]
+    CheckPatient -->|Yes| UpdatePatient[Update Patient]
     
-    EventHandlers --> NotificationHandler[Notifications:<br/>• Email (SendGrid)<br/>• SMS (Twilio)<br/>• Push notifications]
-    EventHandlers --> IntegrationHandler[Integrations:<br/>• MediRecords sync<br/>• Calendar updates<br/>• CRM updates]
-    EventHandlers --> AnalyticsHandler[Analytics:<br/>• Event tracking<br/>• Funnel updates<br/>• KPI calculation]
+    CreatePatient --> CreateBooking[Create MediRecords Booking]
+    UpdatePatient --> CreateBooking
     
-    %% Data Flow
-    PatientDB --> DataLake[(Data Lake:<br/>• Raw event storage<br/>• Audit trails<br/>• Compliance data<br/>• ML training data)]
-    AnalyticsDB --> DataLake
-    WaitlistDB --> DataLake
+    CreateBooking --> AssignMediCalendar{Assign to MediRecords Calendar<br/>8+ Practitioner Calendars}
     
-    DataLake --> MLPipeline[ML Pipeline:<br/>• Demand prediction<br/>• Churn analysis<br/>• Optimal scheduling<br/>• Waitlist conversion]
+    AssignMediCalendar -->|Consultant| ConsultantMediCal[Consultant MediRecords]
+    AssignMediCalendar -->|Dr Dia| DrDiaMediCal[Dr Dia MediRecords]
+    AssignMediCalendar -->|Dr Shivani| DrShivaniMediCal[Dr Shivani MediRecords]
+    AssignMediCalendar -->|Nurse| NurseMediCal[Nurse MediRecords]
+    AssignMediCalendar -->|Ramona| RamonaMediCal[Ramona MediRecords]
+    AssignMediCalendar -->|Counselor 1| Counsel1MediCal[Counselor 1 MediRecords]
+    AssignMediCalendar -->|Counselor 2| Counsel2MediCal[Counselor 2 MediRecords]
+    AssignMediCalendar -->|Equine| EquineMediCal[Equine MediRecords]
     
-    %% Infrastructure
-    Router --> Cache[Redis Cache:<br/>• Session data<br/>• API responses<br/>• Rate limits<br/>• Feature flags]
+    %% Form Processing - Service-Specific Forms
+    CalendarEvent1 --> MiniIntake[Embedded JotForm - Mini Intake]
+    CalendarEvent2 --> ServiceForms{Service-Specific Forms}
     
-    BookingService --> ServiceMesh[Service Mesh:<br/>• Service discovery<br/>• Load balancing<br/>• Circuit breakers<br/>• Distributed tracing]
-    PatientService --> ServiceMesh
-    PaymentService --> ServiceMesh
-    WaitlistService --> ServiceMesh
-    AnalyticsService --> ServiceMesh
+    ServiceForms -->|Alt Med| MedicalIntake[Medical History Form]
+    ServiceForms -->|GAPS| GAPSIntake[GAPS Assessment Form]
+    ServiceForms -->|Weight Loss| WeightIntake[Weight Loss Form]
+    ServiceForms -->|Counseling| MentalHealthIntake[Mental Health Form]
+    ServiceForms -->|Equine| EquineIntake[Equine Therapy Form]
     
-    %% Response Flow
-    ServiceMesh --> ResponseBuilder[Response Builder]
-    Cache --> ResponseBuilder
-    ResponseBuilder --> Gateway
-    Gateway --> End([Client Response])
+    %% Form submission processing
+    MiniIntake --> JotFormWebhook[JotForm Webhook]
+    MedicalIntake --> JotFormWebhook
+    GAPSIntake --> JotFormWebhook
+    WeightIntake --> JotFormWebhook
+    MentalHealthIntake --> JotFormWebhook
+    EquineIntake --> JotFormWebhook
+    
+    JotFormWebhook --> AWSGateway2[AWS API Gateway - Forms]
+    AWSGateway2 --> Lambda2[Lambda - Form Processor<br/>Multiple form types]
+    
+    Lambda2 --> ProcessFormData[Process Form Data]
+    ProcessFormData --> PythonLib2[Custom Python Library]
+    PythonLib2 --> MediRecordsAPI2[MediRecords API]
+    MediRecordsAPI2 --> UpdatePatientDetails[Update Patient Details]
+    
+    %% Notifications - Same system
+    CreateBooking --> NotificationSystem[Notification System]
+    NotificationSystem --> EmailNotify[Email via Calendly/JotForm]
+    NotificationSystem --> SMSNotify[SMS via MediRecords]
+    NotificationSystem --> CalendarInvite[Calendar Invites]
+    
+    %% Waitlist Management (Simple)
+    CounselFlow -->|Not Yet Active| WaitlistForm[JotForm Waitlist]
+    EquineFlow -->|Not Yet Active| WaitlistForm
+    WaitlistForm --> WaitlistSubmit[Submit Interest]
+    WaitlistSubmit --> JotFormWebhook
+    
+    %% Data Storage - Same as before
+    Lambda1 -.-> CloudWatch1[CloudWatch Logs]
+    Lambda2 -.-> CloudWatch2[CloudWatch Logs]
+    MediRecordsAPI -.-> MediDB[(MediRecords Database)]
+    PractitionerO365 -.-> O365Storage[(Office 365 Storage)]
     
     %% Styling
-    classDef service fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
-    classDef data fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    classDef integration fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-    classDef infra fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
-    classDef event fill:#e0f2f1,stroke:#00796b,stroke-width:2px
+    classDef webflow fill:#e3f2fd,stroke:#1976d2,stroke-width:3px
+    classDef calendly fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef aws fill:#fff8e1,stroke:#f57c00,stroke-width:3px
+    classDef medirecords fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    classDef form fill:#e0f2f1,stroke:#00695c,stroke-width:3px
+    classDef notification fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef payment fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
     
-    class BookingService,PatientService,PaymentService,WaitlistService,AnalyticsService service
-    class PatientDB,WaitlistDB,AnalyticsDB,DataLake data
-    class CalendlyAPI,PaymentGateway,NotificationHandler integration
-    class Gateway,ServiceMesh,Cache,MLPipeline infra
-    class EventBus,EventHandlers event
+    class Webflow,ServiceLanding webflow
+    class ConsultantCalendly,DrDiaCalendly,DrShivaniCalendly,NurseCalendly,RamonaCalendly,Counsel1Calendly,Counsel2Calendly,EquineCalendly calendly
+    class AWSGateway,AWSGateway2,Lambda1,Lambda2,CloudWatch1,CloudWatch2 aws
+    class MediRecordsAPI,MediRecordsAPI2,DrDiaMediCal,DrShivaniMediCal,NurseMediCal,RamonaMediCal,Counsel1MediCal,Counsel2MediCal,EquineMediCal medirecords
+    class MiniIntake,MedicalIntake,GAPSIntake,WeightIntake,MentalHealthIntake,EquineIntake,JotFormWebhook,WaitlistForm form
+    class NotificationSystem,EmailNotify,SMSNotify notification
+    class StripePayment payment
 ```
 
-## Service Configuration Management
+## Technical Implementation - Scaled from Current
 
-### Dynamic Service Configuration
-```yaml
-services:
-  alternative_medicine:
-    active: true
-    durations:
-      initial: [15, 20]  # min
-      followup: [10, 15]
-    pricing:
-      initial: 119
-      followup: 79
-    calendars: ["doctor1", "doctor2", "nurse"]
-    
-  gaps_coaching:
-    active: true
-    durations:
-      initial: [60]
-      followup: [15]
-    pricing:
-      initial: 195
-      followup: 79
-    calendars: ["gaps_coach"]
-    
-  weight_loss:
-    active: true
-    durations: 
-      initial: [TBD]
-      followup: [TBD]
-    pricing:
-      initial: TBD
-      followup: TBD
-    calendars: ["doctor1", "doctor2", "nurse"]
-    
-  counseling:
-    active: false
-    waitlist: true
-    launch_date: TBD
-    
-  equine_therapy:
-    active: false
-    waitlist: true
-    launch_date: TBD
-```
+### Core Tech Stack (UNCHANGED)
+- **Website**: Webflow CMS with service landing pages
+- **Booking**: Calendly embedded widgets (8+ calendars)
+- **Payments**: Stripe integrated with Calendly
+- **Calendar Sync**: Office 365 with MS Graph API
+- **Middleware**: AWS API Gateway + Lambda
+- **Patient Management**: MediRecords
+- **Forms**: JotForm for all intake forms
+- **Notifications**: Existing email/SMS systems
 
-## Microservices Architecture
+### What's Scaled Up
 
-### Booking Microservice
-**Responsibilities:**
-- Calendar availability aggregation
-- Service-specific booking rules
-- Multi-practitioner coordination
-- Appointment validation
+#### 1. Calendly Calendars (8+ instead of 5)
+- Consultant (Free consultations)
+- Dr Dia (Alt Med, Weight Loss)
+- Dr Shivani (Alt Med, Weight Loss)
+- Nurse Practitioner (Alt Med, Weight Loss)
+- Ramona (GAPS only)
+- Counselor 1 (Counseling)
+- Counselor 2 (Counseling)
+- Equine Therapist (Equine Therapy)
 
-**Key Features:**
-- Real-time availability caching
-- Conflict detection
-- Service duration enforcement
-- Practitioner matching
+#### 2. Office 365 Calendars
+- Each practitioner has their own O365 calendar
+- All sync through same MS Graph webhook system
+- Same auto-renewal mechanism
 
-### Waitlist Microservice
-**Responsibilities:**
-- Interest capture and scoring
-- Launch notification system
-- Conversion tracking
-- Geographic analysis
+#### 3. Service-Specific Routing
+- Landing pages per service on Webflow
+- Service-filtered calendar views
+- Service-specific intake forms
 
-**Waitlist Scoring Algorithm:**
+#### 4. MediRecords Calendars
+- 8+ practitioner calendars in MediRecords
+- Same API, just more calendar IDs
+- Service-based appointment types
+
+### Enhanced Lambda Functions
+
+#### Booking Processor Enhancements
 ```python
-priority_score = (
-    interest_level * 0.3 +
-    wait_time * 0.2 +
-    engagement * 0.2 +
-    location_match * 0.3
-)
+# Pseudo-code for service routing
+def process_booking(event):
+    service_type = extract_service_type(event)
+    practitioner = extract_practitioner(event)
+    
+    # Route to appropriate MediRecords calendar
+    calendar_mapping = {
+        'dr_dia': 'CAL_001',
+        'dr_shivani': 'CAL_002',
+        'nurse': 'CAL_003',
+        'ramona': 'CAL_004',
+        'counselor_1': 'CAL_005',
+        'counselor_2': 'CAL_006',
+        'equine': 'CAL_007',
+        'consultant': 'CAL_008'
+    }
+    
+    # Same MediRecords API, just more calendars
+    create_booking(calendar_mapping[practitioner], patient_data)
 ```
 
-### Payment Microservice
-**Responsibilities:**
-- Service-based pricing
-- Multi-service packages
-- Payment processing
-- Refund handling
-
-**Pricing Engine:**
-```javascript
-calculateTotal(services) {
-  let total = 0;
-  let discount = 0;
-  
-  // Base pricing
-  services.forEach(service => {
-    total += pricing[service.type][service.visitType];
-  });
-  
-  // Multi-service discount
-  if (services.length > 1) {
-    discount = total * 0.1; // 10% multi-service
-  }
-  
-  return total - discount;
+#### Form Processor Enhancements
+```python
+# Handle multiple form types
+form_types = {
+    'mini_intake': process_mini_intake,
+    'medical_history': process_medical_intake,
+    'gaps_assessment': process_gaps_intake,
+    'weight_loss': process_weight_intake,
+    'mental_health': process_mental_intake,
+    'equine_therapy': process_equine_intake,
+    'waitlist': process_waitlist_signup
 }
 ```
 
-## Integration Points
+### Service Configuration
 
-### Calendar Integration Layer
-```
-Calendly API v2
-├── Webhook subscriptions
-│   ├── invitee.created
-│   ├── invitee.canceled
-│   └── availability.changed
-├── Availability API
-│   ├── GET /user_availability
-│   ├── GET /event_types
-│   └── POST /scheduling_links
-└── Event Types
-    ├── Service-specific configs
-    ├── Duration rules
-    └── Buffer times
-```
+#### Service-to-Practitioner Mapping
+| Service | Practitioners | Initial Price | Follow-up Price |
+|---------|--------------|---------------|-----------------|
+| Alternative Medicine | Dr Dia, Dr Shivani, Nurse | $119 | $79 |
+| GAPS Coaching | Ramona only | $195 | $79 |
+| Weight Loss | Dr Dia, Dr Shivani, Nurse | TBD | TBD |
+| Counseling | Counselor 1, Counselor 2 | TBD | TBD |
+| Equine Therapy | Equine Therapist | TBD | TBD |
 
-### Event-Driven Architecture
+### Waitlist Implementation (Simple)
+- JotForm for waitlist capture
+- Stores in same system
+- Manual notification when service launches
+- No complex automation needed
 
-**Event Flow:**
-1. **Booking Created**
-   - Update availability cache
-   - Send confirmations
-   - Update analytics
-   - Sync to MediRecords
+### Key Technical Considerations
 
-2. **Waitlist Entry**
-   - Calculate priority score
-   - Segment for marketing
-   - Schedule nurture campaign
-   - Track interest metrics
+1. **Calendar Management**
+   - Each practitioner manages own Calendly availability
+   - MediRecords sync must handle 8+ calendars
+   - Service-based filtering in frontend
 
-3. **Service Launch**
-   - Notify waitlist
-   - Open booking slots
-   - Track conversion
-   - Update configurations
+2. **Form Variants**
+   - Service-specific intake forms
+   - Same JotForm platform
+   - Lambda routes based on form type
 
-## Scalability Considerations
+3. **Webhook Scaling**
+   - More O365 calendars = more webhook events
+   - Same renewal system handles all
+   - CloudWatch monitoring for all events
 
-### Horizontal Scaling
-- Kubernetes orchestration
-- Auto-scaling policies
-- Service mesh for load distribution
-- Database read replicas
+4. **Performance**
+   - More Lambda invocations (linear with bookings)
+   - Same architecture scales horizontally
+   - No architectural changes needed
 
-### Performance Optimization
-- Redis caching layer
-- CDN for static assets
-- API response caching
-- Query optimization
+### Security & Compliance (Same as Current)
+- HTTPS for all communications
+- AWS IAM for permissions
+- Secure API key storage
+- HIPAA compliance through existing measures
+- PCI compliance via Stripe
 
-### Monitoring & Observability
-```
-Monitoring Stack:
-├── Prometheus (metrics)
-├── Grafana (visualization)
-├── ELK Stack (logs)
-├── Jaeger (tracing)
-└── PagerDuty (alerts)
-```
+### Deployment Approach
 
-## Security & Compliance
+1. **Add Practitioners Incrementally**
+   - Start with existing 5 practitioners
+   - Add new practitioners one at a time
+   - Test each calendar integration
 
-### HIPAA Compliance
-- Encryption at rest and in transit
-- Audit logging
-- Access controls
-- Data retention policies
+2. **Service Rollout**
+   - Launch services as practitioners ready
+   - Waitlist for upcoming services
+   - Convert waitlist when launching
 
-### API Security
-- OAuth 2.0 authentication
-- API key management
-- Rate limiting per client
-- Request validation
+3. **No Infrastructure Changes**
+   - Same AWS account and setup
+   - Same MediRecords instance
+   - Just configuration updates
 
-## Deployment Pipeline
-
-### CI/CD Flow
-```yaml
-pipeline:
-  - stage: test
-    - unit_tests
-    - integration_tests
-    - security_scan
-    
-  - stage: build
-    - docker_build
-    - push_to_registry
-    
-  - stage: deploy_staging
-    - deploy_to_k8s
-    - run_e2e_tests
-    - performance_tests
-    
-  - stage: deploy_production
-    - blue_green_deployment
-    - health_checks
-    - rollback_if_failed
-```
-
-## Future Enhancements
-
-### Phase 1: Current Implementation
-- 3 active services
-- Basic waitlist capture
-- Manual processes
-
-### Phase 2: Full Automation
-- All 5 services active
-- Automated waitlist conversion
-- ML-driven scheduling
-
-### Phase 3: Advanced Features
-- Predictive analytics
-- Dynamic pricing
-- Automated care paths
-- AI-powered triage
+---
 
 [← Back to Doctor Flow](../doctor/doctor-appointment-flow.md) | [Back to Overview →](../../roles/README.md)
